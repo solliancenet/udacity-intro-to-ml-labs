@@ -179,3 +179,5 @@ In this quickstart, we will be using a subset of NYC Taxi & Limousine Commission
 
     ![Image shows the evaluate model result visualization dialog.](images/24.png 'Evaluation Metrics')
 
+# Next Steps
+Congratulations! You have trained and evaluated your first machine learning model. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
