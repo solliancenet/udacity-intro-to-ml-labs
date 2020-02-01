@@ -85,15 +85,11 @@ In this quickstart, we will be using a subset of NYC Taxi & Limousine Commission
 
 1. Select **Machine Learning Algorithms** section in the left navigation. Follow the steps outlined below:
 
-    1. Select the **Boosted Decision Tree Regression** prebuilt module
+    1. Select the **Linear Regression** prebuilt module
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Minimum number of samples per leaf node: **1**
-
-    4. Learning rate: **0.1**
-
-    ![Image shows the steps to add and configure the Boosted Decision Tree Regression module.](images/14.png 'Boosted Decision Tree Regression Module')
+    ![Image shows the steps to add and configure the Linear Regression module.](images/14.png 'Linear Regression Module')
 
 ## Task 6: Setup Train Model Module
 
@@ -103,7 +99,7 @@ In this quickstart, we will be using a subset of NYC Taxi & Limousine Commission
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the `Boosted Decision Tree Regression` module to the first input of the `Train Model` module
+    3. Connect the `Linear Regression` module to the first input of the `Train Model` module
 
     4. Connect the first output of the `Split Data` module to the second input of the `Train Model` module
 
@@ -155,7 +151,7 @@ In this quickstart, we will be using a subset of NYC Taxi & Limousine Commission
 
     ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Run Pipeline')
 
-3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
+3. Wait for pipeline run to complete. It will take around **8 minutes** to complete the run.
 
 # Exercise 4: Visualize Training Results
 
