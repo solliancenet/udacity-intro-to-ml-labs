@@ -1,6 +1,5 @@
 # Quickstart Overview
 
-
 [Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer) (preview) gives you a cloud-based interactive, visual workspace that you can use to easily and quickly prep data, train and deploy machine learning models. It supports Azure Machine Learning compute, GPU or CPU. Machine Learning designer also supports publishing models as web services on Azure Kubernetes Service that can easily be consumed by other applications.
 
 In this quickstart, we are using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/) to show how you can register and version a Dataset using the AML designer interface. The first exercises use a modified version of the original CSV file, which includes collected records for five months (January till May). In the second exercise, we'll see how we can create a new version of the initial dataset when new data is collected (in this case, we included records collected in June in the CSV file).
@@ -57,7 +56,7 @@ In this quickstart, we are using a subset of NYC Taxi & Limousine Commission - g
 
     ![Confirm the details of the dataset you uploaded and then select Create.](images/07.png 'Confirm and create the dataset')
 
-# Exercise 2: Create a version of the existing Dataset in Azure Machine Learning studio
+# Exercise 2: Create a version of the existing Dataset
 
 ## Task 1: Download the modified CSV file
 
@@ -75,13 +74,19 @@ In this quickstart, we are using a subset of NYC Taxi & Limousine Commission - g
 
   ![Basic info to create dataset version from local files.](images/09.png 'Basic info to create dataset version from local files')
 
-4. In the **Datastore and file selection** step, you should browse for the 6 months modified `nyc-taxi-sample-data-6months.csv` you downloaded earlier in Task 1 and select **Next**.
+4.In the **Datastore and file selection** step, you should browse for the 6 months modified `nyc-taxi-sample-data-6months.csv` you downloaded earlier in Task 1 and select **Next**.
 
-5. Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
+5.Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
 
-6. Select **Next** and then **Create** in the confirmation page. Notice the `Dataset version` value in the basic info section.
+6.Select **Next** and then **Create** in the confirmation page. Notice the `Dataset version` value in the basic info section.
 
 ![Confirmation page for new dataset version.](images/10.png 'Confirmation page for new dataset version')
+
+## Task 3: Review the dataset current version
+
+1. Back to the **Datasets** page, in the **Registered datasets** list, notice the version value for the `nyc-taxi-sample-data` dataset.
+
+![Review the dataset current version.](images/11.png 'Review the dataset current version.')
 
 # Next Steps
 
