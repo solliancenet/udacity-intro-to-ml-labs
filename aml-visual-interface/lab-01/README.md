@@ -2,7 +2,8 @@
 
 [Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer) (preview) gives you a cloud-based interactive, visual workspace that you can use to easily and quickly prep data, train and deploy machine learning models. It supports Azure Machine Learning compute, GPU or CPU. Machine Learning designer also supports publishing models as web services on Azure Kubernetes Service that can easily be consumed by other applications.
 
-In this lab, we will be using the `Flight Delays` data set that is enhanced with the weather data. Based on the enriched dataset, we will learn to use the Azure Machine Learning Graphical Interface to process data, build, train, score, and evaluate a classification model to predict if a particular flight will be delayed by 15 minutes or more. The classification algorithm used in this lab will be the ensemble algorithm: **Two-Class Boosted Decision Tree**. To train the model, we will create Azure Machine Learning Compute resource. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
+In this lab, we will be using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/). The data is enriched with holiday and weather data. Based on the enriched dataset, we will learn to use the Azure Machine Learning Graphical Interface to process data, build, train, score, and evaluate a regression model to predict NYC taxi fares. To train the model, we will create Azure Machine Learning Compute resource. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
+
 
 # Exercise 1: Register Dataset with Azure Machine Learning studio
 
@@ -14,9 +15,9 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
 2. In the Web URL field provide the following URL for the training data file:
     ```
-    https://introtomlsampledata.blob.core.windows.net/data/flightdelays/flightdelays.csv
+    https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data.csv
     ```
-3. Provide `flightdelays` as the Name, leave the remaining values at their defaults and select **Next**.
+3. Provide `nyc-taxi-sample-data` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Upload nyc-taxi-sample-data.csv from a URL.](images/05.png 'Upload dataset')
 
@@ -24,7 +25,7 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
 1. On the Settings and preview panel, set the column headers drop down to `All files have same headers`.
 
-2. Review the dataset and then select **Next**
+2. Scroll the data preview to right to observe the target column: `totalAmount`. After you are done reviewing the data, select **Next**
 
     ![Scroll right to review dataset.](images/06.png 'Review dataset')
 
@@ -60,67 +61,37 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
 ## Task 3: Add Dataset
 
-1. Select **Datasets** section in the left navigation. Next, select **My Datasets, flightdelays** and drag and drop the selected dataset on to the canvas.
+1. Select **Datasets** section in the left navigation. Next, select **My Datasets, nyc-taxi-sample-data** and drag and drop the selected dataset on to the canvas.
 
-    ![Image shows the dataset, flightdelays, added to the canvas.](images/12.png 'Add Dataset')
+    ![Image shows the dataset, nyc-taxi-sample-data, added to the canvas.](images/12.png 'Add Dataset')
 
 ## Task 4: Split Dataset
 
-1. We will split the dataset such that months prior to October will be used for model training and months October to December will be used for model testing.
-
-2. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
     1. Select the **Split Data** prebuilt module
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Splitting mode: **Relative Expression**
+    3. Fraction of rows in the first output dataset: **0.7**
 
-    4. Relational expression: **\\"Month" < 10**
-
-    5. Connect the `Dataset` to the `Split Data` module
+    4. Connect the `Dataset` to the `Split Data` module
 
     ![Image shows the steps to add and configure the Split Data module.](images/13.png 'Split Data Module')
 
 *Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
 
-## Task 5: Select Columns in Dataset
-
-1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
-
-    1. Select the **Select Columns in Dataset** prebuilt module
-
-    2. Drag and drop the selected module on to the canvas
-
-    3. Connect the first output of the `Split Data` module to the `Select Columns in Dataset` module
-
-    4. Select **Edit column** link to open the Select columns` editor
-
-    ![Image shows the steps to add and configure the Select Columns in Dataset module.](images/13_1.png 'Select Columns in Dataset Module')
-
-2. In the `Select columns` editor, follow the steps outlined below:
-
-    1. Include: **All columns**
-
-    2. Select **+**
-
-    3. Exclude: **Column names**, provide the following column names to exclude: **Month, Year, Year_R, Timezone, Timezone_R**
-
-    4. Select **Save**
-
-    ![Image shows the steps to configure the Select Columns in Dataset module.](images/13_2.png 'Select Columns in Dataset Module')
-
-## Task 6: Initialize Classification Model
+## Task 5: Initialize Regression Model
 
 1. Select **Machine Learning Algorithms** section in the left navigation. Follow the steps outlined below:
 
-    1. Select the **Two-Class Boosted Decision Tree** prebuilt module
+    1. Select the **Linear Regression** prebuilt module
 
     2. Drag and drop the selected module on to the canvas
 
-    ![Image shows the steps to add and configure the Two-Class Boosted Decision Tree module.](images/14.png 'Two-Class Boosted Decision Tree Module')
+    ![Image shows the steps to add and configure the Linear Regression module.](images/14.png 'Linear Regression Module')
 
-## Task 7: Setup Train Model Module
+## Task 6: Setup Train Model Module
 
 1. Select **Model Training** section in the left navigation. Follow the steps outlined below:
 
@@ -128,19 +99,19 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the `Two-Class Boosted Decision Tree` module to the first input of the `Train Model` module
+    3. Connect the `Linear Regression` module to the first input of the `Train Model` module
 
-    4. Connect the `Select Columns in Dataset` module to the second input of the `Train Model` module
+    4. Connect the first output of the `Split Data` module to the second input of the `Train Model` module
 
     5. Select the **Edit column** link to open the `Label column` editor
 
     ![Image shows the steps to add and configure the Train Model module.](images/15.png 'Train Model Module')
 
-2. The `Label column` editor allows you to specify your `Label or Target column`. Type in the label column name **ArrDel15** and then select **Save**.
+2. The `Label column` editor allows you to specify your `Label or Target column`. Type in the label column name **totalAmount** and then select **Save**.
 
     ![Image shows the label column editor and how to provide the label column name.](images/16.png 'Label Column')
 
-## Task 8: Setup Score Model Module
+## Task 7: Setup Score Model Module
 
 1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
 
@@ -154,9 +125,9 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
     ![Image shows the steps to add and configure the Score Model module.](images/17.png 'Score Model')
 
-*Note that `Split Data` module will feed data for both model training and model scoring.*
+*Note that `Split Data` module will feed data for both model training and model scoring. The first output (0.7 fraction) will connect with the `Train Model` module and the second output (0.3 fraction) will connect with the `Score Model` module.*
 
-## Task 9: Setup Evaluate Model Module
+## Task 8: Setup Evaluate Model Module
 
 1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
 
@@ -176,35 +147,35 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
     ![Image shows where to select the run button to open the setup pipeline run editor.](images/19.png 'Run Pipeline')
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **flight-delay**, and then select **Run**.
+2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **designer-run**, and then select **Run**.
 
     ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Run Pipeline')
 
-3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
+3. Wait for pipeline run to complete. It will take around **8 minutes** to complete the run.
 
-4. While you wait for the model training to complete, you can learn more about the classification algorithm used in this lab by selecting [Two-Class Boosted Decision Tree](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/two-class-boosted-decision-tree).
+4. While you wait for the model training to complete, you can learn more about the training algorithm used in this lab by selecting [Linear Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/linear-regression).
 
-# Exercise 4: Visualize the Evaluation Results
+# Exercise 4: Visualize Training Results
 
-## Task 1: Open the Result Visualization Dialog
+## Task 1: Visualize the Model Predictions
+
+1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog.
+
+    ![Image shows how to open the score model result visualization dialog.](images/21.png 'Score Model Results')
+
+2. Observe the predicted values under the column **Scored Labels**. You can compare the predicted values (`Scored Labels`) with actual values (`totalAmount`).
+
+    ![Image shows the score model result visualization dialog.](images/22.png 'Model Predictions')
+
+## Task 2: Visualize the Evaluation Results
 
 1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog.
 
     ![Image shows how to open the evaluate model result visualization dialog.](images/23.png 'Evaluate Model Results')
 
-## Task 2: Evaluate Model Performance
+2. Evaluate the model performance by reviewing the various evaluation metrics, such as **Mean Absolute Error**, **Root Mean Squared Error**, etc.
 
-1. Evaluate the model performance by reviewing the various evaluation curves, such as **ROC curve**, **Precision-recall curve**, and **Lift curve**.
-
-    ![Image shows the evaluate model result visualization dialog.](images/24_1.png 'Evaluation Curves')
-
-2. Scroll down to review the following:
-
-    1. Review the key metrics for classifiers: **Accuracy, Precision, Recall, F1 Score, and AUC**
-
-    2. Review the binary classifier's **Confusion Matrix**
-
-    ![Image shows the evaluate model result visualization dialog.](images/24_2.png 'Evaluation Metrics')
+    ![Image shows the evaluate model result visualization dialog.](images/24.png 'Evaluation Metrics')
 
 # Next Steps
-Congratulations! You have trained and evaluated your first ensemble machine learning model. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
+Congratulations! You have trained and evaluated your first machine learning model. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
