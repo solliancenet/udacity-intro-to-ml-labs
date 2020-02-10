@@ -3,7 +3,7 @@
 This lab demonstrates the feature engineering process for building a regression model using bike rental demand prediction as an example. In machine learning predictions, effective feature engineering will lead to a more accurate model.
 We will use the Bike Rental UCI dataset as the input raw data for this experiment. This dataset is based on real data from the Capital Bikeshare company, which operates a bike rental network in Washington DC in the United States. The dataset contains 17,379 rows and 17 columns, each row representing the number of bike rentals within a specific hour of a day in the years 2011 or 2012. Weather conditions (such as temperature, humidity, and wind speed) were included in this raw feature set, and the dates were categorized as holiday vs. weekday etc.
 
-The field to predict is "cnt", which contain a count value ranging from 1 to 977, representing the number of bike rentals within a specific hour.
+The field to predict is "cnt", which contains a count value ranging from 1 to 977, representing the number of bike rentals within a specific hour.
 Our main goal is to construct effective features in the training data, so we build two models using the same algorithm, but with two different datasets. Using the Split Data module in the visual designer, we split the input data in such a way that the training data contains records for the year 2011, and the testing data, records for 2012. Both datasets have the same raw data at the origin, but we added different additional features to each training set:
 
 - Set A = weather + holiday + weekday + weekend features for the predicted day
@@ -53,7 +53,7 @@ For the model, we are using regression because the number of rentals (the label 
 
    ![Image highlights the steps to open the pipeline authoring editor.](images/05.png 'Pipeline Authoring Editor')
 
-## Task 2: Setup Compute Target
+## Task 3: Setup Compute Target
 
 1. In the settings panel on the right, select **Select compute target**.
 
@@ -61,7 +61,7 @@ For the model, we are using regression because the number of rentals (the label 
 
 2. In the `Set up compute target` editor, select the existing compute target: **qs-compute**, choose a name for the pipeline draft: `Bike Rental Feature Engineering` and then select **Save**.
 
-## Task 3: Select columns in the dataset
+## Task 4: Select columns in the dataset
 
 1. Drag and drop on the canvas, the available `Bike Rental Hourly` dataset under the **Datasets** category on the left navigation.
 
@@ -81,9 +81,9 @@ For the model, we are using regression because the number of rentals (the label 
 
 5. Next, use the **Select columns in Dataset** module under the **Data transformation** category and configure it as follows:
 
-- Column names: `instant`, `dteday`, `casual` ,`registered`
+- Include all columns
+- Exclude column names: `instant`, `dteday`, `casual` ,`registered`
 - Use default compute target: `qs-compute`
-
 
     ![Image shows how to fill in configuration of the Edit metadata module.](images/11.png 'Edit metadata module configuration')
 
@@ -97,7 +97,7 @@ For the model, we are using regression because the number of rentals (the label 
 
 Select **Edit code** and use the following lines of code:
 
-```
+```python
 
 # The script MUST contain a function named azureml_main
 # which is the entry point for this module.
@@ -131,11 +131,11 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
     #   -  Single return value: return dataframe1,
     #   -  Two return values: return dataframe1, dataframe2
     return dataframe1,
-
-
 ```
 
-## Task 4: Split data into train and test datasets
+Don't worry if you do not fully understand the details of the Python code above. For now, it's enough to keep in mind that is adds 12 new columns to your dataset containing the number of bikes that were rented in each of the previous 12 hours.
+
+## Task 5: Split data into train and test datasets
 
 1. Use the **Split Data** module under the **Data Transformation** module and connect its input with output from the **Select Columns in Dataset** module. Use the following configuration:
 
@@ -149,7 +149,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
    ![Image shows how to duplicate the Split Data module.](images/14.png 'Duplicate the Split Data module') 
 
-## Task 5: Select columns from the test and training resulted sets
+## Task 6: Select columns from the test and training resulted sets
 
 1. Next, using the **Select columns** module under the **Data transformation** category, create four identical modules to exclude the `yr` column from all the outputs: test and training sets in both branches: A and A+B.
 
@@ -159,7 +159,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
    ![Image shows configuration in the Edit columns dialog.](images/16.png 'configuration in the Edit columns dialog')
 
-## Task 6: Create the regression model 
+## Task 7: Create the regression model 
 
 1. Under the **Machine Learning Algorithms, Regression** category, select the  **Boosted Decision Tree Regression** module. Drag and drop it on the canvas and use the default settings provided.
 
@@ -175,7 +175,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
    ![Image shows the configuration of the first Train model module.](images/19.png 'Train model module connected in the designer')
 
-## Task 7: Evaluate and score models
+## Task 8: Evaluate and score models
 
 1. Use two **Score Model** modules (under the **Model Scoring and Evaluation** category)  and link on the input the two trained models and the test datasets. 
 
