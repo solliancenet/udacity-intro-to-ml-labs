@@ -143,8 +143,47 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
     ![Image shows how to use the Split Data module.](images/13.png 'Use the Split Data module')
 
+2. Select the **Split Data** module block and use the menu buttons to Copy and Paste it on the canvas. Connect the second one to the output of the Python Script execution step.
+
+   ![Image shows how to duplicate the Split Data module.](images/14.png 'Duplicate the Split Data module') 
+
+## Task 5: Select columns from the test and training resulted sets
+
+1. Next, using the **Select columns** module under the **Data transformation** category, create four identical modules to exclude the `yr` column from all the outputs: test and training sets in both branches.
+
+   ![Image shows how to exclude the yr column with Select Columns module.](images/15.png 'Exclude the yr column with Select Columns module')
+
+2. Use the following structure for the columns field in each module:
+
+   ![Image shows configuration in the Edit columns dialog.](images/16.png 'configuration in the Edit columns dialog')
+
+## Task 6: Create the regression model 
+
+1. Under the **Machine Learning Algorithms, Regression** category, select the  **Boosted Decision Tree Regression** module. Drag and drop it on the canvas and use the default settings provided.
+
+   ![Image shows the Boosted Decision Tree Regression module.](images/17.png 'Boosted Decision Tree Regression module used in the designer')
+
+2. Next, use the **Train model** module under the **Model training** category and enter the `cnt` column in the **Label column** field.
+
+3. Link the **Boosted Decision Tree Regression** module as the first input and the training dataset as the second input like in the image below.
+
+   ![Image shows the configuration of the first Train model module.](images/18.png 'Train model module connected in the designer')
+
+4. Use the exact same configuration on the right branch that uses the output from the Python Script.
+
+   ![Image shows the configuration of the first Train model module.](images/19.png 'Train model module connected in the designer')
+
+## Task 7: Evaluate and score models
+
+1. Use two **Score Model** modules (under the **Model Scoring and Evaluation** category)  and link on the input the two trained models and the test datasets. 
+
+2. Drag the **Evaluate Model** module which stands in the same category, **Model Scoring and Evaluation** and link it to the two **Score Model** modules.
+
+   ![Image shows how to configure model scoring and evaluation.](images/20.png 'Model Scoring and evaluation')
+
+
 # Next Steps
 
 Congratulations!
-Some text here...
+
 You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
