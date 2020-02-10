@@ -187,7 +187,20 @@ Don't worry if you do not fully understand the details of the Python code above.
 
     ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/21.png 'Run Pipeline')
 
-3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
+4. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
+
+5. Once the pipeline execution completes, right click on the **Evaluate Model** module and select **Visualize Evaluation results**.
+
+    ![Image shows the Visualize Evaluation result menu on the Evaluate Mode module](images/22.png 'Visualize Evaluation results')
+
+6. The **Evaluate Model result visualization** popup shows the results of the evaluation.
+
+    ![Image shows the Evaluation Model result visualization](images/23.png 'Evaluate Model result visualization')
+
+
+    Notice the values for the **Mean_Absolute_Error** metric. The first value (the bigger one) corresponds to the model trained on feature set A. The second value (the smaller one) corresponds to the model trained on feature sets A + B.
+
+    It is remarkable how, using simple feature engineering to derive new features from the existing data set, a new context was created that allowed the model to better understand the dynamics of the data and hence, produce a better prediction.
 
 # Next Steps
 
