@@ -14,7 +14,7 @@ In this quickstart, we are using a subset of NYC Taxi & Limousine Commission - g
 
 ## Task 1: Download the Training Data File
 
-1. Download the training data file [nyc-taxi-sample-data-5months.csv](https://quickstartsws9073123377.blob.core.windows.net/azureml-blobstore-0d1c4218-a5f9-418b-bf55-902b65277b85/quickstarts/nyc-taxi-data/nyc-taxi-sample-data.csv) on your local computer.
+1. Download the training data file [nyc-taxi-sample-data-5months.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-5months.csv) on your local computer.
 
 ## Task 2: Upload Dataset from local file
 
@@ -60,7 +60,7 @@ In this quickstart, we are using a subset of NYC Taxi & Limousine Commission - g
 
 ## Task 1: Download the modified CSV file
 
-1. Download the training data file that includes new data collected for an extra month [nyc-taxi-sample-data-6months.csv](https://quickstartsws9073123377.blob.core.windows.net/azureml-blobstore-0d1c4218-a5f9-418b-bf55-902b65277b85/quickstarts/nyc-taxi-data/nyc-taxi-sample-data.csv) on your local computer.
+1. Download the training data file that includes new data collected for an extra month [nyc-taxi-sample-data-6months.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-6months.csv) on your local computer.
 
 ## Task 2: Register new dataset version 
 
