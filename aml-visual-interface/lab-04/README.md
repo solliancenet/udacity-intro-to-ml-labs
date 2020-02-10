@@ -93,7 +93,9 @@ For the model, we are using regression because the number of rentals (the label 
 
     ![Image shows how to use the Execute Python Script module.](images/12.png 'Use the Execute Python Script module')
 
-8. Select **Edit code** and use the following lines of code:
+8. We are using the Python script to append a new feature to the dataset: number of bikes that were rented in each of the previous 12 hours. Feature set B captures very recent demand for the bikes. This will be the B set in the described feature engineering approach.
+
+Select **Edit code** and use the following lines of code:
 
 ```
 
@@ -143,13 +145,13 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
     ![Image shows how to use the Split Data module.](images/13.png 'Use the Split Data module')
 
-2. Select the **Split Data** module block and use the menu buttons to Copy and Paste it on the canvas. Connect the second one to the output of the Python Script execution step.
+2. Select the **Split Data** module block and use the menu buttons to Copy and Paste it on the canvas. Connect the second one to the output of the Python Script execution step, which is the featured B set.
 
    ![Image shows how to duplicate the Split Data module.](images/14.png 'Duplicate the Split Data module') 
 
 ## Task 5: Select columns from the test and training resulted sets
 
-1. Next, using the **Select columns** module under the **Data transformation** category, create four identical modules to exclude the `yr` column from all the outputs: test and training sets in both branches.
+1. Next, using the **Select columns** module under the **Data transformation** category, create four identical modules to exclude the `yr` column from all the outputs: test and training sets in both branches: A and A+B.
 
    ![Image shows how to exclude the yr column with Select Columns module.](images/15.png 'Exclude the yr column with Select Columns module')
 
@@ -181,6 +183,11 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 
    ![Image shows how to configure model scoring and evaluation.](images/20.png 'Model Scoring and evaluation')
 
+3. Select **Save** and **Run** to create a new experiment and run the pipeline. Provide `BikeRentalHourly` for the new experiment name.
+
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/21.png 'Run Pipeline')
+
+3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
 
 # Next Steps
 
