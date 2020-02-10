@@ -1,11 +1,11 @@
-# Quickstart Overview
+# Lab Overview
 
-In this quickstart you learn how to import your own data in the designer to create custom solutions. There are two ways you can import data into the designer:
+In this lab you learn how to import your own data in the designer to create custom solutions. There are two ways you can import data into the designer:
 
  - Azure Machine Learning datasets - Register datasets in Azure Machine Learning to enable advanced features that help you manage your data.
  - Import Data module - Use the Import Data module to directly access data from online datasources.
 
-The first approach will be covered later in the next quickstart, which focuses on registering and versioning a dataset in Azure Machine Learning studio. While the use of datasets is recommended to import data, you can also use the Import Data module from the designer. Data comes into the designer from either a datastore or from tabular datasets. Datastores will be covered later in this lesson, but just for a quick definition you can use Datastores to access your storage without having to hard code connection information in your scripts. As for the second option, the Tabular datasets, the following datasources are supported in the designer: Delimited files, JSON files, Parquet files or SQL queries.
+The first approach will be covered later in the next lab, which focuses on registering and versioning a dataset in Azure Machine Learning studio. While the use of datasets is recommended to import data, you can also use the Import Data module from the designer. Data comes into the designer from either a datastore or from tabular datasets. Datastores will be covered later in this lesson, but just for a quick definition you can use Datastores to access your storage without having to hard code connection information in your scripts. As for the second option, the Tabular datasets, the following datasources are supported in the designer: Delimited files, JSON files, Parquet files or SQL queries.
 The following exercise focuses on the Import Data module to load data into a machine learning pipeline from several datasets that will be merged and restructured. The training data will be prepared using basic modules available in the designer, helping you to become familiar with the way you can use the designer to perform basic data wrangling steps.
 In this lab you will be using some sample data from the UCI dataset repository to demonstrate how you can perform basic data import transformation steps using the modules available in Azure Machine Learning designer (Preview).
 
@@ -43,7 +43,8 @@ In this lab you will be using some sample data from the UCI dataset repository t
 
     ![Image shows the Import Data module, added to the canvas.](images/04.png 'Add Import Data module')
 
-2. In Data Import panel on the right, select the **URL via HTTP** option in the Data Source drop-down and provide the following URL for the first CSV file you will import: `https://introtomlsampledata.blob.core.windows.net/data/crime-data/crime-dirty.csv`
+2. In Data Import panel on the right, select the **URL via HTTP** option in the Data Source drop-down and provide the following URL for the first CSV file you will import in your pipeline:
+```https://introtomlsampledata.blob.core.windows.net/data/crime-data/crime-dirty.csv```
 
     ![Data source selection.](images/05.png 'Enter Data Source fields')
 
@@ -79,8 +80,10 @@ In this lab you will be using some sample data from the UCI dataset repository t
 
 1. Select **Data Input and Output** section in the left navigation. Next, drag and drop two **Import Data** blocks on to the canvas as demonstrated in the first exercise and fill in the Web URLs as follows:
 
-    - for the first one, **Data source URL** : `https://introtomlsampledata.blob.core.windows.net/data/crime-data/crime-spring.csv`
-    - for the second one, **Data source URL** : `https://introtomlsampledata.blob.core.windows.net/data/crime-data/crime-winter.csv`
+    - for the first one, **Data source URL** :
+    ```https://introtomlsampledata.blob.core.windows.net/data/crime-data/crime-spring.csv```
+    - for the second one, **Data source URL** :
+    ```https://introtomlsampledata.blob.core.windows.net/data/crime-data/crime-winter.csv```
 
     ![Image shows two additional Import Data module blocks added to the canvas.](images/11.png 'Add two Import Data module blocks')
 
