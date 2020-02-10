@@ -89,11 +89,11 @@ For the model, we are using regression because the number of rentals (the label 
 
 6. Connect the output from the **Edit columns** module to the input of the **Select columns in Dataset** module.
 
-7. Under the **Python Language** category on the left, select the **Execute Python Script** module and connect it with the **Select Columns in Dataset** module.
+7. Under the **Python Language** category on the left, select the **Execute Python Script** module and connect it with the **Select Columns in Dataset** module. Make sure the connector is connected to the very first input of the **Execute Python Script** module.
 
     ![Image shows how to use the Execute Python Script module.](images/12.png 'Use the Execute Python Script module')
 
-8. We are using the Python script to append a new feature to the dataset: number of bikes that were rented in each of the previous 12 hours. Feature set B captures very recent demand for the bikes. This will be the B set in the described feature engineering approach.
+8. We are using the Python script to append a new set of features to the dataset: number of bikes that were rented in each of the previous 12 hours. Feature set B captures very recent demand for the bikes. This will be the B set in the described feature engineering approach.
 
 Select **Edit code** and use the following lines of code:
 
@@ -123,7 +123,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
     for i in np.arange(1, 13):
         prev_col_name = 'cnt' if i == 1 else 'Rentals in hour -{}'.format(i-1)
         new_col_name = 'Rentals in hour -{}'.format(i)
-        
+
         dataframe1[new_col_name] = dataframe1[prev_col_name].shift(1).fillna(0)
 
     # Return value must be of a sequence of pandas.DataFrame
