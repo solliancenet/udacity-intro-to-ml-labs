@@ -4,7 +4,6 @@
 
 In this lab, we will be using the `Flight Delays` data set that is enhanced with the weather data. Based on the enriched dataset, we will learn to use the Azure Machine Learning Graphical Interface to process data, build, train, score, and evaluate a classification model to predict if a particular flight will be delayed by 15 minutes or more. To train the model, we will create Azure Machine Learning Compute resource. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
 
-
 # Exercise 1: Register Dataset with Azure Machine Learning studio
 
 ## Task 1: Upload Dataset
