@@ -22,7 +22,7 @@ In this lab, we will be compare the performance of two different multiclass clas
 
     ![Image highlights the link to select to open the setup compute target editor.](images/02.png 'Setup Compute Target')
 
-2. In the `Set up compute target` editor, select the existing compute target: **qs-compute**, and then select **Save**.
+2. In the `Set up compute target` editor, select the available compute, and then select **Save**.
 
     ![Image shows how to select the existing compute target named qs-compute.](images/03.png 'Setup Compute Target')
 

@@ -74,7 +74,7 @@ In this lab, you learn how to create, run, and explore automated machine learnin
 
 2. Select target column: **ArrDel15**
 
-3. Select compute target: **qs-compute**
+3. Select compute target: **select the available compute**
 
 4. Select **Next**
 

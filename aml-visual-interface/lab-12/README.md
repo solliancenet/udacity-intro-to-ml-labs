@@ -74,7 +74,7 @@ In this lab, we will use Automated Machine Learning to find the best performing 
 
 2. Select target column: **price**
 
-3. Select compute target: **qs-compute**
+3. Select compute target: **select the available compute**
 
 4. Select **Next**
 

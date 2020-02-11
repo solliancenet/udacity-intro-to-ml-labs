@@ -54,7 +54,7 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
     ![Image highlights the link to select to open the setup compute target editor.](images/10.png 'Setup Compute Target')
 
-2. In the `Set up compute target` editor, select the existing compute target: **qs-compute**, and then select **Save**.
+2. In the `Set up compute target` editor, select the available compute, and then select **Save**.
 
     ![Image shows how to select the existing compute target named qs-compute.](images/11.png 'Setup Compute Target')
 
