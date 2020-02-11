@@ -2,7 +2,7 @@
 
 ## Train a machine learning model from a managed notebook environment
 
-So far, the Managed Services for Azure Machine Learning lesson has covered **compute instance** and the benefits it provides through its fully managed environment containing everythng you need to run Azure Machine Learnijng. Now it is time to gain some hands-on experience by putting a compute instance to work.
+So far, the Managed Services for Azure Machine Learning lesson has covered **compute instance** and the benefits it provides through its fully managed environment containing everythng you need to run Azure Machine Learning. Now it is time to gain some hands-on experience by putting a compute instance to work.
 
 # Overview
 
