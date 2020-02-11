@@ -6,7 +6,7 @@ By using Azure Machine Learning service, you can start training on your local ma
 
 You can manage the deployed models and track multiple runs as you experiment to find the best solution. After it's deployed, your model can return predictions in [real time](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-consume-web-service) or [asynchronously](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-run-batch-predictions) on large quantities of data. And with advanced [machine learning pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines), you can collaborate on all the steps of data preparation, model training and evaluation, and deployment.
 
-In this experience you will learn how the automated machine learning capability in Azure Machine Learning (AML) can be used for the life cycle management of the manufactured vehicles and how AML helps in creation of better vehicle maintenance plans. To accomplish this, you will train a Linear Regression model to predict the number of days until battery failure using Automated Machine Learning in Jupyter Notebooks.
+In this experience you will learn how the automated machine learning capability in Azure Machine Learning (AML) can be used for the life cycle management of the manufactured vehicles and how AML helps in creation of better vehicle maintenance plans. To accomplish this, you will train a Linear Regression model to predict the number of days until battery failure using Automated Machine Learning available in AML studio.
 
 ## Exercise 1: Creating a model using automated machine learning
 
@@ -80,20 +80,20 @@ In this exercise, you will create a model that predicts battery failure from tim
 
 1. The experiment will run for about _15 minutes_. While it runs and once it completes, you should check the `Models` tab on the `Run Detail` page to observe the model performance for the primary metric for different runs.
 
-   ![Review run details - graph view](./images/021_RunDetails1.png)
+   ![Review run details - model performance metric](./images/14.png)
 
 2. In the models list, notice at the top the iteration with the best **normalized root mean square error** score. Note that the normalized root mean square error measures the error between the predicted value and actual value. In this case, the model with the lowest normalized root mean square error is the best model.
 
-   ![Review run details - table view](./images/022_RunDetails2.png)
+   ![Review run details - table view](./images/15.png)
 
 3. Select **Experiments** on the left navigation pane and select the experiment `automlregression` to see the list of available runs.
 
-   ![Open experiment runs table](./images/023_CheckExperimentRuns.png)
+   ![Open experiment runs table](./images/16.png)
 
-4. Select the option to **Include child runs** to be able to examine  model performance for the primary metric of different runs. By default, the left chart describes the `mean_absolute_error` value for each run. Select the pen icon on the right corner of the `mean_absolute_error` chart to configure the `normalized_root_mean_square_error` metric representation.
+4. Select the option to **Include child runs** to be able to examine  model performance for the primary metric of different runs. By default, the left chart describes the `normalized_median_absolute_error` value for each run. Select the pen icon on the right corner of the `normalized_median_absolute_error` chart to configure the `normalized_root_mean_square_error` metric representation.
 
-   ![Review runs - chart view](./images/024_IncludeChildRuns.png)
+   ![Review runs - chart view](./images/17.png)
 
 # Next Steps
 
-Congratulations! You have trained a simple recommender. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
+Congratulations! You have trained a simple recommender using the Automated Machine Learning visual interface. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
