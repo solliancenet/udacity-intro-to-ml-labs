@@ -1,4 +1,6 @@
-# Lab Overview
+# Train a simple text classifier
+
+## Lab Overview
 
 Train a simple text classifier
 

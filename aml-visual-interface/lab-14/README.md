@@ -1,4 +1,6 @@
-# Lab Overview
+# Train a simple recommender
+
+## Lab Overview
 
 Train a simple recommender
 

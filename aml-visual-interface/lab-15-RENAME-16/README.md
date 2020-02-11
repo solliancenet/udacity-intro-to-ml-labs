@@ -1,4 +1,6 @@
-# Lab Overview
+# Train a time-series forecasting model using Automated Machine Learning
+
+## Lab Overview
 
 In this lab you will learn how the Automated Machine Learning capability in Azure Machine Learning (AML) can be used for the life cycle management of the manufactured vehicles and how AML helps in creation of better vehicle maintenance plans. To accomplish this, you will train a Linear Regression model to predict the number of days until battery failure using Automated Machine Learning available in AML studio.
 

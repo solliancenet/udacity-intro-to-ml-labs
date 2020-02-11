@@ -1,4 +1,6 @@
-# Lab Overview
+# Import, transform and export data
+
+## Lab Overview
 
 In this lab you learn how to import your own data in the designer to create custom solutions. There are two ways you can import data into the designer:
 

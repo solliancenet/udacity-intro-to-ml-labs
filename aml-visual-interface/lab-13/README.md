@@ -1,4 +1,6 @@
-# Lab Overview
+# Train a simple neural net model
+
+## Lab Overview
 
 Train a simple neural net model
 
