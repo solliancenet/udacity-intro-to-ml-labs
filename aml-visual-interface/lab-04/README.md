@@ -1,9 +1,11 @@
-# Lab Overview
+# Engineer and select features
+
+## Lab Overview
 
 This lab demonstrates the feature engineering process for building a regression model using bike rental demand prediction as an example. In machine learning predictions, effective feature engineering will lead to a more accurate model.
 We will use the Bike Rental UCI dataset as the input raw data for this experiment. This dataset is based on real data from the Capital Bikeshare company, which operates a bike rental network in Washington DC in the United States. The dataset contains 17,379 rows and 17 columns, each row representing the number of bike rentals within a specific hour of a day in the years 2011 or 2012. Weather conditions (such as temperature, humidity, and wind speed) were included in this raw feature set, and the dates were categorized as holiday vs. weekday etc.
 
-The field to predict is "cnt", which contains a count value ranging from 1 to 977, representing the number of bike rentals within a specific hour.
+The field to predict is `cnt` which contains a count value ranging from 1 to 977, representing the number of bike rentals within a specific hour.
 Our main goal is to construct effective features in the training data, so we build two models using the same algorithm, but with two different datasets. Using the Split Data module in the visual designer, we split the input data in such a way that the training data contains records for the year 2011, and the testing data, records for 2012. Both datasets have the same raw data at the origin, but we added different additional features to each training set:
 
 - Set A = weather + holiday + weekday + weekend features for the predicted day
@@ -205,5 +207,4 @@ Don't worry if you do not fully understand the details of the Python code above.
 # Next Steps
 
 Congratulations!
-
-You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
+You have trained and compared performance of two models using the same algorithm, but with two different datasets. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
