@@ -14,7 +14,7 @@ Configuration options available in automated machine learning:
 
 You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also create your automated machine learning experiments in [Azure Machine Learning Studio](https://ml.azure.com/).
 
-In this lab, you learn how to create, run, and explore automated machine learning experiments in the [Azure Machine Learning Studio](https://ml.azure.com/) without a single line of code. As part of this lab, we will be using the `Flight Delays` data set that is enhanced with the weather data. Based on the enriched dataset, we will use automated machine learning to find the best performing classification model to predict if a particular flight will be delayed by 15 minutes or more. We will do all of this from the Azure Machine Learning Studio without writing a single line of code.
+In this lab, you learn how to create, run, and explore automated machine learning experiments in the [Azure Machine Learning Studio](https://ml.azure.com/) without a single line of code. As part of this lab, we will be using the `Flight Delays` data set that is enhanced with the weather data. Based on the enriched dataset, we will use automated machine learning to find the best performing classification model to predict if a particular flight will be delayed by 15 minutes or more.
 
 # Exercise 1: Register Dataset with Azure Machine Learning studio
 
