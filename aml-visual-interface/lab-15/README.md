@@ -10,7 +10,7 @@ In this experience you will learn how the automated machine learning capability 
 
 ## Exercise 1: Creating a model using automated machine learning
 
-In this exercise, you will create a model that predicts battery failure from time-series data using the visual interface to automated machine learning in an Azure Machine Learning workspace.
+In this exercise, you will create a simple time-series forecasting model that predicts battery failure from time-series data using the visual interface to automated machine learning in an Azure Machine Learning workspace.
 
 ### Task 1: Create an automated machine learning experiment using the Portal
 
@@ -96,4 +96,4 @@ In this exercise, you will create a model that predicts battery failure from tim
 
 # Next Steps
 
-Congratulations! You have trained a simple recommender using the Automated Machine Learning visual interface. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
+Congratulations! You have trained a simple time-series forecasting model using automated machine learning in the visual interface. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
