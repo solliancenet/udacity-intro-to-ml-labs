@@ -1,39 +1,46 @@
 # Compute Resources
 
-## Training and deploying a model from a notebook running in a Compute Instance
+## Explore experiments and runs
 
-So far, the Managed Services for Azure Machine Learning lesson has covered **compute instance** and the benefits it provides through its fully managed environment containing everythng you need to run Azure Machine Learning.
-
-The compute instance provides a comprehensive set of a capabilities that you can use directly within a python notebook or python code including:
-
-- Creating a **Workspace** that acts as the root object to organize all artifacts and resources used by Azure Machine Learning.
-- Creating **Experiments** in your Workspace that capture versions of the trained model along with any desired model performance telemetry. Each time you train a model and evaluate its results, you can capture that run (model and telemetry) within an Experiment.
-- Creating **Compute** resources that can be used to scale out model training, so that while your notebook may be running in a lightweight container in Azure Notebooks, your model training can actually occur on a powerful cluster that can provide large amounts of memory, CPU or GPU. 
-- Using **Automated Machine Learning (AutoML)** to automatically train multiple versions of a model using a mix of different ways to prepare the data and different algorithms and hyperparameters (algorithm settings) in search of the model that performs best according to a performance metric that you specify. 
-- Packaging a Docker **Image** that contains everything your trained model needs for scoring (prediction) in order to run as a web service.
-- Deploying your Image to either Azure Kubernetes or Azure Container Instances, effectively hosting the **Web Service**.
+In the previous lab (17), you executed a Jupyter notebook that trained a model through a series of 10 different runs, each with a different alpha hyperparameter applied. These runs were created within the experiment you created at the beginning of the notebook. Because of this, Azure Machine Learning logged the details so you can review the result of each run and see how the alpha value is different between the them.
 
 # Overview
 
-In this lab, you start with a model that was trained using Automated Machine Learning. Learn how to use the Azure ML Python SDK to register, package, and deploy the trained model to Azure Container Instances (ACI) as a scoring web service. Finally, test the deployed model (1) by make direct calls on service object, (2) by calling the service end point (Scoring URI) over http.
+In this lab, you view the experiments and runs executed by the notebook in the previous lab. You navigate to the **Experiments** blade in Azure Machine Learning Studio. Here you see all the individual runs in the experiment. Any custom-logged values (alpha_value and rmse, in this case) become fields for each run, and also become available for the charts and tiles at the top of the experiment page. To add a logged metric to a chart or tile, hover over it, click the edit button, and find your custom-logged metric.
 
-## Exercise 1: Open Notebook for this Lab
+When training models at scale over hundreds and thousands of separate runs, this page makes it easy to see every model you trained, specifically how they were trained, and how your unique metrics have changed over time.
 
-1. Within Azure Machine Learning Studio, navigate to **Compute**, then select **Compute Instances**. For the Compute Instance that is available, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+## Exercise 1: Open Experiments in the portal
 
-   ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png "Launch Jupyter from Compute Instance")
+1. Within Azure Machine Learning Studio, select **Experiments** in the left-hand menu, then select the **diabetes-experiment** submitted by the notebook you executed in the previous lab (17).
 
-2. Within the Jupyter environment, open the **Users** folder, then the folder that has your assigned username and then open `deployment-with-AML.ipynb`. This is the Python notebook you will step through executing in this lab.
+    ![The Experiments blade is displayed and the diabetes experiment is highlighted.](images/experiments.png "Experiments")
 
-   ![Image highlights the steps to open the notebook.](images/notebook-link.png 'Opening the notebook')
+2. Here you can view details about the experiment and each of its runs, which created a new version of the model.
 
-3. In the Setup portion of the notebook, you will be asked to provide values for `subscription_id`, `resource_group`, `workspace_name`, and `workspace_region`. To find these, open your Azure Machine Learning workspace in the Azure portal and copy the values as shown:
+    ![The experiment details are displayed.](images/diabetes-experiment.png "diabetes-experiment")
 
-   ![The Azure Machine Learning workspace is shown with arrows pointing from the values to the parameters in the notebook cell.](images/aml-values.png "Azure Machine Learning values")
+3. Select **Edit table** in the top toolbar. In the Edit table dialog that appears, add the **End time** and **Start time** columns to the Selected columns list, then select **Save**.
 
-4. Follow the instructions within the notebook to complete the lab.
+    ![The start time and end time columns are moved to the selected columns list.](images/edit-table.png "Edit table dialog")
+
+    Depending on your screen resolution, you might need to scroll down the table to see the bottom horizontal scrollbar. When you scroll all the way to the right, you will see the new columns you added.
+
+    ![Thew new columns appear all the way on the right-hand side of the table.](images/added-columns.png "Added columns")
+
+4. Select either the **Run number** *or* the **Run ID** of one of the runs to view its details. Both links on a run display the same dialog.
+
+    ![The Run number and Run ID links are highlighted.](images/run-links.png "Run links")
+
+5. The **Details** tab shows you more detailed information about each run, including the run time and metrics.
+
+    ![The details tab is displayed.](images/run-details.png "Run details")
+
+6. Select the **Outputs + logs** tab. You see the `.pkl` file for the model that was uploaded to the run during each training iteration. This lets you download the model file rather than having to retrain it manually.
+
+    ![The model file is highlighted.](images/run-outputs.png "Outputs + logs")
 
 # Next Steps
 
-Congratulations! You have just learned how to use the Jupyter application on a compute instance to deploy a trained model to Azure Container Instances (ACI) for real-time inferencing. You can now return to the Udacity portal to continue with the lesson.
+Congratulations! You have just learned how to use the Azure Machine Learning SDK to help you explain what influences the predictions a model makes. You can now return to the Udacity portal to continue with the lesson.
 
