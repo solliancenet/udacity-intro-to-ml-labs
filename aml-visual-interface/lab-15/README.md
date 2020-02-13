@@ -1,72 +1,119 @@
 # Train a simple recommender
 
+The main aim of a recommendation system is to recommend one or more items to users of the system. Examples of an item might be a movie, restaurant, book, or song. A user might be a person, a group of persons, or another entity with item preferences.
 
+There are two principal approaches to recommender systems:
+
+- A `content-based` approach makes use of features for both users and items. Users can be described by properties such as age and gender. Items can be described by properties such as author and manufacturer. You can find typical examples of content-based recommendation systems on social matchmaking sites.
+- `Collaborative filtering` uses only identifiers of the users and the items. It gets implicit information about these entities from a (sparse) matrix of ratings given by the users to the items. We can learn about a user from the items they've rated and from other users who have rated the same items.
+
+The SVD recommender, based on the Single Value Decomposition algorithm, uses identifiers of the users and the items, and a matrix of ratings given by the users to the items. It's a collaborative recommender.
 
 ## Lab Overview
 
-In this lab we will be using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/). The data is enriched with holiday and weather data. Based on the enriched dataset, we will configure the prebuilt Neural Network Regression module to create a regression model using a customizable neural network algorithm. We will train the model by providing the model and the NYC taxi dataset as an input to Train Model. The trained model can then be used to predict NYC taxi fares. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
+In this lab, we make use of the Train SVD Recommender module available in Azure Machine Learning designer (preview), to train a movie recommender engine. We use a pure collaborative filtering approach: the model learns from a collection of users who have all rated a subset of a catalog of movies. Two open datasets available in Azure Machine Learning designer are used the `IMDB Movie Titles` dataset joined on the movie identifier with the `Movie Ratings` dataset.
+The Movie Ratings data consists of approximately 225,000 ratings for 15,742 movies by 26,770 users, extracted from Twitter using techniques described in the original paper by Dooms, De Pessemier and Martens. The paper and data can be found on [GitHub](https://github.com/sidooms/MovieTweetings).
 
-# Exercise 1: Register Dataset with Azure Machine Learning studio
+In this experiment, we will both train the engine and score new data, to demonstrate the different modes in which a recommender can be used and evaluated.
+The trained model to predict what rating a user will give to unseen movies, so that we can recommend movies that the user is most likely to enjoy. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
 
-## Task 1: Upload Dataset
-
-1. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
-
-   ![Image highlights the steps to open the create dataset from web files dialog.](images/01.png 'Create dataset from web files')
-
-2. In the Web URL field provide the following URL for the training data file:
-    ```
-    https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data.csv
-    ```
-3. Provide `nyc-taxi-sample-data` as the Name, leave the remaining values at their defaults and select **Next**.
-
-    ![Upload nyc-taxi-sample-data.csv from a URL.](images/02.png 'Upload dataset')
-
-## Task 2: Preview Dataset
-
-1. On the Settings and preview panel, set the column headers drop down to `All files have same headers`.
-
-2. Scroll the data preview to right to observe the target column: `totalAmount`. After you are done reviewing the data, select **Next**
-
-    ![Scroll right to review dataset.](images/03.png 'Review dataset')
-
-## Task 3: Select Columns
-
-1. Select columns from the dataset to include as part of your training data. Leave the default selections and select **Next**
-
-    ![Select columns from the dataset to include as part of your training data.](images/04.png 'Select columns')
-
-## Task 4: Create Dataset
-
-1. Confirm the dataset details and select **Create**
-
-    ![Confirm the details of the dataset you uploaded and then select Create.](images/05.png 'Confirm and create the dataset')
-
-# Exercise 2: Create New Training Pipeline
+# Exercise 1: Create New Training Pipeline
 
 ## Task 1: Open Pipeline Authoring Editor
 
 1. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
 
-   ![Image highlights the steps to open the pipeline authoring editor.](images/06.png 'Pipeline Authoring Editor')
+   ![Image highlights the steps to open the pipeline authoring editor.](images/01.png 'Pipeline Authoring Editor')
 
 ## Task 2: Setup Compute Target
 
 1. In the settings panel on the right, select **Select compute target**.
 
-    ![Image highlights the link to select to open the setup compute target editor.](images/07.png 'Setup Compute Target')
+    ![Image highlights the link to select to open the setup compute target editor.](images/02.png 'Setup Compute Target')
 
 2. In the `Set up compute target` editor, select the available compute, and then select **Save**.
 
-    ![Image shows how to select an existing compute target .](images/08.png 'Setup Compute Target')
+    ![Image shows how to select an existing compute target .](images/03.png 'Setup Compute Target')
 
-## Task 3: Add Dataset
+## Task 3: Add Sample Datasets
 
-1. Select **Datasets** section in the left navigation. Next, select **My Datasets, nyc-taxi-sample-data** and drag and drop the selected dataset on to the canvas.
+1. Select **Datasets** section in the left navigation. Next, select **Samples, Movie Ratings** and drag and drop the selected dataset on to the canvas.
 
-    ![Image shows the dataset, nyc-taxi-sample-data, added to the canvas.](images/09.png 'Add Dataset')
+    ![Image shows the dataset, Movie Ratings, added to the canvas.](images/04.png 'Add First Dataset')
 
-## Task 4: Split Dataset
+2. Select **Datasets** section in the left navigation. Next, select **Samples, IMDB Movie Titles** and drag and drop the selected dataset on to the canvas.
+
+    ![Image shows the dataset, IMDB Movie Titles, added to the canvas.](images/05.png 'Add Second Dataset')
+
+## Task 4: Join the two datasets on Movie ID
+
+1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+
+    1. Select the **Join Data** prebuilt module
+
+    2. Drag and drop the selected module on to the canvas
+
+    3. Connect the output of the `Movie Ratings` module to the first input of the `Join Data` module.
+
+    4. Connect the output of the `IMDB Movie Titles` module to the second input of the `Join Data` module.
+
+    ![Image shows the Join Data module added to the canvas.](images/06.png 'Add Join Data module')
+
+2. Select the `Join Data` module.
+
+3. Select the **Edit column** link to open the `Join key columns for left dataset` editor. Select the **MovieId** column in the `Enter column name` field.
+
+    ![Image shows the Join key columns for left dataset` editor.](images/07.png 'Join key columns for left dataset')
+
+4. Select the **Edit column** link to open the `Join key columns for right dataset` editor. Select the **Movie ID** column in the `Enter column name` field.
+
+    ![Image shows the Join key columns for left dataset` editor.](images/08.png 'Join key columns for left dataset')
+
+*Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
+
+## Task 5: Select Columns UserId, Movie Name, Rating using a Python script
+
+1. Select **Python Language** section in the left navigation. Follow the steps outlined below:
+
+    1. Select the **Execute Python Script** prebuilt module.
+
+    2. Drag and drop the selected module on to the canvas.
+
+    3. Connect the `Join Data` output to the input of the `Execute Python Script` module.
+
+     ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/09.png 'Add Select Columns in Dataset module')
+
+2. Select **Edit code** to open the `Python script` editor and then enter the following lines of code to select the UserId, Movie Name, Rating columns from the joined dataset.
+
+    ```python
+        # The script MUST contain a function named azureml_main
+        # which is the entry point for this module.
+
+        # imports up here can be used to
+
+        # The entry point function can contain up to two input arguments:
+        #   Param<dataframe1>: a pandas.DataFrame
+        #   Param<dataframe2>: a pandas.DataFrame
+        def azureml_main(dataframe1 = None, dataframe2 = None): return dataframe1[['UserId','Movie Name','Rating']],
+    ```
+
+*Note: In other pipelines, for selecting a list of columns from a dataset, we could have used the `Select Columns from Dataset` prebuilt module. This one returns the columns in the same order as in the input dataset. This time we need the output dataset to be in the format: user id, movie name, rating.This column order is required at the input of the Train SVD Recommender module.*
+
+## Task 6: Remove duplicate rows with same Movie Name and UserId
+
+1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+
+    1. Select the **Remove Duplicate Rows** prebuilt module.
+
+    2. Drag and drop the selected module on to the canvas.
+
+    3. Connect the first output of the `Execute Python Script` to the input of the `Remove Duplicate Rows` module.
+
+    4. Select the **Edit columns** link to open the `Select columns` editor and then enter the following list of columns to be included in the output dataset: **Movie Name**, **UserId**.
+
+     ![Image shows the Remove Duplicate Rows module added to the canvas` editor.](images/10.png 'Add Remove Duplicate Rows module')
+
+## Task 7: Split the dataset into training set (0.5) and test set (0.5)
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -74,118 +121,114 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Fraction of rows in the first output dataset: **0.7**
+    3. Fraction of rows in the first output dataset: **0.5**
 
     4. Connect the `Dataset` to the `Split Data` module
 
-    ![Image shows the steps to add and configure the Split Data module.](images/10.png 'Split Data Module')
+    ![Image shows the steps to add and configure the Split Data module.](images/11.png 'Split Data Module')
 
-*Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
+## Task 8: Initialize Recommendation Module
 
-## Task 5: Initialize Regression Model
+1. Select **Recommendation** section in the left navigation. Follow the steps outlined below:
 
-1. Select **Machine Learning Algorithms** section in the left navigation. Follow the steps outlined below:
-
-    1. Select the **Neural Network Regression** prebuilt module, in the Regression category.
+    1. Select the **Train SVD Recommender** prebuilt module.
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Create trainer mode: **Single Parameter**. This option indicates how you want the model to be trained.
+    3. Connect the first output of the `Split Data` module to the input of the `Train SVD Recommender` module
 
-    4. Hidden layer specification: **Fully connected case**. 
-    5. For Learning rate: **0.001**.
-    
-    ![Image shows the steps to add and configure the Neural Network Regression module.](images/13.png 'Neural Network Regression')
+    4. Number of factors: **200**. This option specify the number of factors to use with the recommender. With the number of users and items increasing, it's better to set a larger number of factors. But if the number is too large, performance might drop.
 
-    *Note: Because the number of nodes in the input layer is determined by the number of features in the training data, in a regression model there can be only one node in the output layer.*
+    5. Number of recommendation algorithm iterations: **30**. This number indicates how many times the algorithm should process the input data. The higher this number is, the more accurate the predictions are. However, a higher number means slower training. The default value is 30.
 
+    6. For Learning rate: **0.001**. The learning rate defines the step size for learning.
 
-## Task 6: Setup Train Model Module
+    ![Image shows the steps to add and configure the Train SVD Recommender module.](images/12.png 'Train SVD Recommender module')
 
-1. Select **Model Training** section in the left navigation. Follow the steps outlined below:
+## Task 9: Select Columns UserId, Movie Name from the test set
 
-    1. Select the **Train Model** prebuilt module
+1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
-    2. Drag and drop the selected module on to the canvas
+    1. Select the **Select Columns in Dataset** prebuilt module.
 
-    3. Connect the `Neural Network Regression` module to the first input of the `Train Model` module
+    2. Drag and drop the selected module on to the canvas.
 
-    4. Connect the first output of the `Split Data` module to the second input of the `Train Model` module
+    3. Connect the `Split Data` second output to the input of the `Select columns in Dataset` module.
 
-    5. Select the **Edit column** link to open the `Label column` editor
+    4. Select the **Edit columns** link to open the `Select columns` editor and then enter the following list of columns to be included in the output dataset: **UserId**, **Movie Name**.
 
-    ![Image shows the steps to add and configure the Train Model module.](images/14.png 'Train Model Module')
+     ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/13.png 'Add Select Columns in Dataset module')
 
-2. The `Label column` editor allows you to specify your `Label or Target column`. Type in the label column name **totalAmount** and then select **Save**.
+## Task 10: Configure the Score SVD Recommender
 
-    ![Image shows the label column editor and how to provide the label column name.](images/15.png 'Label Column')
+1. Select **Recommendation** section in the left navigation. Follow the steps outlined below:
 
-## Task 7: Setup Score Model Module
-
-1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
-
-    1. Select the **Score Model** prebuilt module
+    1. Select the **Score SVD Recommender** prebuilt module.
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the `Train Model` module to the first input of the `Score Model` module
+    3. Connect the output of the `Train SVD Recommender` module to the first input of the `Score SVD Recommender` module, which is the Trained SVD Recommendation input.
 
-    4. Connect the second output of the `Split Data` module to the second input of the `Score Model` module
+    4. Connect the output of the `Select Columns in Dataset` module to the second input of the `Score SVD Recommender` module, which is the Dataset to score input.
 
-    ![Image shows the steps to add and configure the Score Model module.](images/16.png 'Score Model')
+    5. Select the `Score SVD Recommender` module on the canvas.
 
-*Note that `Split Data` module will feed data for both model training and model scoring. The first output (0.7 fraction) will connect with the `Train Model` module and the second output (0.3 fraction) will connect with the `Score Model` module.*
+    6. Recommender prediction kind: **Rating Prediction**. For this option, no other parameters are required. When you predict ratings, the model calculates how a user will react to a particular item, given the training data. The input data for scoring must provide both a user and the item to rate.
 
-## Task 8: Setup Evaluate Model Module
+    ![Image shows the steps to add and configure the Score SVD Recommender module.](images/14.png 'Score SVD Recommender module')
 
-1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
+## Task 11: Setup Evaluate Recommender Module
 
-    1. Select the **Evaluate Model** prebuilt module
+1. Select **Recommendation** section in the left navigation. Follow the steps outlined below:
+
+    1. Select the **Evaluate Recommender** prebuilt module
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the `Score Model` module to the first input of the `Evaluate Model` module
+    3. Connect the `Score SVD Recommender` module to the second input of the `Evaluate Recommender` module, which is the Scored dataset input.
 
-    ![Image shows the steps to add and configure the Evaluate Model module.](images/17.png 'Evaluate Model')
+    4. Connect the second output of the `Split Data` module (train set) to the first input of the `Evaluate Recommender` module, which is the Test dataset input.
 
-# Exercise 3: Run Training Pipeline
+    ![Image shows the steps to add and configure the Evaluate Model module.](images/15.png 'Evaluate Model')
+
+# Exercise 2: Run Training Pipeline
 
 ## Task 1: Create Experiment and Run Pipeline
 
-1. Select **Run** to open the `Setup pipeline run` editor.
+1. Select **Run** on the right corner of the canvas to open the `Setup pipeline run` editor.
 
-    ![Image shows where to select the run button to open the setup pipeline run editor.](images/18.png 'Run Pipeline')
+    ![Image shows how to open the setup pipeline run.](images/16_1.png 'Run Pipeline')
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **neural-network-regression**, and then select **Run**.
+2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **movie-recommender**, and then select **Run**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/19.png 'Run Pipeline')
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/16.png 'Run Pipeline')
 
-3. Wait for pipeline run to complete. It will take around **8 minutes** to complete the run.
+3. Wait for pipeline run to complete. It will take around **20 minutes** to complete the run.
 
-4. While you wait for the model training to complete, you can learn more about the training algorithm used in this lab by selecting [Neural Network Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/neural-network-regression).
+4. While you wait for the model training to complete, you can learn more about the SVD algorithm used in this lab by selecting [Train SVD Recommender](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/train-svd-recommender).
 
-# Exercise 4: Visualize Training Results
+# Exercise 3: Visualize Scoring Results
 
-## Task 1: Visualize the Model Predictions
+## Task 1: Visualize the Scored dataset
 
-1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog.
+1. Select **Score SVD Recommender, Outputs, Visualize** to open the `Score SVD Recommender result visualization` dialog or just simply right-click the `Score SVD Recommender` module and select **Visualize Scored dataset**.
 
-    ![Image shows how to open the score model result visualization dialog.](images/20.png 'Score Model Results')
+    ![Image shows how to open the score SVD recommender result visualization dialog.](images/17.png 'Score Recommender Results')
 
-2. Observe the predicted values under the column **Scored Labels**. You can compare the predicted values (`Scored Labels`) with actual values (`totalAmount`).
+2. Observe the predicted values under the column **Rating**.
 
-    ![Image shows the score model result visualization dialog.](images/21.png 'Model Predictions')
+    ![Image shows the score model result visualization dialog.](images/18.png 'Model Recommendations')
 
 ## Task 2: Visualize the Evaluation Results
 
-1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog.
+1. Select **Evaluate Recommender, Outputs, Visualize** to open the `Evaluate Recommender result visualization` dialog or just simply right-click the `Evaluate Recommender` module and select **Visualize Evaluation Results**.
 
-    ![Image shows how to open the evaluate model result visualization dialog.](images/22.png 'Evaluate Model Results')
+    ![Image shows how to open the evaluate recommender result visualization dialog.](images/19.png 'Evaluate Model Results')
 
 2. Evaluate the model performance by reviewing the various evaluation metrics, such as **Mean Absolute Error**, **Root Mean Squared Error**, etc.
 
-    ![Image shows the evaluate model result visualization dialog.](images/23.png 'Evaluation Metrics')
+    ![Image shows the evaluate model result visualization dialog.](images/20.png 'Evaluation Metrics')
 
 # Next Steps
 
-Congratulations! You have trained a simple neural net model using the prebuilt Neural Network Regression module in the AML visual designer. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
+Congratulations! You have trained a simple movie recommender using the prebuilt Recommender modules in the AML visual designer. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.

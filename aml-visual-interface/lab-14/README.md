@@ -170,7 +170,7 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
 
 ## Task 1: Visualize the Model Predictions
 
-1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog.
+1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog or just simply right-click the `Score Model` module and select **Visualize Scored Dataset**.
 
     ![Image shows how to open the score model result visualization dialog.](images/20.png 'Score Model Results')
 
@@ -180,7 +180,7 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
 
 ## Task 2: Visualize the Evaluation Results
 
-1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog.
+1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog or just simply right-click the `Evaluate Model` module and select **Visualize Evaluation Results**.
 
     ![Image shows how to open the evaluate model result visualization dialog.](images/22.png 'Evaluate Model Results')
 
