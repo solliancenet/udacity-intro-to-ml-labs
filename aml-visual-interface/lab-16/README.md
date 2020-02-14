@@ -230,7 +230,7 @@ We will create a training pipeline and initialize a multiclass logistic regressi
 
 3. Wait for pipeline run to complete. It will take around **20 minutes** to complete the run.
 
-4. While you wait for the model training to complete, you can learn more about the training algorithm used in this lab by selecting [Neural Network Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/neural-network-regression).
+4. While you wait for the model training to complete, you can learn more about the classification algorithm used in this lab by selecting [Multiclass Logistic Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/multiclass-logistic-regression).
 
 # Exercise 4: Visualize Training Results
 
@@ -253,6 +253,7 @@ We will create a training pipeline and initialize a multiclass logistic regressi
 2. Evaluate the model performance by reviewing the various evaluation metrics, such as **Mean Absolute Error**, **Root Mean Squared Error**, etc.
 
     ![Image shows the evaluate model result visualization dialog.](images/23.png 'Evaluation Metrics')
+
 # Next Steps
 
 Congratulations! You have trained a simple text classifier. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
