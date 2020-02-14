@@ -11,17 +11,11 @@ The first approach will be covered later in the next lab, which focuses on regis
 The following exercise focuses on the Import Data module to load data into a machine learning pipeline from several datasets that will be merged and restructured. The training data will be prepared using basic modules available in the designer, helping you to become familiar with the way you can use the designer to perform basic data wrangling steps.
 In this lab you will be using some sample data from the UCI dataset repository to demonstrate how you can perform basic data import transformation steps using the modules available in Azure Machine Learning designer (Preview).
 
-## Prerequisites
-
-- Create an Azure resource group named: `QuickStarts`. See [Create Resource Groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/manage-resource-groups-portal) for details on how to create the resource group.
-
-- Create an Azure Machine Learning service workspace, **enterprise edition**, named: `quick-starts-ws`. See [Create an Azure Machine Learning Service Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace) for details on how to create the workspace.
-
 # Exercise 1: Import, transform and export data using the Visual Pipeline Authoring Editor
 
 ## Task 1: Open Pipeline Authoring Editor
 
-1. In [Azure portal](https://portal.azure.com/) , open the machine learning workspace: `quick-starts-ws`
+1. In [Azure portal](https://portal.azure.com/) , open the available machine learning workspace.
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
@@ -35,9 +29,9 @@ In this lab you will be using some sample data from the UCI dataset repository t
 
     ![Image highlights the link to select to open the setup compute target editor.](images/02.png 'Setup Compute Target')
 
-2. In the `Set up compute target` editor, select the existing compute target: **qs-compute**, and then select **Save**.
+2. In the `Set up compute target` editor, select the existing compute target, and then select **Save**.
 
-    ![Image shows how to select the existing compute target named qs-compute.](images/03.png 'Setup Compute Target')
+    ![Image shows how to select the existing compute target.](images/03.png 'Setup Compute Target')
 
 ## Task 3: Import data from Web URL
 
@@ -133,7 +127,7 @@ In this lab you will be using some sample data from the UCI dataset repository t
 
 3. From the left navigation, select **Datasets**. This will open the `Registered datasets` page. See your registered dataset among the other datasets you used during this lesson.
 
- ![Image shows the Registered datasets list.](images/19.png 'Registered datasets in Azure Machine Learning Studio')
+    ![Image shows the Registered datasets list.](images/19.png 'Registered datasets in Azure Machine Learning Studio')
 
 # Next Steps
 

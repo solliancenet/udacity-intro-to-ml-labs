@@ -6,12 +6,6 @@
 
 In this lab, we are using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/) to show how you can register and version a Dataset using the AML designer interface. In the first exercises we use a modified version of the original CSV file, which includes collected records for five months (January till May). The second exercise demonstrates how we can create a new version of the initial dataset when new data is collected (in this case, we included records collected in June in the CSV file).
 
-## Prerequisites
-
-- Create an Azure resource group named: `QuickStarts`. See [Create Resource Groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/manage-resource-groups-portal) for details on how to create the resource group.
-
-- Create an Azure Machine Learning service workspace, **enterprise edition**, named: `quick-starts-ws`. See [Create an Azure Machine Learning Service Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace) for details on how to create the workspace.
-
 # Exercise 1: Register Dataset with Azure Machine Learning studio
 
 ## Task 1: Download the Training Data File
@@ -20,7 +14,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 ## Task 2: Upload Dataset from local file
 
-1. In [Azure portal](https://portal.azure.com/) , open the machine learning workspace: `quick-starts-ws`
+1. In [Azure portal](https://portal.azure.com/) , open the available machine learning workspace.
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
