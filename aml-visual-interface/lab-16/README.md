@@ -242,9 +242,9 @@ We will create a training pipeline and initialize a multiclass logistic regressi
 
 1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog or just simply right-click the `Score Model` module and select **Visualize Scored Dataset**.
 
-    ![Image shows how to open the score model result visualization dialog.](images/20.png 'Score Model Results')
+    ![Image shows how to open the score model result visualization dialog.](images/21_0.png 'Score Model Results')
 
-2. Observe the predicted values under the column **Scored Labels**. You can compare the predicted values (`Scored Labels`) with actual values (`totalAmount`).
+2. Observe the predicted values under the column **Category**. 
 
     ![Image shows the score model result visualization dialog.](images/21.png 'Model Predictions')
 
@@ -254,10 +254,10 @@ We will create a training pipeline and initialize a multiclass logistic regressi
 
     ![Image shows how to open the evaluate model result visualization dialog.](images/22.png 'Evaluate Model Results')
 
-2. Evaluate the model performance by reviewing the various evaluation metrics, such as **Mean Absolute Error**, **Root Mean Squared Error**, etc.
+2. Evaluate the model performance by reviewing the various evaluation metrics.Evaluate Model has two input ports, so that we could evaluate and compare scored datasets that are generated with different methods. In this sample, we compare the performance of the result generated with feature hashing method and n-gram method. 
 
     ![Image shows the evaluate model result visualization dialog.](images/23.png 'Evaluation Metrics')
 
 # Next Steps
 
-Congratulations! You have trained a simple text classifier. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
+Congratulations! You have trained a simple text classifier and compared performance of the result generated with two different featurization modules. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.
