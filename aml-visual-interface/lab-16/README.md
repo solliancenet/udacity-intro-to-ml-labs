@@ -173,7 +173,11 @@ We will create a training pipeline and initialize a multiclass logistic regressi
 
 1. Copy and paste the existing **Extract N-Gram Feature from Text** module on the canvas.
 
-2. Connect the second output of the `Split Data`, the test set output, to the input of the newly added `Extract N-Gram Feature from Text` module.
+2. Set the `Vocabulary mode` option to **ReadOnly**.
+
+3. Connect the second output of the `Split Data`, the test set output, to the first input of the newly added `Extract N-Gram Feature from Text` module.
+
+4. Connect the second output of the uppermost `Extract N-Gram Feature from Text`, to the second input of the copied `Extract N-Gram Feature from Text` module.
 
     ![Image shows the steps to duplicate the  Extract N-Gram Feature from Text module on the test set branch.](images/15.png 'Duplicate Extract N-Gram Feature from Text module on the test set branch')
 
