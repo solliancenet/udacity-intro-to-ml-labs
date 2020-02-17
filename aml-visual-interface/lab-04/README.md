@@ -18,17 +18,12 @@ We are building two training datasets by combining the feature set as follows:
 
 For the model, we are using regression because the number of rentals (the label column) contains continuos real numbers. As the algorithm for the experiment, we will be using the Boosted Decision Tree Regression.
 
-## Prerequisites
-
-- Create an Azure resource group named: `QuickStarts`. See [Create Resource Groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/manage-resource-groups-portal) for details on how to create the resource group.
-
-- Create an Azure Machine Learning service workspace, **enterprise edition**, named: `quick-starts-ws`. See [Create an Azure Machine Learning Service Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace) for details on how to create the workspace.
 
 # Exercise 1: Data pre-processing using the Pipeline Authoring Editor
 
 ## Task 1: Upload Dataset
 
-1. In [Azure portal](https://portal.azure.com/) , open the machine learning workspace: `quick-starts-ws`
+1. In [Azure portal](https://portal.azure.com/) , open the available machine learning workspace.
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
@@ -61,7 +56,7 @@ For the model, we are using regression because the number of rentals (the label 
 
     ![Image highlights the link to select to open the setup compute target editor.](images/06.png 'Setup Compute Target')
 
-2. In the `Set up compute target` editor, select the existing compute target: **qs-compute**, choose a name for the pipeline draft: `Bike Rental Feature Engineering` and then select **Save**.
+2. In the `Set up compute target` editor, select the existing compute target, choose a name for the pipeline draft: `Bike Rental Feature Engineering` and then select **Save**.
 
 ## Task 4: Select columns in the dataset
 

@@ -164,29 +164,29 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
 
 3. Wait for pipeline run to complete. It will take around **8 minutes** to complete the run.
 
-4. While you wait for the model training to complete, you can learn more about the training algorithm used in this lab by selecting [Linear Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/neural-network-regression).
+4. While you wait for the model training to complete, you can learn more about the training algorithm used in this lab by selecting [Neural Network Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/neural-network-regression).
 
 # Exercise 4: Visualize Training Results
 
 ## Task 1: Visualize the Model Predictions
 
-1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog.
+1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog or just simply right-click the `Score Model` module and select **Visualize Scored Dataset**.
 
-    ![Image shows how to open the score model result visualization dialog.](images/21.png 'Score Model Results')
+    ![Image shows how to open the score model result visualization dialog.](images/20.png 'Score Model Results')
 
 2. Observe the predicted values under the column **Scored Labels**. You can compare the predicted values (`Scored Labels`) with actual values (`totalAmount`).
 
-    ![Image shows the score model result visualization dialog.](images/20.png 'Model Predictions')
+    ![Image shows the score model result visualization dialog.](images/21.png 'Model Predictions')
 
 ## Task 2: Visualize the Evaluation Results
 
-1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog.
+1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog or just simply right-click the `Evaluate Model` module and select **Visualize Evaluation Results**.
 
-    ![Image shows how to open the evaluate model result visualization dialog.](images/21.png 'Evaluate Model Results')
+    ![Image shows how to open the evaluate model result visualization dialog.](images/22.png 'Evaluate Model Results')
 
 2. Evaluate the model performance by reviewing the various evaluation metrics, such as **Mean Absolute Error**, **Root Mean Squared Error**, etc.
 
-    ![Image shows the evaluate model result visualization dialog.](images/22.png 'Evaluation Metrics')
+    ![Image shows the evaluate model result visualization dialog.](images/23.png 'Evaluation Metrics')
 
 # Next Steps
 
