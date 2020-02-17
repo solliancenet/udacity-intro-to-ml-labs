@@ -1,21 +1,21 @@
 # Train a simple recommender
 
-The main aim of a recommendation system is to recommend one or more items to users of the system. Examples of an item might be a movie, restaurant, book, or song. A user might be a person, a group of persons, or another entity with item preferences.
+The main aim of a recommendation system is to recommend one or more items to users of the system. Examples of an item to be recommended, might be a movie, restaurant, book, or song. In general, the user is an entity with item preferences such as a person, a group of persons, or any other type of entity you can imagine.
 
 There are two principal approaches to recommender systems:
 
-- A `content-based` approach makes use of features for both users and items. Users can be described by properties such as age and gender. Items can be described by properties such as author and manufacturer. You can find typical examples of content-based recommendation systems on social matchmaking sites.
-- `Collaborative filtering` uses only identifiers of the users and the items. It gets implicit information about these entities from a (sparse) matrix of ratings given by the users to the items. We can learn about a user from the items they've rated and from other users who have rated the same items.
+- The `content-based` approach, which makes use of features for both users and items. Users can be described by properties such as age or gender. Items can be described by properties such as the author or the manufacturer. Typical examples of content-based recommendation systems can be found on social matchmaking sites.
+- The `Collaborative filtering` approach, which uses only identifiers of the users and the items. It is based on a matrix of ratings given by the users to the items. The main source of information about a user is the list the items they've rated and the similarity with other users who have rated the same items.
 
-The SVD recommender, based on the Single Value Decomposition algorithm, uses identifiers of the users and the items, and a matrix of ratings given by the users to the items. It's a collaborative recommender.
+The SVD recommender module in Azure Machine Learning designer is based on the Single Value Decomposition algorithm. It uses identifiers of the users and the items, and a matrix of ratings given by the users to the items. It's a typical example of collaborative recommender.
 
 ## Lab Overview
 
-In this lab, we make use of the Train SVD Recommender module available in Azure Machine Learning designer (preview), to train a movie recommender engine. We use a pure collaborative filtering approach: the model learns from a collection of users who have all rated a subset of a catalog of movies. Two open datasets available in Azure Machine Learning designer are used the `IMDB Movie Titles` dataset joined on the movie identifier with the `Movie Ratings` dataset.
+In this lab, we make use of the Train SVD Recommender module available in Azure Machine Learning designer (preview), to train a movie recommender engine. We use the collaborative filtering approach: the model learns from a collection of ratings made by users on a subset of a catalog of movies. Two open datasets available in Azure Machine Learning designer are used the `IMDB Movie Titles` dataset joined on the movie identifier with the `Movie Ratings` dataset.
 The Movie Ratings data consists of approximately 225,000 ratings for 15,742 movies by 26,770 users, extracted from Twitter using techniques described in the original paper by Dooms, De Pessemier and Martens. The paper and data can be found on [GitHub](https://github.com/sidooms/MovieTweetings).
 
-In this experiment, we will both train the engine and score new data, to demonstrate the different modes in which a recommender can be used and evaluated.
-The trained model to predict what rating a user will give to unseen movies, so that we can recommend movies that the user is most likely to enjoy. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
+We will both train the engine and score new data, to demonstrate the different modes in which a recommender can be used and evaluated.
+The trained model will predict what rating a user will give to unseen movies, so we'll be able to recommend movies that the user is most likely to enjoy. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
 
 # Exercise 1: Create New Training Pipeline
 

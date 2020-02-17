@@ -4,11 +4,9 @@
 
 In this lab you will learn how the Automated Machine Learning capability in Azure Machine Learning (AML) can be used for the life cycle management of the manufactured vehicles and how AML helps in creation of better vehicle maintenance plans. To accomplish this, you will train a Linear Regression model to predict the number of days until battery failure using Automated Machine Learning available in AML studio.
 
-## Exercise 1: Creating a model using automated machine learning
+# Exercise 1: Creating a model using automated machine learning
 
-In this exercise, you will create a simple time-series forecasting model that predicts battery failure from time-series data using the visual interface to automated machine learning in an Azure Machine Learning workspace.
-
-### Task 1: Create an automated machine learning experiment using the Portal
+## Task 1: Create an automated machine learning experiment using the Portal
 
 1. Navigate to your Azure Machine Learning workspace in the Azure Portal. Select **Launch now** under the **Try the new Azure Machine Learning studio** message. Alternatively, you can navigate directly to the new [Azure Machine Learning studio](https://ml.azure.com/). This will prompt you to select the workspace as part of the sign-in process.
 
@@ -72,7 +70,7 @@ In this exercise, you will create a simple time-series forecasting model that pr
 
     ![Preparing experiment](./images/13.png)
 
-### Task 2: Review the experiment run results
+## Task 2: Review the experiment run results
 
 1. The experiment will run for about _15 minutes_. While it runs and once it completes, you should check the `Models` tab on the `Run Detail` page to observe the model performance for the primary metric for different runs.
 
