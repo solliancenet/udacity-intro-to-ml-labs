@@ -2,7 +2,7 @@
 
 ## Explore experiments and runs
 
-In the previous lab (17), you executed a Jupyter notebook that trained a model through a series of 10 different runs, each with a different alpha hyperparameter applied. These runs were created within the experiment you created at the beginning of the notebook. Because of this, Azure Machine Learning logged the details so you can review the result of each run and see how the alpha value is different between the them.
+In the previous lab (19), you executed a Jupyter notebook that trained a model through a series of 10 different runs, each with a different alpha hyperparameter applied. These runs were created within the experiment you created at the beginning of the notebook. Because of this, Azure Machine Learning logged the details so you can review the result of each run and see how the alpha value is different between the them.
 
 # Overview
 
@@ -12,7 +12,7 @@ When training models at scale over hundreds and thousands of separate runs, this
 
 ## Exercise 1: Open Experiments in the portal
 
-1. Within Azure Machine Learning Studio, select **Experiments** in the left-hand menu, then select the **diabetes-experiment** submitted by the notebook you executed in the previous lab (17).
+1. Within Azure Machine Learning Studio, select **Experiments** in the left-hand menu, then select the **diabetes-experiment** submitted by the notebook you executed in the previous lab (19).
 
     ![The Experiments blade is displayed and the diabetes experiment is highlighted.](images/experiments.png "Experiments")
 

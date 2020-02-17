@@ -72,7 +72,29 @@ The Azure Machine Learning designer simplifies the process by enabling you to tr
 
    ![The dialog shows the selected compute target.](images/set-up-real-time-endpoint.png "Set up real-time endpoint")
 
-3. Wait for the deployment to complete.
+3. Wait for the deployment to complete. The status of the deployment can be observed above the `Pipeline Authoring Editor`.
+
+   ![Deployment completed dialog is shown.](images/deploy-succeeded.png "Deploy - Succeeded")
+
+### Task 2: Review deployed web service
+
+1. To view the deployed web service, select the **Endpoints** section in your Azure Portal Workspace.
+
+2. Select the deployed web service: **sample-1-regression---automobile** to open the deployment details page.
+
+   ![The deployed service is highlighted within the Endpoints blade.](images/endpoints.png "Endpoints")
+
+   *Note: you have to select the text of the service name to open the deployment details page*
+
+### Task 3: Review how to consume the deployed web service
+
+1. Select the **Consume** tab to observe the following information:
+
+   1. `Basic consumption info` displays the **REST endpoint**, **Primary key**, and **Secondary key**.
+
+   2. `Consumption option` shows code samples in **C#**, **Python**, and **R** on how to call the endpoint to consume the webservice.
+
+   ![The Consume tab is displayed.](images/consume.png "Service details: Consume")
 
 # Next Steps
 
