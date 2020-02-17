@@ -1,47 +1,114 @@
-# Azure Machine Learning service Quickstarts
-
-[Azure Machine Learning service](https://docs.microsoft.com/en-us/azure/machine-learning/service/overview-what-is-azure-ml) is a cloud service for machine learning that support training, deploying, managing, and operationalizing (MLOps) models in Azure using Python SDK and CLI. Azure Machine Learning service also provides a visual interface (preview) to quickly, prepare data, and train machine learning models.
-
-The Quickstarts are grouped into two parts: (1) Quickstarts for [Azure Machine Learning Python SDK](https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py), and (2) Quickstart for [Azure Machine Learning Visual Interface](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-quickstart-run-experiment).
-
-## 1. Azure Machine Learning Python SDK
-
-The following set of quickstarts demonstrate a key set of Azure Machine Learning Services and provides instructions for you to preform them using a Python environment of your choice - Azure Notebooks or Visual Studio Code.
-
-The following quickstarts are available:
-
-### 1.0 [Setting up your environment](./aml-python-sdk/quickstart-1.0/README.md)
-
-If a lab environment has not be provided for you, this provides the instructions to get started in your own Azure Subscription.
-
-### 1.1 [Azure Machine Learning Pipelines](./aml-python-sdk/quickstart-1.1/README.md)
-
-The goal of this quickstart is to build machine learning pipelines using Azure Machine Learning Python SDK that demonstrate the basic data science workflow of data preparation, model training, and predictions.
-
-### 1.2 [MLOps with Azure Machine Learning Service and Azure DevOps](./aml-python-sdk/quickstart-1.2/README.md)
-
-The goal of this quickstart is to build a simple use case that shows how you can operationalize your machine learning models that leverages the Azure DevOps Machine Learning extension, CLI extension for Azure Machine Learning service, and Azure Machine Learning Pipelines that integrate with Azure DevOps CI/CD and deployment workflows.
-
-### 1.3 [Automated Machine Learning](./aml-python-sdk/quickstart-1.3/README.md)
-
-This quickstart consists of two parts. In the first part, you learn how to create, run, and explore automated machine learning experiments in the Azure portal without a single line of code. In the second part, you will use compute resources provided by Azure Machine Learning service to remotely train a set of models using Automated Machine Learning using Azure ML Python SDK.
-
-### 1.4 [Deep Learning with Azure Machine Learning](./aml-python-sdk/quickstart-1.4/README.md)
-
-In this quickstart, you will train a deep learning model to classify the descriptions of car components as compliant or non-compliant. You will train the model on Azure Machine Learning Compute Cluster, download the trained model to your local computer, and make predictions.
-
-### 1.5 [Creating ONNX models with Azure Machine Learning](./aml-python-sdk/quickstart-1.5/README.md)
-
-In this quickstart, your will convert a Deep Learning model you trained in [quickstart-1.4](./aml-python-sdk/quickstart-1.4/README.md) to ONNX format and deploy the ONNX model as a web service to make inferences. You will also measure the speed of the ONNX runtime for making inferences and compare the speed of ONNX with Keras for making inferences.
-
-### 1.6 [Model Interpretability with Azure Machine Learning](./aml-python-sdk/quickstart-1.6/README.md)
-
-The goal of this quickstart is to show Model interpretability with Azure Machine Learning service. You will learn how to explain why your model made the prediction it made by using the Azure Machine Learning Interpretability SDK. You will learn to understand both global and local explainability of your model. Finally, you will also learn how to deploy the explainer along with the model to be used at scoring time to make predictions and provide local explanations.
-
-### 1.7 [Deployment of Automated Machine Learning Model](./aml-python-sdk/quickstart-1.7/README.md)
-
-In this quickstart, you will start with a model that was trained using Automated Machine Learning. Learn how to use the Azure ML Python SDK to register, package, and deploy the trained model to Azure Container Instance as a scoring web service. Finally, test the deployed model (1) by make direct calls on service object, (2) by calling the service end point (Scoring URI) over http.
-
-## 2. [Azure Machine Learning Designer](./aml-visual-interface/README.md)
+# Azure Machine Learning service Labs
 
 Azure Machine Learning designer gives you a cloud-based interactive, visual workspace that you can use to easily and quickly prep data, train and deploy machine learning models. It supports Azure Machine Learning compute, GPU or CPU. Azure Machine Learning designer also supports publishing models as web services on Azure Kubernetes Service that can easily be consumed by other applications. To use Azure Machine Learning designer, you do not need programming experience and this quickstart will walk you through an exercise that will show how to process training data, create a model, train, score, and evaluate the model and finally deploy the trained model as a web service.
+
+## Lab 1 [Use an algorithm (linear regression) to train a model](./aml-visual-interface/lab-01/README.md)
+
+
+
+## Lab 2 [Import, transform, and export data](./aml-visual-interface/lab-02/README.md)
+
+
+
+## Lab 3 [Create and version a dataset](./aml-visual-interface/lab-03/README.md)
+
+
+
+
+## Lab 4 [Engineer and select features](./aml-visual-interface/lab-04/README.md)
+
+
+
+
+## Lab 5 [Train and evaluate a model](./aml-visual-interface/lab-05/README.md)
+
+
+
+
+## Lab 6 [Train a two-class decision forest](./aml-visual-interface/lab-06/README.md)
+
+
+
+
+## Lab 7 [Train a simple classifier with Automated ML](./aml-visual-interface/lab-07/README.md)
+
+
+
+
+## Lab 8 [Compare the performance of the various two-class classifiers](./aml-visual-interface/lab-08/README.md)
+
+
+
+
+## Lab 9 [Compare the performance of the various multiclass classifiers](./aml-visual-interface/lab-09/README.md)
+
+
+
+
+## Lab 10 [Train a classifier using automated machine learning](./aml-visual-interface/lab-10/README.md)
+
+
+
+
+## Lab 11 [Compare the performance of the various regressors](./aml-visual-interface/lab-11/README.md)
+
+
+
+
+## Lab 12 [Train a regressor using automated machine learning](./aml-visual-interface/lab-12/README.md)
+
+
+
+
+## Lab 13 [Train a simple clustering model](./aml-visual-interface/lab-13/README.md)
+
+
+
+
+## Lab 14 [Classical ML vs. Deep Learning: multiclass neural net module](./aml-visual-interface/lab-14/README.md)
+
+
+
+
+## Lab 15 [Train a simple recommender](./aml-visual-interface/lab-15/README.md)
+
+
+
+
+## Lab 16 [Train a simple text classifier](./aml-visual-interface/lab-16/README.md)
+
+
+
+
+## Lab 17 [Train a time-series forecasting model using automated machine learning](./aml-visual-interface/lab-17/README.md)
+
+
+
+
+## Lab 18 [Managing compute](./aml-visual-interface/lab-18/README.md)
+
+
+
+
+## Lab 19 [Train a machine learning model from a managed notebook environment](./aml-visual-interface/lab-19/README.md)
+
+
+
+## Lab 20 [Explore experiments and runs](./aml-visual-interface/lab-20/README.md)
+
+
+
+
+## Lab 21 [Deploy a trained model as a webservice](./aml-visual-interface/lab-21/README.md)
+
+
+
+
+## Lab 22 [Training and deploying a model from a notebook running in a Compute Instance](./aml-visual-interface/lab-22/README.md)
+
+
+
+## Lab 23 [Explore model explanations](./aml-visual-interface/lab-23/README.md)
+
+
+
