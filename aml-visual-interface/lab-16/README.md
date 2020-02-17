@@ -1,11 +1,11 @@
 # Train a simple text classifier
 
-In text classification scenarios, the goal is to assign a piece of text to predefined classes or categories. The text could be a document, news article, search query, email, tweet, support tickets, customer feedback, user product review etc. Some examples of text classification applications are: categorizing newspaper articles into topics, organizing web pages into hierarchical categories, spam email filtering, sentiment analysis, predicting user intent from search queries, support tickets routing, and customer feedback analysis.
+In text classification scenarios, the goal is to assign a piece of text, such as a document, a news article, a search query, an email, a tweet, support tickets, customer feedback, user product review, to predefined classes or categories. Some examples of text classification applications are: categorizing newspaper articles into topics, organizing web pages into hierarchical categories, spam email filtering, sentiment analysis, predicting user intent from search queries, support tickets routing, and customer feedback analysis.
 
 ## Lab Overview
 
-In this lab we demonstrate how to use text analytics modules available in Azure Machine Learning designer (preview) to build a text classification pipeline.
-We will create a training pipeline and initialize a multiclass logistic regression classifier to predict the company category with Wikipedia SP 500 dataset derived from Wikipedia. Before uploading to Azure Machine Learning designer, the dataset was processed as follows: extract text content for each specific company, remove wiki formatting, remove non-alphanumeric characters, convert all text to lowercase, known company categories were added. Articles could not be found for some companies, so the number of records is less than 500.
+In this lab we demonstrate how to use text analytics modules available in Azure Machine Learning designer (preview) to build a simple text classification pipeline.
+We will create a training pipeline and initialize a **multiclass logistic regression classifier** to predict the company category with Wikipedia SP 500 dataset derived from Wikipedia. The dataset manages articles of each S&P 500 company. Before uploading to Azure Machine Learning designer, the dataset was processed as follows: extracted text content for each specific company, removed wiki formatting, removed non-alphanumeric characters, converted all text to lowercase, known company categories added. Articles could not be found for some companies, so that's why the number of records is less than 500.
 
 # Exercise 1: Create New Training Pipeline
 
@@ -254,7 +254,7 @@ We will create a training pipeline and initialize a multiclass logistic regressi
 
     ![Image shows how to open the evaluate model result visualization dialog.](images/22.png 'Evaluate Model Results')
 
-2. Evaluate the model performance by reviewing the various evaluation metrics.Evaluate Model has two input ports, so that we could evaluate and compare scored datasets that are generated with different methods. In this sample, we compare the performance of the result generated with feature hashing method and n-gram method. 
+2. Evaluate the model performance by reviewing the various evaluation metrics. Evaluate Model has two input ports, so that we could evaluate and compare scored datasets that are generated with different methods. In this sample, we compare the performance of the result generated with feature hashing method and n-gram method. 
 
     ![Image shows the evaluate model result visualization dialog.](images/23.png 'Evaluation Metrics')
 
