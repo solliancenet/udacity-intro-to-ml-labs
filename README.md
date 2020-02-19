@@ -90,7 +90,7 @@ Lab 20: [Explore experiments and runs](./aml-visual-interface/lab-20/README.md)
 
 Lab 21: [Deploy a trained model as a webservice](./aml-visual-interface/lab-21/README.md)
 
-*Concept 6 - Programatically Accessding Managed Services*
+*Concept 6 - Programatically Accessing Managed Services*
 
 Lab 22: [Training and deploying a model from a notebook running in a Compute Instance](./aml-visual-interface/lab-22/README.md)
 
