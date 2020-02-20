@@ -2,7 +2,7 @@
 
 ## Training and deploying a model from a notebook running in a Compute Instance
 
-So far, the Managed Services for Azure Machine Learning lesson has covered **compute instance** and the benefits it provides through its fully managed environment containing everythng you need to run Azure Machine Learning.
+So far, the Managed Services for Azure Machine Learning lesson has covered **compute instance** and the benefits it provides through its fully managed environment containing everything you need to run Azure Machine Learning.
 
 The compute instance provides a comprehensive set of a capabilities that you can use directly within a python notebook or python code including:
 
