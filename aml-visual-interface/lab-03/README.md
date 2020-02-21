@@ -2,7 +2,9 @@
 
 ## Lab Overview
 
-[Azure Machine Learning designer](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-designer) (preview) gives you a cloud-based interactive, visual workspace that you can use to easily and quickly prep data, train and deploy machine learning models. It supports Azure Machine Learning compute, GPU or CPU. Machine Learning designer also supports publishing models as web services on Azure Kubernetes Service that can easily be consumed by other applications.
+To access your data in your storage account, Azure Machine Learning offers datastores and datasets. Create an Azure Machine Learning datasets to interact with data in your datastores and package your data into a consumable object for machine learning tasks. Register the dataset to your workspace to share and reuse it across different experiments without data ingestion complexities.
+
+Datasets can be created from local files, public urls, Azure Open Datasets, or specific file(s) in your datastores. To create a dataset from an in memory pandas dataframe, write the data to a local file, like a csv, and create your dataset from that file. Datasets aren't copies of your data, but are references that point to the data in your storage service, so no extra storage cost is incurred.
 
 In this lab, we are using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/) to show how you can register and version a Dataset using the AML designer interface. In the first exercises we use a modified version of the original CSV file, which includes collected records for five months (January till May). The second exercise demonstrates how we can create a new version of the initial dataset when new data is collected (in this case, we included records collected in June in the CSV file).
 
@@ -14,7 +16,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 ## Task 2: Upload Dataset from local file
 
-1. In [Azure portal](https://portal.azure.com/) , open the available machine learning workspace.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
@@ -24,11 +26,11 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
    ![Image highlights the steps to open the create dataset from local files dialog.](images/02.png 'Create dataset from local files')
 
-4. Provide `nyc-taxi-sample-data` as the Name, leave the remaining values at their defaults and select **Next**.
+4. Provide `nyc-taxi-sample-dataset` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Enter the name for the created dataset.](images/03.png 'Basic info for dataset')
 
-5. On the Datastore and file selection panel, select the default datastore of your workspace `workspaceblobstore`, which was previously created by default when the workspace was created. **Browse** for the `nyc-taxi-sample-data-5months.csv` file you downloaded earlier on your local computer and select **Next** to upload the file in the datastore.
+5. On the `Datastore and file selection` panel, select the default datastore of your workspace `workspaceblobstore`, which was previously created by default when the workspace was created. **Browse** for the `nyc-taxi-sample-data-5months.csv` file you downloaded earlier on your local computer and select **Next** to upload the file in the datastore.
 
      ![Datastore and file selection.](images/04.png 'Datastore and file selection')
 
@@ -60,7 +62,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 ## Task 2: Register new dataset version 
 
-1. From the [Azure Machine Learning studio](https://ml.azure.com/), select **Datasets** and select the `nyc-taxi-sample-data` dataset created in the first exercise. This will open the `Dataset details` page.
+1. From the [Azure Machine Learning studio](https://ml.azure.com/), select **Datasets** and select the `nyc-taxi-sample-dataset` dataset created in the first exercise. This will open the `Dataset details` page.
 
 2. Select **New version, From local files** to open the same `Create dataset from local files` dialog you already entered in the first exercise.
 
@@ -68,21 +70,42 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 3. This time, the **Name** and **Dataset version** fields are already filled in for you. Select **Next** to move on to the next step.
 
-  ![Basic info to create dataset version from local files.](images/09.png 'Basic info to create dataset version from local files')
+    ![Basic info to create dataset version from local files.](images/09.png 'Basic info to create dataset version from local files')
 
-4.In the **Datastore and file selection** step, you should browse for the 6 months modified `nyc-taxi-sample-data-6months.csv` you downloaded earlier in Task 1 and select **Next**.
+4. In the **Datastore and file selection** step, you should browse for the 6 months modified `nyc-taxi-sample-data-6months.csv` you downloaded earlier in Task 1 and select **Next**.
 
-5.Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
 
-6.Select **Next** and then **Create** in the confirmation page. Notice the `Dataset version` value in the basic info section.
+5. Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
+
+6. On the `Schema` page, let's suppose you decided to exclude some columns from your dataset. Exclude columns: **snowDepth**, **prcipTime**, **precipDepth**. Select **Next** to move on to the final step.
+
+     ![Schema selection page for version 2 of the dataset.](images/091.png 'Schema selection page for version 2 of the dataset')
+
+7. Notice the `Dataset version` value in the basic info section. Select **Create** to close the new version confirmation page.
 
 ![Confirmation page for new dataset version.](images/10.png 'Confirmation page for new dataset version')
 
-## Task 3: Review the dataset current version
+## Task 3: Review both versions of the dataset
 
-1. Back to the **Datasets** page, in the **Registered datasets** list, notice the version value for the `nyc-taxi-sample-data` dataset.
+1. Back to the **Datasets** page, in the **Registered datasets** list, notice the version value for the `nyc-taxi-sample-dataset` dataset.
 
-![Review the dataset current version.](images/11.png 'Review the dataset current version.')
+    ![Review the dataset current version.](images/11.png 'Review the dataset current version.')
+
+2. Select the `nyc-taxi-sample-dataset` dataset link to open the dataset details page, where **Version 2(latest)** is automatically selected. Go to the **Explore** section to observe the structure and content of the new version. Notice the columns and rows structure in the dataset preview pane:
+
+    - **Number of columns**: 11
+    - **Number of rows**: 10000 
+    - Scroll right to check that the three excluded columns are missing (**snowDepth**, **prcipTime**, **precipDepth**)
+
+    ![Review the structure of the current version.](images/12.png 'Review the structure of current version.')
+
+3. Select **Version 1** from the drop-down near the dataset name title and notice the changing values for:
+
+    - **Number of columns**: 14 (since the previous version still contains the three excluded columns) 
+    - **Number of rows**: 9776 (since the previous version contains only data for 5 months)
+
+    ![Review the structure of the previous version.](images/13.png 'Review the structure of the previous version.')
+
 
 # Next Steps
 
