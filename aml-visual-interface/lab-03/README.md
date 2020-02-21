@@ -8,13 +8,13 @@ Datasets can be created from local files, public urls, Azure Open Datasets, or s
 
 In this lab, we are using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/) to show how you can register and version a Dataset using the AML designer interface. In the first exercises we use a modified version of the original CSV file, which includes collected records for five months (January till May). The second exercise demonstrates how we can create a new version of the initial dataset when new data is collected (in this case, we included records collected in June in the CSV file).
 
-# Exercise 1: Register Dataset with Azure Machine Learning studio
+## Exercise 1: Register Dataset with Azure Machine Learning studio
 
-## Task 1: Download the Training Data File
+### Task 1: Download the Training Data File
 
 1. Download the training data file [nyc-taxi-sample-data-5months.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-5months.csv) on your local computer.
 
-## Task 2: Upload Dataset from local file
+### Task 2: Upload Dataset from local file
 
 1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
@@ -34,7 +34,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
      ![Datastore and file selection.](images/04.png 'Datastore and file selection')
 
-## Task 3: Preview Dataset
+### Task 3: Preview Dataset
 
 1. On the Settings and preview panel, set the **Column headers** drop down to `All files have same headers`. 
 
@@ -42,25 +42,25 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
     ![Scroll right to review dataset.](images/05.png 'Review dataset')
 
-## Task 4: Select Columns
+### Task 4: Select Columns
 
 1. Select columns from the dataset to include as part of your training data. Leave the default selections and select **Next**
 
     ![Select columns from the dataset to include as part of your training data.](images/06.png 'Select columns')
 
-## Task 5: Create Dataset
+### Task 5: Create Dataset
 
 1. Confirm the dataset details and select **Create**
 
     ![Confirm the details of the dataset you uploaded and then select Create.](images/07.png 'Confirm and create the dataset')
 
-# Exercise 2: Create a version of the existing Dataset
+## Exercise 2: Create a version of the existing Dataset
 
-## Task 1: Download the modified CSV file
+### Task 1: Download the modified CSV file
 
 1. Download the training data file that includes new data collected for an extra month [nyc-taxi-sample-data-6months.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-6months.csv) on your local computer.
 
-## Task 2: Register new dataset version 
+### Task 2: Register new dataset version
 
 1. From the [Azure Machine Learning studio](https://ml.azure.com/), select **Datasets** and select the `nyc-taxi-sample-dataset` dataset created in the first exercise. This will open the `Dataset details` page.
 
@@ -74,7 +74,6 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 4. In the **Datastore and file selection** step, you should browse for the 6 months modified `nyc-taxi-sample-data-6months.csv` you downloaded earlier in Task 1 and select **Next**.
 
-
 5. Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
 
 6. On the `Schema` page, let's suppose you decided to exclude some columns from your dataset. Exclude columns: **snowDepth**, **prcipTime**, **precipDepth**. Select **Next** to move on to the final step.
@@ -85,7 +84,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 ![Confirmation page for new dataset version.](images/10.png 'Confirmation page for new dataset version')
 
-## Task 3: Review both versions of the dataset
+### Task 3: Review both versions of the dataset
 
 1. Back to the **Datasets** page, in the **Registered datasets** list, notice the version value for the `nyc-taxi-sample-dataset` dataset.
 
@@ -106,8 +105,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
     ![Review the structure of the previous version.](images/13.png 'Review the structure of the previous version.')
 
-
-# Next Steps
+## Next Steps
 
 Congratulations!
 You have now explored a first simple scenario for dataset versioning using the Azure Machine Learning studio. You found out how you can create and version a simple dataset when new training data is available.

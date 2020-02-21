@@ -7,15 +7,15 @@ In text classification scenarios, the goal is to assign a piece of text, such as
 In this lab we demonstrate how to use text analytics modules available in Azure Machine Learning designer (preview) to build a simple text classification pipeline.
 We will create a training pipeline and initialize a **multiclass logistic regression classifier** to predict the company category with Wikipedia SP 500 dataset derived from Wikipedia. The dataset manages articles of each S&P 500 company. Before uploading to Azure Machine Learning designer, the dataset was processed as follows: extracted text content for each specific company, removed wiki formatting, removed non-alphanumeric characters, converted all text to lowercase, known company categories added. Articles could not be found for some companies, so that's why the number of records is less than 500.
 
-# Exercise 1: Create New Training Pipeline
+## Exercise 1: Create New Training Pipeline
 
-## Task 1: Open Pipeline Authoring Editor
+### Task 1: Open Pipeline Authoring Editor
 
 1. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
 
    ![Image highlights the steps to open the pipeline authoring editor.](images/01.png 'Pipeline Authoring Editor')
 
-## Task 2: Setup Compute Target
+### Task 2: Setup Compute Target
 
 1. In the settings panel on the right, select **Select compute target**.
 
@@ -25,13 +25,13 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows how to select an existing compute target .](images/03.png 'Setup Compute Target')
 
-## Task 3: Add Wikipedia SP 500 Sample Datasets
+### Task 3: Add Wikipedia SP 500 Sample Datasets
 
 1. Select **Datasets** section in the left navigation. Next, select **Samples, Wikipedia SP 500 Dataset** and drag and drop the selected dataset on to the canvas.
 
     ![Image shows the dataset, Wikipedia SP 500, added to the canvas.](images/04.png 'Add First Dataset')
 
-## Task 4: Preprocess text for following steps
+### Task 4: Preprocess text for following steps
 
 1. Select **Text Analytics** section in the left navigation. Follow the steps outlined below:
 
@@ -49,7 +49,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the Preprocess Text module added to the canvas.](images/05.png 'Add Preprocess Text module')
 
-## Task 5: Split the dataset into training set (0.5) and test set (0.5)
+### Task 5: Split the dataset into training set (0.5) and test set (0.5)
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -67,7 +67,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to add and configure the Split Data module.](images/06.png 'Split Data Module')
 
-## Task 6: Convert the plain text of the articles to integers with Feature Hashing module, on the training set
+### Task 6: Convert the plain text of the articles to integers with Feature Hashing module, on the training set
 
 1. Select **Text Analytics** section in the left navigation. Follow the steps outlined below:
 
@@ -85,7 +85,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
 *The goal of using feature hashing is to reduce dimensionality; also it makes the lookup of feature weights faster at classification time because it uses hash value comparison instead of string comparison.*
 
-## Task 7: Featurize unstructured text data with Extract N-Gram Feature from Text module, on the training set
+### Task 7: Featurize unstructured text data with Extract N-Gram Feature from Text module, on the training set
 
 1. Select **Text Analytics** section in the left navigation. Follow the steps outlined below:
 
@@ -107,7 +107,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
      ![Image shows the Extract N-Gram Feature from Text module added to the canvas and configured.](images/08.png 'Add and configure Extract N-Gram Feature from Text module')
 
-## Task 8: Remove text columns from dataset
+### Task 8: Remove text columns from dataset
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below to add two Select Columns in Dataset modules on both featurization branches:
 
@@ -129,7 +129,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to duplicate the configured Select Columns in Dataset module.](images/11.png 'Duplicate the configured Select Columns in Dataset module')
 
-## Task 9: Add the Train Model Modules
+### Task 9: Add the Train Model Modules
 
 1. Select **Model Training** section in the left navigation. Follow the steps outlined below:
 
@@ -149,7 +149,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to add and configure the two Train Model modules.](images/12.png 'Train Model modules')
 
-## Task 10: Initialize Multiclass Logistic Regression Model
+### Task 10: Initialize Multiclass Logistic Regression Model
 
 1. Select **Machine Learning Algorithms** section in the left navigation. Follow the steps outlined below:
 
@@ -161,7 +161,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to add and configure the Multiclass Logistic Regression module.](images/13.png 'Multiclass Logistic Regression')
 
-## Task 11: Convert the plain text of the articles to integers with Feature Hashing module, on the test set
+### Task 11: Convert the plain text of the articles to integers with Feature Hashing module, on the test set
 
 1. Copy and paste the existing **Feature Hashing** module on the canvas.
 
@@ -169,7 +169,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to duplicate the Feature Hashing module on the test set branch.](images/14.png 'Duplicate the Feature Hashing module on the test set branch')
 
-## Task 12: Featurize unstructured text data with Extract N-Gram Feature from Text module, on the test set
+### Task 12: Featurize unstructured text data with Extract N-Gram Feature from Text module, on the test set
 
 1. Copy and paste the existing **Extract N-Gram Feature from Text** module on the canvas.
 
@@ -181,7 +181,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to duplicate the  Extract N-Gram Feature from Text module on the test set branch.](images/15.png 'Duplicate Extract N-Gram Feature from Text module on the test set branch')
 
-## Task 13: Setup Score Model Modules
+### Task 13: Setup Score Model Modules
 
 1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
 
@@ -195,7 +195,6 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to add and configure the first Score Model module.](images/16.png 'Score Model')
 
-    
 2. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
 
     1. Select the **Score Model** prebuilt module
@@ -208,7 +207,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to add and configure the second Score Model module.](images/17.png 'Score Model')
 
-## Task 8: Setup Evaluate Model Module
+### Task 14: Setup Evaluate Model Module
 
 1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
 
@@ -220,9 +219,9 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the steps to add and configure the Evaluate Model module.](images/18.png 'Evaluate Model')
 
-# Exercise 3: Run Training Pipeline
+## Exercise 2: Run Training Pipeline
 
-## Task 1: Create Experiment and Run Pipeline
+### Task 1: Create Experiment and Run Pipeline
 
 1. Select **Run** to open the `Setup pipeline run` editor.
 
@@ -236,9 +235,9 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
 4. While you wait for the model training to complete, you can learn more about the classification algorithm used in this lab by selecting [Multiclass Logistic Regression module](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/multiclass-logistic-regression).
 
-# Exercise 4: Visualize Training Results
+## Exercise 3: Visualize Training Results
 
-## Task 1: Visualize the Model Predictions
+### Task 1: Visualize the Model Predictions
 
 1. Select **Score Model, Outputs, Visualize** to open the `Score Model result visualization` dialog or just simply right-click the `Score Model` module and select **Visualize Scored Dataset**.
 
@@ -248,7 +247,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the score model result visualization dialog.](images/21.png 'Model Predictions')
 
-## Task 2: Visualize the Evaluation Results
+### Task 2: Visualize the Evaluation Results
 
 1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog or just simply right-click the `Evaluate Model` module and select **Visualize Evaluation Results**.
 
@@ -258,6 +257,6 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     ![Image shows the evaluate model result visualization dialog.](images/23.png 'Evaluation Metrics')
 
-# Next Steps
+## Next Steps
 
 Congratulations! You have trained a simple text classifier and compared performance of the result generated with two different featurization modules. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.

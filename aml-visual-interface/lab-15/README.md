@@ -17,15 +17,15 @@ The Movie Ratings data consists of approximately 225,000 ratings for 15,742 movi
 We will both train the engine and score new data, to demonstrate the different modes in which a recommender can be used and evaluated.
 The trained model will predict what rating a user will give to unseen movies, so we'll be able to recommend movies that the user is most likely to enjoy. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
 
-# Exercise 1: Create New Training Pipeline
+## Exercise 1: Create New Training Pipeline
 
-## Task 1: Open Pipeline Authoring Editor
+### Task 1: Open Pipeline Authoring Editor
 
 1. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
 
    ![Image highlights the steps to open the pipeline authoring editor.](images/01.png 'Pipeline Authoring Editor')
 
-## Task 2: Setup Compute Target
+### Task 2: Setup Compute Target
 
 1. In the settings panel on the right, select **Select compute target**.
 
@@ -35,7 +35,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows how to select an existing compute target .](images/03.png 'Setup Compute Target')
 
-## Task 3: Add Sample Datasets
+### Task 3: Add Sample Datasets
 
 1. Select **Datasets** section in the left navigation. Next, select **Samples, Movie Ratings** and drag and drop the selected dataset on to the canvas.
 
@@ -45,7 +45,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the dataset, IMDB Movie Titles, added to the canvas.](images/05.png 'Add Second Dataset')
 
-## Task 4: Join the two datasets on Movie ID
+### Task 4: Join the two datasets on Movie ID
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -71,7 +71,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
 *Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
 
-## Task 5: Select Columns UserId, Movie Name, Rating using a Python script
+### Task 5: Select Columns UserId, Movie Name, Rating using a Python script
 
 1. Select **Python Language** section in the left navigation. Follow the steps outlined below:
 
@@ -99,7 +99,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
 *Note: In other pipelines, for selecting a list of columns from a dataset, we could have used the `Select Columns from Dataset` prebuilt module. This one returns the columns in the same order as in the input dataset. This time we need the output dataset to be in the format: user id, movie name, rating.This column order is required at the input of the Train SVD Recommender module.*
 
-## Task 6: Remove duplicate rows with same Movie Name and UserId
+### Task 6: Remove duplicate rows with same Movie Name and UserId
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -113,7 +113,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
      ![Image shows the Remove Duplicate Rows module added to the canvas` editor.](images/10.png 'Add Remove Duplicate Rows module')
 
-## Task 7: Split the dataset into training set (0.5) and test set (0.5)
+### Task 7: Split the dataset into training set (0.5) and test set (0.5)
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -127,7 +127,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the steps to add and configure the Split Data module.](images/11.png 'Split Data Module')
 
-## Task 8: Initialize Recommendation Module
+### Task 8: Initialize Recommendation Module
 
 1. Select **Recommendation** section in the left navigation. Follow the steps outlined below:
 
@@ -145,7 +145,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the steps to add and configure the Train SVD Recommender module.](images/12.png 'Train SVD Recommender module')
 
-## Task 9: Select Columns UserId, Movie Name from the test set
+### Task 9: Select Columns UserId, Movie Name from the test set
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -159,7 +159,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
      ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/13.png 'Add Select Columns in Dataset module')
 
-## Task 10: Configure the Score SVD Recommender
+### Task 10: Configure the Score SVD Recommender
 
 1. Select **Recommendation** section in the left navigation. Follow the steps outlined below:
 
@@ -177,7 +177,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the steps to add and configure the Score SVD Recommender module.](images/14.png 'Score SVD Recommender module')
 
-## Task 11: Setup Evaluate Recommender Module
+### Task 11: Setup Evaluate Recommender Module
 
 1. Select **Recommendation** section in the left navigation. Follow the steps outlined below:
 
@@ -191,9 +191,9 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the steps to add and configure the Evaluate Model module.](images/15.png 'Evaluate Model')
 
-# Exercise 2: Run Training Pipeline
+## Exercise 2: Run Training Pipeline
 
-## Task 1: Create Experiment and Run Pipeline
+### Task 1: Create Experiment and Run Pipeline
 
 1. Select **Run** on the right corner of the canvas to open the `Setup pipeline run` editor.
 
@@ -207,9 +207,9 @@ The trained model will predict what rating a user will give to unseen movies, so
 
 4. While you wait for the model training to complete, you can learn more about the SVD algorithm used in this lab by selecting [Train SVD Recommender](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/train-svd-recommender).
 
-# Exercise 3: Visualize Scoring Results
+## Exercise 3: Visualize Scoring Results
 
-## Task 1: Visualize the Scored dataset
+### Task 1: Visualize the Scored dataset
 
 1. Select **Score SVD Recommender, Outputs, Visualize** to open the `Score SVD Recommender result visualization` dialog or just simply right-click the `Score SVD Recommender` module and select **Visualize Scored dataset**.
 
@@ -219,7 +219,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the score model result visualization dialog.](images/18.png 'Model Recommendations')
 
-## Task 2: Visualize the Evaluation Results
+### Task 2: Visualize the Evaluation Results
 
 1. Select **Evaluate Recommender, Outputs, Visualize** to open the `Evaluate Recommender result visualization` dialog or just simply right-click the `Evaluate Recommender` module and select **Visualize Evaluation Results**.
 
@@ -229,6 +229,6 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the evaluate model result visualization dialog.](images/20.png 'Evaluation Metrics')
 
-# Next Steps
+## Next Steps
 
 Congratulations! You have trained a simple movie recommender using the prebuilt Recommender modules in the AML visual designer. You can continue to experiment in the environment but are free to close the lab environment tab and return to the Udacity portal to continue with the lesson.

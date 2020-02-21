@@ -4,24 +4,22 @@
 
 In this lab you learn how to import your own data in the designer to create custom solutions. There are two ways you can import data into the designer in Azure Machine Learning Studio:
 
- - Azure Machine Learning datasets
+- Azure Machine Learning datasets
 
     Register datasets in Azure Machine Learning to enable advanced features that help you manage your data.
- - Import Data module
- 
-     Use the Import Data module to directly access data from online datasources.
+- Import Data module
 
-The first approach will be covered later in the next lab, which focuses on registering and versioning a dataset in Azure Machine Learning studio. 
+    Use the Import Data module to directly access data from online datasources.
+
+The first approach will be covered later in the [next lab](../lab-03/README.md), which focuses on registering and versioning a dataset in Azure Machine Learning studio. 
 
 While the use of datasets is recommended to import data, you can also use the Import Data module from the designer. Data comes into the designer from either a `Datastore` or from `Tabular Datasets`. Datastores will be covered later in this course, but just for a quick definition, you can use Datastores to access your storage without having to hard code connection information in your scripts. As for the second option, the Tabular datasets, the following datasources are supported in the designer: Delimited files, JSON files, Parquet files or SQL queries.
 
-The following exercise focuses on the Import Data module to load data into a machine learning pipeline from several datasets that will be merged and restructured. The training data will be prepared using basic modules available in the designer, helping you to become familiar with the way you can use the designer to perform basic data wrangling steps.
+The following exercise focuses on the Import Data module to load data into a machine learning pipeline from several datasets that will be merged and restructured. We will be using some sample data from the UCI dataset repository to demonstrate how you can perform basic data import transformation steps with the modules available in Azure Machine Learning designer.
 
-We will be using some sample data from the UCI dataset repository to demonstrate how you can perform basic data import transformation steps with the modules available in Azure Machine Learning designer (Preview).
+## Exercise 1: Import, transform and export data using the Visual Pipeline Authoring Editor
 
-# Exercise 1: Import, transform and export data using the Visual Pipeline Authoring Editor
-
-## Task 1: Open Pipeline Authoring Editor
+### Task 1: Open Pipeline Authoring Editor
 
 1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
@@ -31,7 +29,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
    ![Image highlights the steps to open the pipeline authoring editor.](images/01.png 'Pipeline Authoring Editor')
 
-## Task 2: Setup Compute Target
+### Task 2: Setup Compute Target
 
 1. In the settings panel on the right, select **Select compute target**.
 
@@ -41,7 +39,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
     ![Image shows how to select the existing compute target.](images/03.png 'Setup Compute Target')
 
-## Task 3: Import data from Web URL
+### Task 3: Import data from Web URL
 
 1. Select **Data Input and Output** section in the left navigation. Next, select **Import Data** and drag and drop the selected module on to the canvas.
 
@@ -56,7 +54,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
     ![Preview data source schema.](images/06.png 'Preview Data Source schema')
 
-# Task 4: Create Experiment and Run Pipeline
+### Task 4: Create Experiment and Run Pipeline
 
 1. Back to the pipeline canvas, select **Run** on the top right corner to open the `Setup pipeline run` editor.
 
@@ -66,7 +64,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
 3. Wait for pipeline run to complete. It will take around **2 minutes** to complete the run.
 
-## Task 5: Visualize Import Data results
+### Task 5: Visualize Import Data results
 
 1. Select the `Import Data` module on the canvas and then select **Outputs** on the right pane. Click on the **Visualize** icon to open the `Import Data result visualization` dialog.
 
@@ -74,13 +72,13 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
 2. In the `Import Data result visualization` dialog take some moments to explore all the metadata that is now available to you, such as: number of rows, columns, preview of data and for each column you select you can observe: **Mean**, **Median**, **Min**, **Max** and also number of **Unique Values** and **Missing Values**. Data profiles help you glimpse into the column types and summary statistics of a dataset. Scroll right and select the **X Coordinate** column. Notice the `Nan` value on the third row in the preview table and check the `Missing values` number in the **Statistics** section.
 
-![Image shows the Missing values count in the Statistics section.](images/10.png 'Missing values count in the Statistics section')
+    ![Image shows the Missing values count in the Statistics section.](images/10.png 'Missing values count in the Statistics section')
 
-3.Select **Close** to return to the pipeline designer canvas where you can continue the data import phase.
+3. Select **Close** to return to the pipeline designer canvas where you can continue the data import phase.
 
-# Exercise 2: Restructure the data split across multiple files
+## Exercise 2: Restructure the data split across multiple files
 
-## Task 1: Append rows from two additional data sources
+### Task 1: Append rows from two additional data sources
 
 1. Select **Data Input and Output** section in the left navigation. Next, drag and drop two **Import Data** modules on to the canvas as demonstrated in the first exercise and fill in the Web URLs as follows:
 
@@ -99,7 +97,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
     ![Second Add rows module added.](images/13.png 'Second Add rows module added')
 
-## Task 2: Clean missing values
+### Task 2: Clean missing values
 
 1. Drag the **Clean Missing Data** module from the **Data Transformation** section in the left navigation. 
 
@@ -113,7 +111,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
     ![Clean missing values module properties.](images/16.png 'Clean missing values module properties')
 
-## Task 3: Run Pipeline
+### Task 3: Run Pipeline
 
 1. Select **Run** to open the `Setup pipeline run` editor.
 
@@ -123,7 +121,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
 3. Wait for pipeline run to complete. It will take around **6 minutes** to complete the run.
 
-## Task 5: Save the clean dataset 
+### Task 4: Save the clean dataset
 
 1. Select the `Clean missing data` module you created on the canvas and then select **Outputs** on the right pane. Click on the **Save** icon under the **Cleaned dataset** section to open the `Save as dataset` dialog.
 
@@ -137,7 +135,7 @@ We will be using some sample data from the UCI dataset repository to demonstrate
 
     ![Image shows the Registered datasets list.](images/19.png 'Registered datasets in Azure Machine Learning Studio')
 
-# Next Steps
+## Next Steps
 
 Congratulations!
 You completed a few basic steps involved in the data explore and transform process, using the prebuilt modules you can find in the visual editor provided by Azure Machine Learning Studio.
