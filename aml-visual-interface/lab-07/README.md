@@ -28,7 +28,7 @@ In this lab, you learn how to create, run, and explore automated machine learnin
     ```
     https://introtomlsampledata.blob.core.windows.net/data/flightdelays/flightdelays.csv
     ```
-3. Provide `flightdelays` as the Name, leave the remaining values at their defaults and select **Next**.
+3. Provide `flightdelays-automl` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Upload nyc-taxi-sample-data.csv from a URL.](images/05.png 'Upload dataset')
 
@@ -64,7 +64,7 @@ In this lab, you learn how to create, run, and explore automated machine learnin
 
 ## Task 2: Select Training Data
 
-1. Select the dataset `flightdelays` and then select **Next**
+1. Select the dataset `flightdelays-automl` and then select **Next**
 
     ![Select the dataset flightdelays and then select Next.](images/09.png 'Select dataset')
 
