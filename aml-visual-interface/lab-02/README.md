@@ -129,11 +129,11 @@ The following exercise focuses on the Import Data module to load data into a mac
 
 2. Check the option to create a new dataset and enter `crime-all` in the dataset name field. Select **Save** to close the dialog.
 
-    ![Image shows the Create dataset dialog.](images/19.png 'Create new dataset dialog')
+    ![Image shows the Create dataset dialog.](images/19.png 'Create new dataset dialog')![](media/19.png)
 
 3. From the left navigation, select **Datasets**. This will open the `Registered datasets` page. See your registered dataset among the other datasets you used during this lesson.
 
-    ![Image shows the Registered datasets list.](images/19.png 'Registered datasets in Azure Machine Learning Studio')
+    ![Image shows the Registered datasets list.](images/21.png 'Registered datasets in Azure Machine Learning Studio')
 
 ## Next Steps
 
