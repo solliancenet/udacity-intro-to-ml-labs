@@ -95,7 +95,7 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
     3. Create trainer mode: **Single Parameter**. This option indicates how you want the model to be trained.
 
     4. Hidden layer specification: **Fully connected case**.
-    5. For Learning rate: **0.001**.
+    5. For Learning rate: **0.01**.
 
     ![Image shows the steps to add and configure the Neural Network Regression module.](images/13.png 'Neural Network Regression')
 
