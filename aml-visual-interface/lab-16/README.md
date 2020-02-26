@@ -157,27 +157,41 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the output of the `Multiclass Logistic Regression` module to the first input of both `Train Model` modules.
+    3. Connect the output of the `Multiclass Logistic Regression` module to the first input of the left branch (the Feature Hashing approach)  `Train Model` module.
+
+    4. Connect the output of the `Multiclass Logistic Regression` module to the first input of the right branch (the N-Gram Features approach)  `Train Model` module.
 
     ![Image shows the steps to add and configure the Multiclass Logistic Regression module.](images/13.png 'Multiclass Logistic Regression')
 
 ### Task 11: Convert the plain text of the articles to integers with Feature Hashing module, on the test set
 
-1. Copy and paste the existing **Feature Hashing** module on the canvas.
+1. Select the existing **Feature Hashing** module.
 
-2. Connect the second output of the `Split Data`, the test set output, to the input of the newly added `Feature Hashing` module.
+2. Copy the **Feature Hashing** module using the **Copy** option from the top menu.
+
+3. **Paste** the copied module on the canvas.
+
+4. Position the new **Feature Hashing** module between the two `Train Model` modules on the canvas.
+
+5. Connect the second output of the `Split Data`, the test set output, to the input of the newly added `Feature Hashing` module.
 
     ![Image shows the steps to duplicate the Feature Hashing module on the test set branch.](images/14.png 'Duplicate the Feature Hashing module on the test set branch')
 
 ### Task 12: Featurize unstructured text data with Extract N-Gram Feature from Text module, on the test set
 
-1. Copy and paste the existing **Extract N-Gram Feature from Text** module on the canvas.
+1. Select the existing **Extract N-Gram Feature from Text** module.
 
-2. Set the `Vocabulary mode` option to **ReadOnly**.
+2. Copy the **Extract N-Gram Feature from Text** module using the **Copy** option from the top menu.
 
-3. Connect the second output of the `Split Data`, the test set output, to the first input of the newly added `Extract N-Gram Feature from Text` module.
+3. **Paste** the copied module on the canvas.
 
-4. Connect the second output of the uppermost `Extract N-Gram Feature from Text`, to the second input of the copied `Extract N-Gram Feature from Text` module.
+4. Position the new **Extract N-Gram Feature from Text** module near the rightmost `Train Model` module on the canvas.
+
+5. Connect the second output of the `Split Data`, the test set output, to the first input of the newly added `Extract N-Gram Feature from Text` module.
+
+6. Connect the second output of the uppermost `Extract N-Gram Feature from Text`, to the second input of the copied `Extract N-Gram Feature from Text` module.
+
+7. Select the newly added module and in the right settings pane, set the `Vocabulary mode` to **ReadOnly**
 
     ![Image shows the steps to duplicate the  Extract N-Gram Feature from Text module on the test set branch.](images/15.png 'Duplicate Extract N-Gram Feature from Text module on the test set branch')
 
