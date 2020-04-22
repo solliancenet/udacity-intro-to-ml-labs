@@ -13,17 +13,42 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 
 The primary goal of this quickstart is to explain the predictions made by our trained model with the various [Azure Model Interpretability](https://docs.microsoft.com/en-us/azure/machine-learning/service/machine-learning-interpretability-explainability) packages of the Azure Machine Learning Python SDK.
 
-## Exercise 1 Open Notebook for this Lab
-1. Within Azure Machine Learning Studio, navigate to **Compute**, then select **Compute Instances**. For the Compute Instance that is available, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+## Exercise 1: Create New Compute Instance
+
+1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **+New**.
+
+    ![The compute instances blade is displayed.](images/new_compute_1.png "Create New Compute Instance")
+
+2. In the `New Compute Instance` pane, provide the following information and then select **Create**.
+
+    - Compute name: `provide an unique name`
+    - Virtual Machine size: `Standard_D3_v2`
+
+    ![The New Compute Instance pane is displayed.](images/new_compute_2.png "Create New Compute Instance")
+
+3. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
+
+## Exercise 2: Open Notebook for this Lab
+
+1. Download the notebook on your local disk from the following URL:
+
+    `https://github.com/solliancenet/udacity-intro-to-ml-labs/blob/master/aml-visual-interface/lab-23/notebook/interpretability-with-AML.ipynb`
+
+   Select **Raw** to view the text version of the file and then right-click in the browser and save the content locally as `interpretability-with-AML.ipynb`. Please ensure that the file extension is `ipynb`.
+
+2. For your Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
 
    ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png 'Launch Jupyter from Compute Instance')
 
-2. Within the Jupyter environment, open the **Users** folder, then the folder that has your assigned username and  then open `interpretability-with-AML.ipynb`. This is the Python notebook you will step thru executing in this lab.
+3. Within the Jupyter environment, open the **Users** folder, then the folder that has your assigned username and then select **Upload** menu and upload the notebook downloaded in step 1.
+
+   ![Image highlights the upload menu.](images/upload.png "Upload Jupyter Notebook")
+
+4. Open `interpretability-with-AML.ipynb`. This is the Python notebook you will step through executing in this lab.
 
    ![Image highlights the steps to open the notebook.](images/03.png 'Opening the notebook')
 
-3. Follow the instructions within the notebook to complete the lab.
+5. Follow the instructions within the notebook to complete the lab.
 
 # Next Steps
 Congratulations! You have just learned how to use the Azure Machine Learning SDK to help you explain what influences the predictions a model makes. You can now return to the Udacity portal to continue with the lesson.
-

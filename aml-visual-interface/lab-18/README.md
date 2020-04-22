@@ -18,13 +18,24 @@ A managed compute resource is created and managed by Azure Machine Learning. Thi
 
 In this lab, you will explore different actions you can take to manage a compute instance in Azure Machine Learning Studio.
 
-## Exercise 1: Explore Compute Instances
+## Exercise 1: Create New Compute Instance
 
-1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **Compute Instances**.
+1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **+New**.
 
-    ![The compute instances blade is displayed.](images/compute-instances.png "Compute instances")
+    ![The compute instances blade is displayed.](images/new_compute_1.png "Create New Compute Instance")
 
-2. Select the radio button next to the name of your compute instance. This will select the instance, as indicated by a checkmark. Selecting your instance in this way enables the toolbar options above that enable you to Stop, Restart, or Delete the instance.
+2. In the `New Compute Instance` pane, provide the following information and then select **Create**.
+
+    - Compute name: `provide an unique name`
+    - Virtual Machine size: `Standard_D3_v2`
+
+    ![The New Compute Instance pane is displayed.](images/new_compute_2.png "Create New Compute Instance")
+
+3. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
+
+## Exercise 2: Explore Compute Instances
+
+1. Select the radio button next to the name of your compute instance. This will select the instance, as indicated by a checkmark. Selecting your instance in this way enables the toolbar options above that enable you to Stop, Restart, or Delete the instance.
 
     ![The checkmark appears next to the instance and an arrow is pointing from the checkmark to the enabled buttons on the toolbar above.](images/selected-compute-instance.png "Selected compute instance")
 
@@ -34,7 +45,7 @@ In this lab, you will explore different actions you can take to manage a compute
     * **Restart**: Restarting an instance is sometimes necessary after installing certain libraries or extensions. There may be times, however, when the compute instance stops functioning as expected. When this happens, try restarting it before taking further action.
     * **Delete**: You can create and delete instances as you see fit. The good news is, all notebooks and R scripts are stored in the default storage account of your workspace in Azure file share, within the "User files" directory. This central storage allows all compute instances *in the same workspace* to access the same files so you don't lose them when you delete an instance you no longer need.
 
-3. Select the name of your instance. This opens the **Compute details** blade, revealing useful information about your compute instance.
+2. Select the name of your instance. This opens the **Compute details** blade, revealing useful information about your compute instance.
 
     ![The compute instance details are shown.](images/compute-instance-details.png "Compute details")
 
@@ -42,11 +53,11 @@ In this lab, you will explore different actions you can take to manage a compute
 
     The **Resource properties** show the status and configuration of the compute instance, including links to its applications and public and private endpoints. In this screenshot, you will see that SSH access is disabled. You cannot enable SSH access after creating a compute instance. You can only enable this option at the time of creation. SSH access allows you to securely connect to the VM from a terminal or command window. Use the public IP address to connect via SSH or an integrated development environment (IDE) like [Visual Studio Code](https://docs.microsoft.com/azure/machine-learning/tutorial-setup-vscode-extension).
 
-4. Navigate back to **Compute**. The compute instance comes preconfigured with tools and environments that enable you to author, train, and deploy models in a fully integrated notebook experience. You access these environments through the **Application URI** links located in the resource properties (as seen in the previous step), and next to each compute instance in the list.
+3. Navigate back to **Compute**. The compute instance comes preconfigured with tools and environments that enable you to author, train, and deploy models in a fully integrated notebook experience. You access these environments through the **Application URI** links located in the resource properties (as seen in the previous step), and next to each compute instance in the list.
 
     ![The links under the Application URI column are highlighted.](images/application-uri.png "Application URI")
 
-5. Select each of the application links to sign in to the related environment. You may be prompted to select your user account for each application.
+4. Select each of the application links to sign in to the related environment. You may be prompted to select your user account for each application.
 
 # Next Steps
 
