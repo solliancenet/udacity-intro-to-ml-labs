@@ -13,22 +13,7 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 
 The primary goal of this quickstart is to explain the predictions made by our trained model with the various [Azure Model Interpretability](https://docs.microsoft.com/en-us/azure/machine-learning/service/machine-learning-interpretability-explainability) packages of the Azure Machine Learning Python SDK.
 
-## Exercise 1: Create New Compute Instance
-
-1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **+New**.
-
-    ![The compute instances blade is displayed.](images/new_compute_1.png "Create New Compute Instance")
-
-2. In the `New Compute Instance` pane, provide the following information and then select **Create**.
-
-    - Compute name: `provide an unique name`
-    - Virtual Machine size: `Standard_D3_v2`
-
-    ![The New Compute Instance pane is displayed.](images/new_compute_2.png "Create New Compute Instance")
-
-3. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
-
-## Exercise 2: Open Notebook for this Lab
+## Exercise 1: Run the Notebook for this Lab
 
 1. Download the notebook on your local disk from the following URL:
 
@@ -36,7 +21,7 @@ The primary goal of this quickstart is to explain the predictions made by our tr
 
    Select **Raw** to view the text version of the file and then right-click in the browser and save the content locally as `interpretability-with-AML.ipynb`. Please ensure that the file extension is `ipynb`.
 
-2. For your Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+2. From within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**. Next, for the available Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
 
    ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png 'Launch Jupyter from Compute Instance')
 

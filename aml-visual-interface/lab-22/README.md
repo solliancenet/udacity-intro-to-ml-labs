@@ -17,22 +17,7 @@ The compute instance provides a comprehensive set of a capabilities that you can
 
 In this lab, you start with a model that was trained using Automated Machine Learning. Learn how to use the Azure ML Python SDK to register, package, and deploy the trained model to Azure Container Instances (ACI) as a scoring web service. Finally, test the deployed model (1) by make direct calls on service object, (2) by calling the service end point (Scoring URI) over http.
 
-## Exercise 1: Create New Compute Instance
-
-1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **+New**.
-
-    ![The compute instances blade is displayed.](images/new_compute_1.png "Create New Compute Instance")
-
-2. In the `New Compute Instance` pane, provide the following information and then select **Create**.
-
-    - Compute name: `provide an unique name`
-    - Virtual Machine size: `Standard_D3_v2`
-
-    ![The New Compute Instance pane is displayed.](images/new_compute_2.png "Create New Compute Instance")
-
-3. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
-
-## Exercise 2: Open Notebook for this Lab
+## Exercise 1: Run the Notebook for this Lab
 
 1. Download the following two files on your local disk from the following URLs:
 
@@ -44,7 +29,7 @@ In this lab, you start with a model that was trained using Automated Machine Lea
 
    Select **Raw** to view the text version of the file and then right-click in the browser and save the content locally as `deployment-with-AML.ipynb`. Please ensure that the file extension is `ipynb`.
 
-2. For your Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+2. From within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**. Next, for the available Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
 
    ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png "Launch Jupyter from Compute Instance")
 
@@ -65,4 +50,3 @@ In this lab, you start with a model that was trained using Automated Machine Lea
 # Next Steps
 
 Congratulations! You have just learned how to use the Jupyter application on a compute instance to deploy a trained model to Azure Container Instances (ACI) for real-time inferencing. You can now return to the Udacity portal to continue with the lesson.
-

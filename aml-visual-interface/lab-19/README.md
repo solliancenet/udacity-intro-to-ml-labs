@@ -6,29 +6,14 @@ So far, the Managed Services for Azure Machine Learning lesson has covered **com
 
 # Overview
 
-In this lab, you learn the foundational design patterns in Azure Machine Learning, and train a simple scikit-learn model based on the diabetes data set. After completing this lab, you will have the practical knowledge of the SDK to scale up to developing more-complex experiments and workflows. 
+In this lab, you learn the foundational design patterns in Azure Machine Learning, and train a simple scikit-learn model based on the diabetes data set. After completing this lab, you will have the practical knowledge of the SDK to scale up to developing more-complex experiments and workflows.
 
 In this tutorial, you learn the following tasks:
 
 > * Connect your workspace and create an experiment
 > * Load data and train a scikit-learn model
 
-## Exercise 1: Create New Compute Instance
-
-1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **+New**.
-
-    ![The compute instances blade is displayed.](images/new_compute_1.png "Create New Compute Instance")
-
-2. In the `New Compute Instance` pane, provide the following information and then select **Create**.
-
-    - Compute name: `provide an unique name`
-    - Virtual Machine size: `Standard_D3_v2`
-
-    ![The New Compute Instance pane is displayed.](images/new_compute_2.png "Create New Compute Instance")
-
-3. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
-
-## Exercise 2: Open Notebook for this Lab
+## Exercise 1: Run the Notebook for this Lab
 
 1. Download the notebook on your local disk from the following URL:
 
@@ -36,7 +21,7 @@ In this tutorial, you learn the following tasks:
 
    Select **Raw** to view the text version of the file and then right-click in the browser and save the content locally as `1st-experiment-sdk-train-model.ipynb`. Please ensure that the file extension is `ipynb`.
 
-2. For your Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+2. From within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**. Next, for the available Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
 
    ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png "Launch Jupyter from Compute Instance")
 
@@ -57,4 +42,3 @@ In this tutorial, you learn the following tasks:
 # Next Steps
 
 Congratulations! You have just learned how to use the Jupyter application on a compute instance to train a model. You can now return to the Udacity portal to continue with the lesson.
-
