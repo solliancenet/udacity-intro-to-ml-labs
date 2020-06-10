@@ -9,15 +9,21 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 
 ## Task 1: Upload Dataset
 
-1. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
 
    ![Image highlights the steps to open the create dataset from web files dialog.](images/04.png 'Create dataset from web files')
 
-2. In the Web URL field provide the following URL for the training data file:
+4. In the Web URL field provide the following URL for the training data file:
     ```
     https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data.csv
     ```
-3. Provide `nyc-taxi-sample-data` as the Name, leave the remaining values at their defaults and select **Next**.
+5. Provide `nyc-taxi-sample-data` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Upload nyc-taxi-sample-data.csv from a URL.](images/05.png 'Upload dataset')
 
