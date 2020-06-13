@@ -14,6 +14,9 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
     ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+    
+When you first launch the studio, you may need to set the directory and subscription. For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
 
 3. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
 
