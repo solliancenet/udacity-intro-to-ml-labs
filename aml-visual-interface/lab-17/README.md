@@ -8,51 +8,59 @@ In this lab you will learn how the Automated Machine Learning capability in Azur
 
 ### Task 1: Create an automated machine learning experiment using the Portal
 
-1. Navigate to your Azure Machine Learning workspace in the Azure Portal. Select **Launch now** under the **Try the new Azure Machine Learning studio** message. Alternatively, you can navigate directly to the new [Azure Machine Learning studio](https://ml.azure.com/). This will prompt you to select the workspace as part of the sign-in process.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
-   ![Navigate to Azure Machine Learning studio](./images/01.png)
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
-2. Select **Automated ML** in the left navigation bar.
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. Select **Automated ML** in the left navigation bar.
 
    ![Select Automated ML](./images/02.png)
 
-3. Select **New automated ML run** to start creating a new experiment.
+5. Select **New automated ML run** to start creating a new experiment.
 
    ![New automated ML run](./images/03.png)
 
-4. Select **Create dataset** and choose the **From web files** option from the drop-down.
+6. Select **Create dataset** and choose the **From web files** option from the drop-down.
 
    ![Create dataset from local file](./images/04.png)
 
-5. Fill in the training data URL in the `Web URL` field: `https://introtomlsampledata.blob.core.windows.net/data/battery-lifetime/training-formatted.csv`, make sure the name is set to `training-formatted-dataset`, and select **Next** to load a preview of the parsed training data.
+7. Fill in the training data URL in the `Web URL` field: `https://introtomlsampledata.blob.core.windows.net/data/battery-lifetime/training-formatted.csv`, make sure the name is set to `training-formatted-dataset`, and select **Next** to load a preview of the parsed training data.
 
    ![Training data web URL](./images/05.png)
 
-6. In the `Settings and preview` page, for the `Column headers` field, select `All files have same headers`. Scroll to the right to observe all of the columns in the data.
+8. In the `Settings and preview` page, for the `Column headers` field, select `All files have same headers`. Scroll to the right to observe all of the columns in the data.
 
    ![Reviewing the training data](./images/06.png)
 
-7. Select **Next** to check the schema and then confirm the dataset details by selecting **Next** and then **Create** on the confirmation page.
+9. Select **Next** to check the schema and then confirm the dataset details by selecting **Next** and then **Create** on the confirmation page.
 
    ![Reviewing the schema of training data](./images/07.png)
 
-8. Now you should be able to select the newly created dataset for your experiment. Select the `training-formatted-dataset` dataset and select **Next** to move to the experiment run details page.
+10. Now you should be able to select the newly created dataset for your experiment. Select the `training-formatted-dataset` dataset and select **Next** to move to the experiment run details page.
 
-   ![Select the dataset](./images/08.png)
+    ![Select the dataset](./images/08.png)
 
-9. You will now configure the Auto ML run basic settings by providing the following values for the experiment name, target column and training compute:
+11. You will now configure the Auto ML run basic settings by providing the following values for the experiment name, target column and training compute:
 
-   - Experiment name: **automlregression**
-   - Target column: select **Survival_In_Days**
-   - Select training compute target: : select **qs-compute**
+    - Experiment name: **automlregression**
+    - Target column: select **Survival_In_Days**
+    - Select training compute target: : select **qs-compute**
 
-   ![Setup Auto ML experiment basic settings](./images/09.png)
+    ![Setup Auto ML experiment basic settings](./images/09.png)
 
-10. Select **Next** and select **Regression** in the `Task type and settings` page.
+12. Select **Next** and select **Regression** in the `Task type and settings` page.
 
     ![Select Regression task type](./images/10.png)
 
-11. Select **View additional configuration settings** to open the advanced settings section. Provide the following settings:
+13. Select **View additional configuration settings** to open the advanced settings section. Provide the following settings:
 
     - Primary metric: **Normalized root mean squared error**
     - Exit criterion > Metric score threshold: **0.09**
@@ -62,11 +70,11 @@ In this lab you will learn how the Automated Machine Learning capability in Azur
 
     ![Configuring the Advanced Settings as described](./images/11.png)
 
-12. Select **Save** and then **Finish** to begin the automated machine learning process.
+14. Select **Save** and then **Finish** to begin the automated machine learning process.
 
     ![Start Automate ML run](./images/12.png)
 
-13. Wait until the `Run status` becomes **Running** in the `Run Detail page`.
+15. Wait until the `Run status` becomes **Running** in the `Run Detail page`.
 
     ![Preparing experiment](./images/13.png)
 

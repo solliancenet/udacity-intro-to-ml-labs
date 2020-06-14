@@ -25,7 +25,15 @@ The following exercise focuses on the Import Data module to load data into a mac
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
-3. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
 
    ![Image highlights the steps to open the pipeline authoring editor.](images/01.png 'Pipeline Authoring Editor')
 

@@ -20,17 +20,23 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
-    ![Launch Azure Machine Learning studio.](images/01.png 'Launch AML')
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
 
-3. From the studio, select **Datasets, + Create dataset, From local files**. This will open the `Create dataset from local files` dialog on the right.
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Datasets, + Create dataset, From local files**. This will open the `Create dataset from local files` dialog on the right.
 
    ![Image highlights the steps to open the create dataset from local files dialog.](images/02.png 'Create dataset from local files')
 
-4. Provide `nyc-taxi-sample-dataset` as the Name, leave the remaining values at their defaults and select **Next**.
+5. Provide `nyc-taxi-sample-dataset` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Enter the name for the created dataset.](images/03.png 'Basic info for dataset')
 
-5. On the `Datastore and file selection` panel, select the default datastore of your workspace `workspaceblobstore`, which was previously created by default when the workspace was created. **Browse** for the `nyc-taxi-sample-data-5months.csv` file you downloaded earlier on your local computer and select **Next** to upload the file in the datastore.
+6. On the `Datastore and file selection` panel, select the default datastore of your workspace `workspaceblobstore`, which was previously created by default when the workspace was created. **Browse** for the `nyc-taxi-sample-data-5months.csv` file you downloaded earlier on your local computer and select **Next** to upload the file in the datastore.
 
      ![Datastore and file selection.](images/04.png 'Datastore and file selection')
 

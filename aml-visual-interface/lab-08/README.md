@@ -8,7 +8,19 @@ In this lab, we will be compare the performance of two binary classifiers: Two-C
 
 ## Task 1: Open Sample 5: Binary Classification – Customer Relationship Prediction
 
-1. From the studio, select **Designer, Sample 5: Binary Classification – Customer Relationship Prediction**.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Designer, Sample 5: Binary Classification – Customer Relationship Prediction**.
 
    ![Image highlights the steps to open the sample pipeline, Sample 5: Binary Classification – Customer Relationship Prediction.](images/01.png 'Pipeline Authoring Editor')
 

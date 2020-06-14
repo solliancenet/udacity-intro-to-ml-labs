@@ -20,15 +20,29 @@ In this lab, we will use Automated Machine Learning to find the best performing 
 
 ## Task 1: Upload Dataset
 
-1. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
 
    ![Image highlights the steps to open the create dataset from web files dialog.](images/04.png 'Create dataset from web files')
 
-2. In the Web URL field provide the following URL for the training data file:
+5. In the Web URL field provide the following URL for the training data file:
+
     ```
     https://introtomlsampledata.blob.core.windows.net/data/crm-churn/crm-churn.csv
     ```
-3. Provide `CRM-Churn` as the Name, leave the remaining values at their defaults and select **Next**.
+
+6. Provide `CRM-Churn` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Upload crm-churn.csv from a URL.](images/05.png 'Upload dataset')
 

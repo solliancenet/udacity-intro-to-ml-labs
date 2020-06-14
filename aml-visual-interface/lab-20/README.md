@@ -6,11 +6,45 @@ In the previous lab (19), you executed a Jupyter notebook that trained a model t
 
 # Overview
 
-In this lab, you view the experiments and runs executed by the notebook in the previous lab. You navigate to the **Experiments** blade in Azure Machine Learning Studio. Here you see all the individual runs in the experiment. Any custom-logged values (alpha_value and rmse, in this case) become fields for each run, and also become available for the charts and tiles at the top of the experiment page. To add a logged metric to a chart or tile, hover over it, click the edit button, and find your custom-logged metric.
+In this lab, you view the experiments and runs executed by a notebook. In the first part of the lab, you will use a notebook to create and run the experiments. In the second part of the lab, you will navigate to the **Experiments** blade in Azure Machine Learning Studio. Here you see all the individual runs in the experiment. Any custom-logged values (alpha_value and rmse, in this case) become fields for each run, and also become available for the charts and tiles at the top of the experiment page. To add a logged metric to a chart or tile, hover over it, click the edit button, and find your custom-logged metric.
 
 When training models at scale over hundreds and thousands of separate runs, this page makes it easy to see every model you trained, specifically how they were trained, and how your unique metrics have changed over time.
 
-## Exercise 1: Open Experiments in the portal
+## Exercise 1: Run the Notebook for this Lab
+
+1. Download the notebook on your local disk from the following URL:
+
+    `https://github.com/solliancenet/udacity-intro-to-ml-labs/blob/master/aml-visual-interface/lab-20/notebook/1st-experiment-sdk-train-model.ipynb`
+
+   Select **Raw** to view the text version of the file and then right-click in the browser and save the content locally as `1st-experiment-sdk-train-model.ipynb`. Please ensure that the file extension is `ipynb`.
+
+2. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+3. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+4. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+5. From the studio, navigate to **Compute**. Next, for the available Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+
+   ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png "Launch Jupyter from Compute Instance")
+
+6. Within the Jupyter environment, open the **Users** folder, then the folder that has your assigned username and then select **Upload** menu and upload the notebook downloaded in step 1.
+
+   ![Image highlights the upload menu.](images/upload.png "Upload Jupyter Notebook")
+
+7. Open `1st-experiment-sdk-train-model.ipynb`. This is the Python notebook you will step through executing in this lab.
+
+   ![Image highlights the steps to open the notebook.](images/notebook-link.png 'Opening the notebook')
+
+8. Follow the instructions within the notebook to complete the exercise.
+
+## Exercise 2: Open Experiments in the portal
 
 1. Within Azure Machine Learning Studio, select **Experiments** in the left-hand menu, then select the **diabetes-experiment** submitted by the notebook you executed in the previous lab (19).
 
@@ -43,4 +77,3 @@ When training models at scale over hundreds and thousands of separate runs, this
 # Next Steps
 
 Congratulations! You have just learned how to use the Azure Machine Learning SDK to help you explain what influences the predictions a model makes. You can now return to the Udacity portal to continue with the lesson.
-

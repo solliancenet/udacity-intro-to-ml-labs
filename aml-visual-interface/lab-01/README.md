@@ -4,7 +4,6 @@
 
 In this lab, we will be using a subset of NYC Taxi & Limousine Commission - green taxi trip records available from [Azure Open Datasets](https://azure.microsoft.com/en-us/services/open-datasets/). The data is enriched with holiday and weather data. Based on the enriched dataset, we will learn to use the Azure Machine Learning Graphical Interface to process data, build, train, score, and evaluate a regression model to predict NYC taxi fares. To train the model, we will create Azure Machine Learning Compute resource. We will do all of this from the Azure Machine Learning designer without writing a single line of code.
 
-
 # Exercise 1: Register Dataset with Azure Machine Learning studio
 
 ## Task 1: Upload Dataset
@@ -14,12 +13,12 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
     ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
-    
+
 3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
 
     ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
-    
-For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
 
 4. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
 

@@ -20,18 +20,30 @@ In this lab, you will explore different actions you can take to manage a compute
 
 ## Exercise 1: Create New Compute Instance
 
-1. Within [Azure Machine Learning Studio](https://ml.azure.com/), navigate to **Compute**, then select **+New**.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, navigate to **Compute**, then select **+New**.
 
     ![The compute instances blade is displayed.](images/new_compute_1.png "Create New Compute Instance")
 
-2. In the `New Compute Instance` pane, provide the following information and then select **Create**.
+5. In the `New Compute Instance` pane, provide the following information and then select **Create**.
 
     - Compute name: `provide an unique name`
     - Virtual Machine size: `Standard_D3_v2`
 
     ![The New Compute Instance pane is displayed.](images/new_compute_2.png "Create New Compute Instance")
 
-3. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
+6. It will take couple of minutes for your compute instance to be ready.  Wait for your compute instance to be in status `Running`.
 
 ## Exercise 2: Explore Compute Instances
 

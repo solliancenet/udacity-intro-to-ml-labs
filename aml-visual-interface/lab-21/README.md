@@ -8,13 +8,25 @@ In previous lessons, we spent much time talking about training a machine learni
 
 In this lab, you learn how to deploy a trained model that can be used as a webservice, hosted on an Azure Kubernetes Service (AKS) cluster. This process is what enables you to use your model for real-time inferencing.
 
-The Azure Machine Learning designer simplifies the process by enabling you to train and deploy your model without writing any code. 
+The Azure Machine Learning designer simplifies the process by enabling you to train and deploy your model without writing any code.
 
 ## Exercise 1: Open a sample training pipeline
 
 ### Task 1: Open the pipeline authoring editor
 
-1. Within Azure Machine Learning Studio, select **Designer** in the left-hand menu. Next, select **Sample 1: Regression - Automobile Price Prediction (Basic)** under the **New pipeline** section. This will open a `visual pipeline authoring editor`.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Designer** in the left-hand menu. Next, select **Sample 1: Regression - Automobile Price Prediction (Basic)** under the **New pipeline** section. This will open a `visual pipeline authoring editor`.
 
    ![The Sample 1 pipeline is selected.](images/new-pipeline.png "Designer: New pipeline")
 

@@ -23,24 +23,30 @@ For the model, we are using regression because the number of rentals (the label 
 
 ## Task 1: Upload Dataset
 
-1. In [Azure portal](https://portal.azure.com/) , open the available machine learning workspace.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
 2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
-    ![Launch Azure Machine Learning studio.](images/01.png 'Launch AML') 
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
 
-3. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
 
    ![Image highlights the steps to open the create dataset from web files dialog.](images/02.png 'Create dataset from web files')
 
-4. In the Web URL field provide the following URL for the training data file:
+5. In the Web URL field provide the following URL for the training data file:
     ```https://introtomlsampledata.blob.core.windows.net/data/bike-rental/bike-rental-hour.csv```
 
-5. Provide `Bike Rental Hourly` as the Name, leave the remaining values at their defaults and select **Next**.
+6. Provide `Bike Rental Hourly` as the Name, leave the remaining values at their defaults and select **Next**.
 
     ![Upload bike-rental-hour.csv from a URL.](images/03.png 'Upload dataset')
 
-6. Select the option to `Use headers from the first file` in the **Settings and preview** dialog and then select **Next**, **Next** and **Create** to confirm all details in registering the dataset.
+7. Select the option to `Use headers from the first file` in the **Settings and preview** dialog and then select **Next**, **Next** and **Create** to confirm all details in registering the dataset.
 
     ![Preview the Bike Rentals Hourly dataset schema.](images/04.png 'Preview the Bike Rentals Hourly dataset schema')
 

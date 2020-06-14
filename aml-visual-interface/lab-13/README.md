@@ -8,7 +8,19 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
 ## Task 1: Open Pipeline Authoring Editor
 
-1. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
+
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+
+    ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
+
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+
+    ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
+
+    > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
+
+4. From the studio, select **Designer, +**. This will open a `visual pipeline authoring editor`.
 
    ![Image highlights the steps to open the pipeline authoring editor.](images/09.png 'Pipeline Authoring Editor')
 
