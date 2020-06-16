@@ -81,7 +81,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the Join key columns for left dataset` editor.](images/08.png 'Join key columns for left dataset')
 
-*Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
+*Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
 
 ### Task 5: Select Columns UserId, Movie Name, Rating using a Python script
 
@@ -95,21 +95,15 @@ The trained model will predict what rating a user will give to unseen movies, so
 
      ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/09.png 'Add Select Columns in Dataset module')
 
-2. Select **Edit code** to open the `Python script` editor and then enter the following lines of code to select the UserId, Movie Name, Rating columns from the joined dataset.
+2. Select **Edit code** to open the `Python script` editor, clear the existing code and then enter the following lines of code to select the UserId, Movie Name, Rating columns from the joined dataset. Please ensure that there is no indentation for the first line and the second and third lines are indented.
 
     ```python
-        # The script MUST contain a function named azureml_main
-        # which is the entry point for this module.
-
-        # imports up here can be used to
-
-        # The entry point function can contain up to two input arguments:
-        #   Param<dataframe1>: a pandas.DataFrame
-        #   Param<dataframe2>: a pandas.DataFrame
-        def azureml_main(dataframe1 = None, dataframe2 = None): return dataframe1[['UserId','Movie Name','Rating']],
+    def azureml_main(dataframe1 = None, dataframe2 = None):
+        df1 = dataframe1[['UserId','Movie Name','Rating']]
+        return df1,
     ```
 
-*Note: In other pipelines, for selecting a list of columns from a dataset, we could have used the `Select Columns from Dataset` prebuilt module. This one returns the columns in the same order as in the input dataset. This time we need the output dataset to be in the format: user id, movie name, rating.This column order is required at the input of the Train SVD Recommender module.*
+    > Note: In other pipelines, for selecting a list of columns from a dataset, we could have used the `Select Columns from Dataset` prebuilt module. This one returns the columns in the same order as in the input dataset. This time we need the output dataset to be in the format: user id, movie name, rating.This column order is required at the input of the Train SVD Recommender module.
 
 ### Task 6: Remove duplicate rows with same Movie Name and UserId
 
@@ -203,17 +197,19 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     ![Image shows the steps to add and configure the Evaluate Model module.](images/15.png 'Evaluate Model')
 
-## Exercise 2: Run Training Pipeline
+## Exercise 2: Submit Training Pipeline
 
-### Task 1: Create Experiment and Run Pipeline
+### Task 1: Create Experiment and Submit Pipeline
 
-1. Select **Run** on the right corner of the canvas to open the `Setup pipeline run` editor.
+1. Select **Submit** on the right corner of the canvas to open the `Setup pipeline run` editor.
 
-    ![Image shows how to open the setup pipeline run.](images/16_1.png 'Run Pipeline')
+    ![Image shows how to open the setup pipeline run.](images/16_1.png 'Submit Pipeline')
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **movie-recommender**, and then select **Run**.
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/16.png 'Run Pipeline')
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **movie-recommender**, and then select **Submit**.
+
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/16.png 'Submit Pipeline')
 
 3. Wait for pipeline run to complete. It will take around **20 minutes** to complete the run.
 

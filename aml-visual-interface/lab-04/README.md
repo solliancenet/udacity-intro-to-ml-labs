@@ -186,9 +186,11 @@ Don't worry if you do not fully understand the details of the Python code above.
 
    ![Image shows how to configure model scoring and evaluation.](images/20.png 'Model Scoring and evaluation')
 
-3. Select **Save** and **Run** to create a new experiment and run the pipeline. Provide `BikeRentalHourly` for the new experiment name.
+3. Select **Submit** to open the `Setup pipeline run` editor. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **BikeRentalHourly**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/21.png 'Run Pipeline')
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/21.png 'Submit Pipeline')
+
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
 4. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
 

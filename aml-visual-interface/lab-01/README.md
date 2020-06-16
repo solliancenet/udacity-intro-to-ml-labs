@@ -90,7 +90,7 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 
     ![Image shows the steps to add and configure the Split Data module.](images/13.png 'Split Data Module')
 
-*Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
+*Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
 
 ## Task 5: Initialize Regression Model
 
@@ -150,17 +150,19 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 
     ![Image shows the steps to add and configure the Evaluate Model module.](images/18.png 'Evaluate Model')
 
-# Exercise 3: Run Training Pipeline
+# Exercise 3: Submit Training Pipeline
 
-## Task 1: Create Experiment and Run Pipeline
+## Task 1: Create Experiment and Submit Pipeline
 
-1. Select **Run** to open the `Setup pipeline run` editor.
+1. Select **Submit** to open the `Setup pipeline run` editor.
 
-    ![Image shows where to select the run button to open the setup pipeline run editor.](images/19.png 'Run Pipeline')
+    ![Image shows where to select the submit button to open the setup pipeline run editor.](images/19.png 'Submit Pipeline')
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **designer-run**, and then select **Run**.
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Run Pipeline')
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **designer-run**, and then select **Submit**.
+
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Submit Pipeline')
 
 3. Wait for pipeline run to complete. It will take around **8 minutes** to complete the run.
 

@@ -54,7 +54,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows the steps to add and configure the Select Columns in Dataset module.](images/13_1.png 'Select Columns in Dataset Module')
 
-    *Note that you can run the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
+    *Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
 
 2. In the `Select columns` editor, follow the steps outlined below:
 
@@ -138,17 +138,19 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows the steps to add and configure the Assign Data to Clusters module.](images/17.png 'Assign Data to Clusters')
 
-# Exercise 2: Run Training Pipeline
+# Exercise 2: Submit Training Pipeline
 
-## Task 1: Create Experiment and Run Pipeline
+## Task 1: Create Experiment and Submit Pipeline
 
-1. Select **Run** to open the `Setup pipeline run` editor.
+1. Select **Submit** to open the `Setup pipeline run` editor.
 
-    ![Image shows where to select the run button to open the setup pipeline run editor.](images/19.png 'Run Pipeline')
+    ![Image shows where to select the submit button to open the setup pipeline run editor.](images/19.png 'Submit Pipeline')
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **cluster-weather**, and then select **Run**.
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Run Pipeline')
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **cluster-weather**, and then select **Submit**.
+
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Submit Pipeline')
 
 3. Wait for pipeline run to complete. It will take around **5 minutes** to complete the run.
 

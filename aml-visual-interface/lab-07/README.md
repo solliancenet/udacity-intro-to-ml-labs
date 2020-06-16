@@ -132,25 +132,31 @@ In this lab, you learn how to create, run, and explore automated machine learnin
 
     ![Models tab showing model performance metric.](images/15.png 'Models')
 
+    > Note that we have set a metric score threshold to limit the training time. As a result you might see only one algorithm in your models list.
+
 4. Select **Details** and wait till the run status becomes **Completed**.
 
     ![Run Details tab showing run status.](images/16.png 'Run Details')
 
 5. While you wait for the model training to complete, you can learn to view and understand the charts and metrics for your automated machine learning run by selecting [Understand automated machine learning results](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-understand-automated-ml).
 
-# Exercise 4: Review Recommended Model's Performance
+# Exercise 4: Review Best Model's Performance
 
-## Task 1: Review Recommended Model Performance
+## Task 1: Review Best Model Performance
 
-1. From the `Details` tab review the **Recommended model** and its corresponding **AUC weighted** score. Next, select **View model details**
+1. The `Details` tab shows the `Best model summary`. Next, select **Algorithm name** to review the model details.
 
     ![Run Details tab showing recommended model.](images/17.png 'Recommended Model')
 
-2. Review the various **Run Metrics** to evaluate the model performance. Next, select **Visualizations**
+2. From the `Model details` tab, to view the various metrics to evaluate the best model performance, select **View all other metrics**.
 
-    ![Model Details tab showing model performance metrics.](images/18.png 'Model details')
+    ![Model Details tab showing model summary.](images/18_1.png 'Model Details')
 
-3. Review the various model performance curves, such as Precision-Recall, ROC, Calibration curve, Gain & Lift curves, and Confusion matrix.
+3. Review the model performance metrics and then select **Close**.
+
+    ![Model performance metrics.](images/18_2.png 'Run Metrics')
+
+4. Next, select **Metrics** to review the various model performance curves, such as Precision-Recall, ROC, Calibration curve, Gain & Lift curves, and Confusion matrix.
 
     ![Model Visualizations tab showing model performance curves.](images/19.png 'Model Performance')
 

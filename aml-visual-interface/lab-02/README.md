@@ -62,13 +62,15 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     ![Preview data source schema.](images/06.png 'Preview Data Source schema')
 
-### Task 4: Create Experiment and Run Pipeline
+### Task 4: Create Experiment and Submit Pipeline
 
-1. Back to the pipeline canvas, select **Run** on the top right corner to open the `Setup pipeline run` editor.
+1. Back to the pipeline canvas, select **Submit** on the top right corner to open the `Setup pipeline run` editor.
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name` **designer-data-import**, and then select **Run**.
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **designer-data-import**, and then select **Submit**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/08.png 'Run Pipeline')
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/08.png 'Submit Pipeline')
+
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
 3. Wait for pipeline run to complete. It will take around **2 minutes** to complete the run.
 
@@ -97,11 +99,15 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     ![Image shows two additional Import Data module modules added to the canvas.](images/11.png 'Add two Import Data module modules')
 
-2. Select the **Data Transformation** section in the left navigation. Drag and drop the **Add rows** module and connect it to the above added Import data modules.
+2. For each of the three `Import Data` modules, select **Preview schema** and ensure that the data type for `FBI Code` is of type `String` and then select **Save**.
+
+    ![Preview data source schema.](images/11_1.png 'Preview Schema')
+
+3. Select the **Data Transformation** section in the left navigation. Drag and drop the **Add rows** module and connect it to the above added Import data modules.
 
     ![Image demonstrates the use of the Add rows module in the designer.](images/12.png 'Add rows module in the designer')
 
-3. Repeat the same step and add a second **Add rows** module that connects the output from the first **Import data** module to the output of the first **Add rows** module.
+4. Repeat the same step and add a second **Add rows** module that connects the output from the first **Import data** module to the output of the first **Add rows** module.
 
     ![Second Add rows module added.](images/13.png 'Second Add rows module added')
 
@@ -111,7 +117,7 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     ![Image demonstrates the use of the Clean missing values module in the designer.](images/14.png 'Add rows module in the designer')
 
-2. Select **Edit column** in the right pane to configure the list of columns to be cleaned. Select `Column names` from the available include options and type the name of the columns you intend to clean at this step: `X Coordionate` and `Y Coordinate`. Select **Save** to close the dialog.
+2. Select **Edit column** in the right pane to configure the list of columns to be cleaned. Select `Column names` from the available include options and type the name of the columns you intend to clean at this step: `X Coordinate` and `Y Coordinate`. Select **Save** to close the dialog.
 
     ![Include columns in the Clean missing values dialog.](images/15.png 'Include columns in the Clean missing values dialog')
 
@@ -119,13 +125,15 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     ![Clean missing values module properties.](images/16.png 'Clean missing values module properties')
 
-### Task 3: Run Pipeline
+### Task 3: Submit Pipeline
 
-1. Select **Run** to open the `Setup pipeline run` editor.
+1. Select **Submit** to open the `Setup pipeline run` editor.
 
-2. In the `Setup pipeline run` editor, select **designer-data-import** for `Experiment` name, and then select **Run**.
+2. In the `Setup pipeline run` editor, select **Select existing, designer-data-import** for `Experiment`, and then select **Submit**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/17.png 'Run Pipeline')
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/17.png 'Submit Pipeline')
+
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
 3. Wait for pipeline run to complete. It will take around **6 minutes** to complete the run.
 

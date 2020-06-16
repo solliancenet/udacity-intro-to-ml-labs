@@ -60,17 +60,19 @@ In this lab, we will be compare the performance of two regression algorithms: `B
 
     ![Image shows the steps to add and configure the Neural Net Regression module.](images/06.png 'Neural Net Regression Module')
 
-# Exercise 2: Run Training Pipeline
+# Exercise 2: Submit Training Pipeline
 
-## Task 1: Create Experiment and Run Pipeline
+## Task 1: Create Experiment and Submit Pipeline
 
-1. Select **Run** to open the `Setup pipeline run` editor.
+1. Select **Submit** to open the `Setup pipeline run` editor.
 
-    ![Image shows where to select the run button to open the setup pipeline run editor.](images/07.png 'Run Pipeline')
+    ![Image shows where to select the submit button to open the setup pipeline run editor.](images/07.png 'Submit Pipeline')
 
-2. In the `Setup pipeline run` editor, select **+New experiment**, provide `Experiment Name:` **automobile-price-prediction**, and then select **Run**.
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/08.png 'Run Pipeline')
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **automobile-price-prediction**, and then select **Submit**.
+
+    ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/08.png 'Submit Pipeline')
 
 3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
 

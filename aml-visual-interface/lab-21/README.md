@@ -40,13 +40,15 @@ The Azure Machine Learning designer simplifies the process by enabling you to tr
 
    ![Select the existing compute target, then select Save.](images/set-up-compute-target.png "Set up compute target")
 
-### Task 3: Create a new experiment and run the pipeline
+### Task 3: Create a new experiment and submit the pipeline
 
-1. Select **Run** to open the `Set up pipline run` editor.
+1. Select **Submit** to open the `Set up pipline run` editor.
 
-   ![The Run button is highlighted.](images/run-button.png "Run")
+   ![The Submit button is highlighted.](images/run-button.png "Submit")
 
-2. In the `Set up pipeline run` editor, select **+ New experiment**, provide a unique **Experiment Name**, and then select **Run**.
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
+
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide an unique **Experiment Name**, and then select **Submit**.
 
    ![The dialog is displayed with the previously described values.](images/set-up-pipeline-run.png "Set up pipeline run")
 
@@ -60,13 +62,15 @@ The Azure Machine Learning designer simplifies the process by enabling you to tr
 
    ![Select the real-time inference pipeline option.](images/new-real-time-inference-pipeline.png "Real-time inference pipeline")
 
-### Task 2: Run the pipeline
+### Task 2: Submit the pipeline
 
-1. Select **Run** to open the `Set up pipeline run` editor.
+1. Select **Submit** to open the `Set up pipeline run` editor.
 
-   ![Select the Run button.](images/run-inference-pipeline.png "Run")
+   ![Select the Submit button.](images/run-inference-pipeline.png "Submit")
 
-2. Select **Experiment**, then select the experiment you created in an earlier step. Select **Run** to start the pipeline.
+    > Please note that the button name in the UI is changed from **Run** to **Submit**.
+
+2. In the `Setup pipeline run` editor, select **Select existing**, then select the experiment you created in an earlier step. Select **Submit** to start the pipeline.
 
    ![Select your previous experiment.](images/set-up-inference-pipeline-run.png "Set up pipeline run")
 
