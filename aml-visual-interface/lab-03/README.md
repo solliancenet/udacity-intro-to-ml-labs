@@ -10,11 +10,7 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 ## Exercise 1: Register Dataset with Azure Machine Learning studio
 
-### Task 1: Download the Training Data File
-
-1. Download the training data file [nyc-taxi-sample-data-5months.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-5months.csv) on your local computer.
-
-### Task 2: Upload Dataset from local file
+### Task 1: Upload Dataset from web file
 
 1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
@@ -28,33 +24,33 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
     > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
 
-4. From the studio, select **Datasets, + Create dataset, From local files**. This will open the `Create dataset from local files` dialog on the right.
+4. From the studio, select **Datasets, + Create dataset, From web files**. This will open the `Create dataset from web files` dialog on the right.
 
-   ![Image highlights the steps to open the create dataset from local files dialog.](images/02.png 'Create dataset from local files')
+   ![Image highlights the steps to open the create dataset from web files dialog.](images/02.png 'Create dataset from web files')
 
-5. Provide `nyc-taxi-sample-dataset` as the Name, leave the remaining values at their defaults and select **Next**.
+5. Provide the following information and then select **Next**:
 
-    ![Enter the name for the created dataset.](images/03.png 'Basic info for dataset')
+    1. Web URL: `https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-5months.csv`
 
-6. On the `Datastore and file selection` panel, select the default datastore of your workspace `workspaceblobstore`, which was previously created by default when the workspace was created. **Browse** for the `nyc-taxi-sample-data-5months.csv` file you downloaded earlier on your local computer and select **Next** to upload the file in the datastore.
+    1. Name: `nyc-taxi-sample-dataset`
 
-     ![Datastore and file selection.](images/04.png 'Datastore and file selection')
+    ![Enter the name and URL for the dataset.](images/03.png 'Basic info for dataset')
 
-### Task 3: Preview Dataset
+### Task 2: Preview Dataset
 
-1. On the Settings and preview panel, set the **Column headers** drop down to `All files have same headers`. 
+1. On the Settings and preview panel, set the **Column headers** drop down to `All files have same headers`.
 
 2. Scroll the data preview to right to observe the target column: `totalAmount`. After you are done reviewing the data, select **Next**
 
     ![Scroll right to review dataset.](images/05.png 'Review dataset')
 
-### Task 4: Select Columns
+### Task 3: Select Columns
 
 1. Select columns from the dataset to include as part of your training data. Leave the default selections and select **Next**
 
     ![Select columns from the dataset to include as part of your training data.](images/06.png 'Select columns')
 
-### Task 5: Create Dataset
+### Task 4: Create Dataset
 
 1. Confirm the dataset details and select **Create**
 
@@ -62,35 +58,31 @@ In this lab, we are using a subset of NYC Taxi & Limousine Commission - green ta
 
 ## Exercise 2: Create a version of the existing Dataset
 
-### Task 1: Download the modified CSV file
-
-1. Download the training data file that includes new data collected for an extra month [nyc-taxi-sample-data-6months.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-6months.csv) on your local computer.
-
-### Task 2: Register new dataset version
+### Task 1: Register new dataset version
 
 1. From the [Azure Machine Learning studio](https://ml.azure.com/), select **Datasets** and select the `nyc-taxi-sample-dataset` dataset created in the first exercise. This will open the `Dataset details` page.
 
-2. Select **New version, From local files** to open the same `Create dataset from local files` dialog you already entered in the first exercise.
+2. Select **New version, From web files** to open the same `Create dataset from web files` dialog you already entered in the first exercise.
 
-   ![Dataset details page with New version option.](images/08.png 'New version from local files in dataset details page')
+   ![Dataset details page with New version option.](images/08.png 'New version from web files in dataset details page')
 
-3. This time, the **Name** and **Dataset version** fields are already filled in for you. Select **Next** to move on to the next step.
+3. This time, the **Name** and **Dataset version** fields are already filled in for you. Provide the following information and select **Next** to move on to the next step:
+
+    1. Web URL: `https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data-6months.csv`
 
     ![Basic info to create dataset version from local files.](images/09.png 'Basic info to create dataset version from local files')
 
-4. In the **Datastore and file selection** step, you should browse for the 6 months modified `nyc-taxi-sample-data-6months.csv` you downloaded earlier in Task 1 and select **Next**.
+4. Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
 
-5. Select `All files have the same headers` in the **Column headers** drop-down and move on to the schema selection step.
-
-6. On the `Schema` page, let's suppose you decided to exclude some columns from your dataset. Exclude columns: **snowDepth**, **prcipTime**, **precipDepth**. Select **Next** to move on to the final step.
+5. On the `Schema` page, let's suppose you decided to exclude some columns from your dataset. Exclude columns: **snowDepth**, **prcipTime**, **precipDepth**. Select **Next** to move on to the final step.
 
      ![Schema selection page for version 2 of the dataset.](images/091.png 'Schema selection page for version 2 of the dataset')
 
-7. Notice the `Dataset version` value in the basic info section. Select **Create** to close the new version confirmation page.
+6. Notice the `Dataset version` value in the basic info section. Select **Create** to close the new version confirmation page.
 
 ![Confirmation page for new dataset version.](images/10.png 'Confirmation page for new dataset version')
 
-### Task 3: Review both versions of the dataset
+### Task 2: Review both versions of the dataset
 
 1. Back to the **Datasets** page, in the **Registered datasets** list, notice the version value for the `nyc-taxi-sample-dataset` dataset.
 
