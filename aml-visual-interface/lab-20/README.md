@@ -12,35 +12,35 @@ When training models at scale over hundreds and thousands of separate runs, this
 
 ## Exercise 1: Run the Notebook for this Lab
 
-1. Download the notebook on your local disk from the following URL:
+1. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
 
-    `https://github.com/solliancenet/udacity-intro-to-ml-labs/blob/master/aml-visual-interface/lab-20/notebook/1st-experiment-sdk-train-model.ipynb`
-
-   Select **Raw** to view the text version of the file and then right-click in the browser and save the content locally as `1st-experiment-sdk-train-model.ipynb`. Please ensure that the file extension is `ipynb`.
-
-2. In [Azure portal](https://portal.azure.com/), open the available machine learning workspace.
-
-3. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
+2. Select **Launch now** under the **Try the new Azure Machine Learning studio** message.
 
     ![Launch Azure Machine Learning studio.](images/01a.png 'Launch AML')
 
-4. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
+3. When you first launch the studio, you may need to set the directory and subscription. If so, you will see this screen:
 
     ![Launch Azure Machine Learning studio.](images/00.png 'Launch AML')
 
     > For the directory, select **Udacity** and for the subscription, select **Azure Sponsorship**. For the machine learning workspace, you may see multiple options listed. **Select any of these** (it doesn't matter which) and then click **Get started**.
 
-5. From the studio, navigate to **Compute**. Next, for the available Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
+4. From the studio, navigate to **Compute**. Next, for the available Compute Instance, under Application URI select `Jupyter`. Be sure to select `Jupyter` and not `JupterLab`.
 
    ![Image highlights the steps to launch Jupyter from the Compute Instance.](images/02.png "Launch Jupyter from Compute Instance")
 
-6. Within the Jupyter environment, open the **Users** folder, then the folder that has your assigned username and then select **Upload** menu and upload the notebook downloaded in step 1.
+5. From within the Jupyter interface, select **New, Terminal**.
 
-   ![Image highlights the upload menu.](images/upload.png "Upload Jupyter Notebook")
+    ![Image highlights the steps to launch terminal from the Jupyter interface.](images/05.png "Launch Terminal")
 
-7. Open `1st-experiment-sdk-train-model.ipynb`. This is the Python notebook you will step through executing in this lab.
+6. In the new terminal window run the following command and wait for it to finish:
 
-   ![Image highlights the steps to open the notebook.](images/notebook-link.png 'Opening the notebook')
+    `git clone https://github.com/solliancenet/udacity-intro-to-ml-labs.git`
+
+    ![Image highlights the steps to clone the Github repo.](images/06.png "Clone Github Repo")
+
+7. From within the Jupyter interface, navigate to directory `udacity-intro-to-ml-labs/aml-visual-interface/lab-20/notebook` and open `1st-experiment-sdk-train-model.ipynb`. This is the Python notebook you will step through executing in this lab.
+
+   ![Image highlights the steps to open the notebook.](images/07.png 'Opening the notebook')
 
 8. Follow the instructions within the notebook to complete the exercise.
 
