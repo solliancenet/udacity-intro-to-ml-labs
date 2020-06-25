@@ -72,8 +72,8 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
 
 2. In the `Set up compute target` editor, select the available compute, and then select **Save**.
 ```
-NOTE : If you are facing any difficulties in accessing any of the pop-up windows or any of the buttons properly, Please refer to the Help section in the lab environment
 
+NOTE : If you are facing any difficulties in accessing any of the pop-up windows or any of the buttons properly, Please refer to the Help section in the lab environment
 ```
 
    ![Image shows how to select an existing compute target .](images/08.png 'Setup Compute Target')
