@@ -64,6 +64,11 @@ For the model, we are using regression because the number of rentals (the label 
 
 2. In the `Set up compute target` editor, select the existing compute target, choose a name for the pipeline draft: `Bike Rental Feature Engineering` and then select **Save**.
 
+```
+NOTE : If you are facing any difficulties in accessing any of the pop-up windows or any of the buttons properly, Please refer to the Help section in the lab environment
+
+```
+
 ## Task 4: Select columns in the dataset
 
 1. Drag and drop on the canvas, the available `Bike Rental Hourly` dataset under the **Datasets** category on the left navigation.
