@@ -37,6 +37,10 @@ The Azure Machine Learning designer simplifies the process by enabling you to tr
    ![The select compute target link is highlighted.](images/select-compute-target-link.png "Select compute target link")
 
 2. In the `Set up compute target` editor, select the existing compute target, then select **Save**.
+```
+
+NOTE : If you are facing any difficulties in accessing any of the pop-up windows or any of the buttons properly, Please refer to the Help section in the lab environment
+```
 
    ![Select the existing compute target, then select Save.](images/set-up-compute-target.png "Set up compute target")
 

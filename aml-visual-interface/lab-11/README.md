@@ -31,8 +31,12 @@ In this lab, we will be compare the performance of two regression algorithms: `B
     ![Image highlights the link to select to open the setup compute target editor.](images/02.png 'Setup Compute Target')
 
 2. In the `Set up compute target` editor, select the available compute, and then select **Save**.
+```
 
-    ![Image shows how to select the existing compute target named qs-compute.](images/03.png 'Setup Compute Target')
+NOTE : If you are facing any difficulties in accessing any of the pop-up windows or any of the buttons properly, Please refer to the Help section in the lab environment
+```
+
+   ![Image shows how to select the existing compute target named qs-compute.](images/03.png 'Setup Compute Target')
 
 ## Task 3: Delete Pipeline Modules
 
