@@ -66,9 +66,14 @@ In this lab, we will be using a subset of NYC Taxi & Limousine Commission - gree
 
     ![Image highlights the link to select to open the setup compute target editor.](images/10.png 'Setup Compute Target')
 
-2. In the `Set up compute target` editor, select the available compute, and then select **Save**.`NOTE : If you are facing any difficulties in accessing any of the pop-up windows properly or any of the buttons, Please refer to the Help section in the lab environment`
+2. In the `Set up compute target` editor, select the available compute, and then select **Save**.
 
-    ![Image shows how to select the existing compute target named qs-compute.](images/11.png 'Setup Compute Target')
+```
+NOTE : If you are facing any difficulties in accessing any of the pop-up windows properly or any of the buttons, Please refer to the Help section in the lab environment
+
+```
+
+![Image shows how to select the existing compute target named qs-compute.](images/11.png 'Setup Compute Target')
 
 ## Task 3: Add Dataset
 
