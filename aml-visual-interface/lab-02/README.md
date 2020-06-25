@@ -45,7 +45,12 @@ The following exercise focuses on the Import Data module to load data into a mac
 
 2. In the `Set up compute target` editor, select the existing compute target, and then select **Save**.
 
-    ![Image shows how to select the existing compute target.](images/03.png 'Setup Compute Target')
+```
+NOTE : If you are facing any difficulties in accessing any of the pop-up windows or any of the buttons properly, Please refer to the Help section in the lab environment
+
+```
+
+  ![Image shows how to select the existing compute target.](images/03.png 'Setup Compute Target')
 
 ### Task 3: Import data from Web URL
 
