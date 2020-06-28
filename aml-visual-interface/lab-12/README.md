@@ -137,19 +137,19 @@ In this lab, we will use Automated Machine Learning to find the best performing 
 
 5. While you wait for the model training to complete, you can learn more about how Automated Machine Learning offers preprocessing and data guardrails automatically by selecting [Advanced featurization options](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-portal-experiments#advanced-featurization-options).
 
-# Exercise 4: Review Recommended Model's Performance
+# Exercise 4: Review Best Model's Performance
 
-## Task 1: Review Recommended Model Performance
+## Task 1: Review Best Model Performance
 
-1. From the `Details` tab review the **Recommended model** and its corresponding **Normalized root mean squared error** score. Next, select **View model details**
+1. From the `Details` tab review the best model's `Algorithm name` and its corresponding `Normalized root mean squared error` score. Next, select the best model's **Algorithm name**
 
     ![Run Details tab showing recommended model.](images/17.png 'Recommended Model')
 
-2. Review the various **Run Metrics** to evaluate the model performance. Next, select **Visualizations**
+2. Select **View all other metrics** to review the various `Run Metrics` to evaluate the model performance. Next, select **Metrics**
 
     ![Model Details tab showing model performance metrics.](images/18.png 'Model details')
 
-3. Review the `Predicted vs True` curve.
+3. Select **predicted_true, Chart** to review the `Predicted vs. True` curve.
 
     ![Model Visualizations tab showing model performance curve.](images/19.png 'Model Performance')
 
