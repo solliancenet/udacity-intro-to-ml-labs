@@ -135,7 +135,7 @@ In this lab, we will use Automated Machine Learning to find the best performing 
 
     ![Run Details tab showing run status.](images/16.png 'Run Details')
 
-5. While you wait for the model training to complete, you can learn more about how Automated Machine Learning offers preprocessing and data guardrails automatically by selecting [Advanced featurization options](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-portal-experiments#advanced-featurization-options).
+5. While you wait for the model training to complete, you can learn more about how Automated Machine Learning offers preprocessing and data guardrails automatically by selecting [Automatic featurization](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-features#automatic-featurization).
 
 # Exercise 4: Review Best Model's Performance
 
