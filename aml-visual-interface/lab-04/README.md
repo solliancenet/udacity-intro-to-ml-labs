@@ -147,7 +147,6 @@ Don't worry if you do not fully understand the details of the Python code above.
     - Splitting mode: `Relative Expression`
     - Relational expression: `\"yr" == 0`
 
-
     ![Image shows how to use the Split Data module.](images/13.png 'Use the Split Data module')
 
 2. Select the **Split Data** module block and use the menu buttons to Copy and Paste it on the canvas. Connect the second one to the output of the Python Script execution step, which is the featured B set.
