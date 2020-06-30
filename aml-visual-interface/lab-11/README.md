@@ -60,7 +60,7 @@ In this lab, we will be compare the performance of two regression algorithms: `B
 
     7. Connect the `Neural Net Regression` module to the first input of the `Train Model` module
 
-    ![Image shows the steps to add and configure the Neural Net Regression module.](images/06.png 'Neural Net Regression Module')
+    ![Image shows the steps to add and configure the Neural Net Regression module.](images/udacity-01.png 'Neural Net Regression Module')
 
 # Exercise 2: Submit Training Pipeline
 
@@ -68,7 +68,7 @@ In this lab, we will be compare the performance of two regression algorithms: `B
 
 1. Select **Submit** to open the `Setup pipeline run` editor.
 
-    ![Image shows where to select the submit button to open the setup pipeline run editor.](images/07.png 'Submit Pipeline')
+    ![Image shows where to select the submit button to open the setup pipeline run editor.](images/udacity-02.png 'Submit Pipeline')
 
     > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
@@ -86,7 +86,7 @@ In this lab, we will be compare the performance of two regression algorithms: `B
 
 1. Select **Evaluate Model, Outputs, Visualize** to open the `Evaluate Model result visualization` dialog.
 
-    ![Image shows how to open the evaluate model result visualization dialog.](images/09.png 'Evaluate Model Results')
+    ![Image shows how to open the evaluate model result visualization dialog.](images/udacity-03.png 'Evaluate Model Results')
 
 ## Task 2: Compare Performance Metrics
 
