@@ -53,11 +53,11 @@ The trained model will predict what rating a user will give to unseen movies, so
 
 1. Select **Datasets** section in the left navigation. Next, select **Samples, Movie Ratings** and drag and drop the selected dataset on to the canvas.
 
-    ![Image shows the dataset, Movie Ratings, added to the canvas.](images/04.png 'Add First Dataset')
+    ![Image shows the dataset, Movie Ratings, added to the canvas.](images/21.png 'Add First Dataset')
 
 2. Select **Datasets** section in the left navigation. Next, select **Samples, IMDB Movie Titles** and drag and drop the selected dataset on to the canvas.
 
-    ![Image shows the dataset, IMDB Movie Titles, added to the canvas.](images/05.png 'Add Second Dataset')
+    ![Image shows the dataset, IMDB Movie Titles, added to the canvas.](images/22.png 'Add Second Dataset')
 
 ### Task 4: Join the two datasets on Movie ID
 
@@ -71,7 +71,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     4. Connect the output of the `IMDB Movie Titles` module to the second input of the `Join Data` module.
 
-    ![Image shows the Join Data module added to the canvas.](images/06.png 'Add Join Data module')
+    ![Image shows the Join Data module added to the canvas.](images/24.png 'Add Join Data module')
 
 2. Select the `Join Data` module.
 
