@@ -60,7 +60,7 @@ In this lab, we will be compare the performance of two regression algorithms: `B
 
     7. Connect the `Neural Net Regression` module to the first input of the `Train Model` module
 
-    ![Image shows the steps to add and configure the Neural Net Regression module.](images/udacity-01.png 'Neural Net Regression Module')
+    ![Image shows the steps to add and configure the Neural Net Regression module.](images/udacity-01a.png 'Neural Net Regression Module')
 
 # Exercise 2: Submit Training Pipeline
 
