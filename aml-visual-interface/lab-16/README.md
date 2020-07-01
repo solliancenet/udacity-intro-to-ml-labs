@@ -43,11 +43,11 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
 1. Select **Datasets** section in the left navigation. Next, select **Samples, Wikipedia SP 500 Dataset** and drag and drop the selected dataset on to the canvas.
 
-    ![Image shows the dataset, Wikipedia SP 500, added to the canvas.](images/04.png 'Add First Dataset')
+    ![Image shows the dataset, Wikipedia SP 500, added to the canvas.](images/25.png 'Add First Dataset')
 
 ### Task 4: Preprocess text for following steps
 
-1. Select **Text Analytics** section in the left navigation. Follow the steps outlined below:
+1. Select **Text Analytics** section in the Modules . Follow the steps outlined below:
 
     1. Select the **Preprocess Text** prebuilt module.
 
@@ -61,11 +61,11 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     6. Leave all the other options checked, as in the default configuration of the `Preprocess Text` module.
 
-    ![Image shows the Preprocess Text module added to the canvas.](images/05.png 'Add Preprocess Text module')
+    ![Image shows the Preprocess Text module added to the canvas.](images/26.png 'Add Preprocess Text module')
 
 ### Task 5: Split the dataset into training set (0.5) and test set (0.5)
 
-1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+1. Select **Data Transformation** section in the Modules. Follow the steps outlined below:
 
     1. Select the **Split Data** prebuilt module.
 
@@ -79,7 +79,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     6. Connect the output of the `Preprocess Text` module to the input of the `Split Data` module.
 
-    ![Image shows the steps to add and configure the Split Data module.](images/06.png 'Split Data Module')
+    ![Image shows the steps to add and configure the Split Data module.](images/27.png 'Split Data Module')
 
 ### Task 6: Convert the plain text of the articles to integers with Feature Hashing module, on the training set
 
@@ -95,7 +95,7 @@ We will create a training pipeline and initialize a **multiclass logistic regres
 
     5. Set `Hashing bitsize`: **10** and set the number of `N-grams`: **2**.
 
-     ![Image shows the Feature Hashing module added to the canvas and configured.](images/07.png 'Add and configure Feature Hashing module')
+     ![Image shows the Feature Hashing module added to the canvas and configured.](images/28.png 'Add and configure Feature Hashing module')
 
 *The goal of using feature hashing is to reduce dimensionality; also it makes the lookup of feature weights faster at classification time because it uses hash value comparison instead of string comparison.*
 

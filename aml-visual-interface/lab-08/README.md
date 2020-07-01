@@ -58,7 +58,7 @@ In this lab, we will be compare the performance of two binary classifiers: Two-C
 
     4. Connect the first output of the `Split Data` module to the second input of the `Train Model` module
 
-    ![Image shows the steps to add and configure the Two-Class Logistic Regression module.](images/06.png 'Two-Class Logistic Regression Module')
+    ![Image shows the steps to add and configure the Two-Class Logistic Regression module.](images/13.png 'Two-Class Logistic Regression Module')
 
 # Exercise 2: Submit Training Pipeline
 
