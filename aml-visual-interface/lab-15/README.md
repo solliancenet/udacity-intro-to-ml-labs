@@ -95,7 +95,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     3. Connect the `Join Data` output to the input of the `Execute Python Script` module.
 
-     ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/09.png 'Add Select Columns in Dataset module')
+     ![Image shows the Select Columns in Dataset module added to the canvas editor.](images/09.png 'Add Select Columns in Dataset module')
 
 2. Select **Edit code** to open the `Python script` editor, clear the existing code and then enter the following lines of code to select the UserId, Movie Name, Rating columns from the joined dataset. Please ensure that there is no indentation for the first line and the second and third lines are indented.
 
