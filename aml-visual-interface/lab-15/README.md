@@ -77,11 +77,11 @@ The trained model will predict what rating a user will give to unseen movies, so
 
 3. Select the **Edit column** link to open the `Join key columns for left dataset` editor. Select the **MovieId** column in the `Enter column name` field.
 
-      ![Image shows the Join key columns for left dataset` editor.](images/07.png 'Join key columns for left dataset')
+      ![Image shows the Join key columns for left dataset editor](images/07.png 'Join key columns for left dataset')
 
 4. Select the **Edit column** link to open the `Join key columns for right dataset` editor. Select the **Movie ID** column in the `Enter column name` field.
 
-    ![Image shows the Join key columns for left dataset` editor.](images/08.png 'Join key columns for left dataset')
+    ![Image shows the Join key columns for left dataset editor.](images/08.png 'Join key columns for left dataset')
 
 *Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
 
