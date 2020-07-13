@@ -88,7 +88,7 @@ For the model, we are using regression because the number of rentals (the label 
 
 - Include all columns
 - Exclude column names: `instant`, `dteday`, `casual` ,`registered`
-- Use default compute target: `qs-compute`
+- Use default compute target: `aml-compute`
 
     ![Image shows how to fill in configuration of the Edit metadata module.](images/11.png 'Edit metadata module configuration')
 
