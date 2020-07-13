@@ -141,7 +141,7 @@ The following exercise focuses on the Import Data module to load data into a mac
 
 ### Task 4: Save the clean dataset
 
-1. Select the `Clean missing data` module you created on the canvas and then select **Outputs** on the right pane. Click on the **Save** icon under the **Cleaned dataset** section to open the `Save as dataset` dialog.
+1. Select the `Clean missing data` module you created on the canvas and then select **Outputs + logs** on the right pane. Click on the **Save** icon under the **Cleaned dataset** section to open the `Save as dataset` dialog.
 
     ![Image shows how to open the Save as dataset dialog.](images/18.png 'Save the cleaned dataset')
 
