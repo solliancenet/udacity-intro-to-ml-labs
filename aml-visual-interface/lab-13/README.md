@@ -112,7 +112,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     3. Connect the `K-Means Clustering` module to the first input of the `Train Clustering Model` module
 
-    4. Connect the first output of the `Normalize` module to the second input of the `Train Clustering Model` module
+    4. Connect the first output of the `Normalize Data` module to the second input of the `Train Clustering Model` module
 
     5. Select the **Edit column** link to open the `Column set` editor
 
