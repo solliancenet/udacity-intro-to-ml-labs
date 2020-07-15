@@ -74,7 +74,7 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-3. Wait for pipeline run to complete. It will take around **2 minutes** to complete the run.
+3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
 
 ### Task 5: Visualize Import Data results
 
@@ -101,7 +101,7 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     ![Image shows two additional Import Data module modules added to the canvas.](images/11.png 'Add two Import Data module modules')
 
-2. For each of the three `Import Data` modules, select **Preview schema** and ensure that the data type for `FBI Code` is of type `String` and then select **Save**.
+2. For each of the **three** `Import Data` modules, select **Preview schema** and ensure that the data type for `FBI Code` and `Location` is of type `String` and then select **Save**.
 
     ![Preview data source schema.](images/11_1.png 'Preview Schema')
 
@@ -137,7 +137,7 @@ The following exercise focuses on the Import Data module to load data into a mac
 
     > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-3. Wait for pipeline run to complete. It will take around **6 minutes** to complete the run.
+3. Wait for pipeline run to complete. It will take around **8 minutes** to complete the run.
 
 ### Task 4: Save the clean dataset
 

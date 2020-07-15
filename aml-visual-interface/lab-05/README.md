@@ -98,7 +98,7 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
     ![Image shows the steps to add and configure the Split Data module.](images/13.png 'Split Data Module')
 
-*Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs.*
+*Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs. Please refer ahead to Exercise 3, Task 1, Step 2 on details of submitting the pipeline. It can take up to 5-10 minutes to run the pipeline.*
 
 ## Task 5: Select Columns in Dataset
 

@@ -44,7 +44,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
 ## Task 4: Select Columns in Dataset
 
-1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+1. Select **Modules, Data Transformation** section in the left navigation. Follow the steps outlined below:
 
     1. Select the **Select Columns in Dataset** prebuilt module
 
@@ -68,7 +68,21 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows the steps to configure the Select Columns in Dataset module.](images/13_2.png 'Select columns')
 
-## Task 5: Normalize Data
+## Task 5: Split Data
+
+1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+
+    1. Select the **Split Data** prebuilt module
+
+    2. Drag and drop the selected module on to the canvas
+
+    3. Connect the `Select Columns in Dataset` module to the `Split Data` module
+
+    4. Fraction of rows in the first output dataset: **0.1**
+
+    ![Image shows the steps to add and configure the Split Data module.](images/13_5.png 'Split Data')
+
+## Task 6: Normalize Data
 
 1. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
 
@@ -76,7 +90,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the `Select Columns in Dataset` module to the `Normalize Data` module
+    3. Connect the `Split Data` module to the `Normalize Data` module
 
     4. Select **Edit column** link to open the `Columns to transform` editor
 
@@ -90,7 +104,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows the steps to configure the Normalize Data module.](images/13_4.png 'Columns to transform')
 
-## Task 6: Initialize K-Means Clustering Model
+## Task 7: Initialize K-Means Clustering Model
 
 1. Select **Machine Learning Algorithms** section in the left navigation. Follow the steps outlined below:
 
@@ -102,7 +116,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows the steps to add and configure the K-Means Clustering module.](images/14.png 'K-Means Clustering Module')
 
-## Task 7: Setup Train Clustering Model Module
+## Task 8: Setup Train Clustering Model Module
 
 1. Select **Model Training** section in the left navigation. Follow the steps outlined below:
 
@@ -126,7 +140,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows the Columns set editor and how include all columns.](images/16.png 'Columns set')
 
-## Task 8: Setup Assign Data to Clusters Module
+## Task 9: Setup Assign Data to Clusters Module
 
 1. Select **Model Scoring & Evaluation** section in the left navigation. Follow the steps outlined below:
 
@@ -148,13 +162,11 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     ![Image shows where to select the submit button to open the setup pipeline run editor.](images/19.png 'Submit Pipeline')
 
-    > Please note that the button name in the UI is changed from **Run** to **Submit**.
-
 2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name:` **cluster-weather**, and then select **Submit**.
 
     ![Image shows how to provide the experiment name in the setup pipeline run editor and start the pipeline run.](images/20.png 'Submit Pipeline')
 
-3. Wait for pipeline run to complete. It will take around **5 minutes** to complete the run.
+3. Wait for pipeline run to complete. It will take around **10 minutes** to complete the run.
 
 4. While you wait for the model training to complete, you can learn more about the K-Means Clustering algorithm used in this lab by selecting [K-Means Clustering](https://docs.microsoft.com/en-us/azure/machine-learning/algorithm-module-reference/k-means-clustering#configure-the-k-means-clustering-module).
 
@@ -162,7 +174,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
 ## Task 1: Open the Visualization Dialog
 
-1. Select **Assign Data to Clusters, Outputs, Visualize** to open the `Assign Data to Clusters result visualization` dialog.
+1. Select **Assign Data to Clusters, Outputs + logs, Visualize** to open the `Assign Data to Clusters result visualization` dialog.
 
     ![Image shows how to open the Assign Data to Clusters result visualization dialog.](images/23.png 'Evaluate Model Results')
 
