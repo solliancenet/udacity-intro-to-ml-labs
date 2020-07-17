@@ -161,7 +161,7 @@ Don't worry if you do not fully understand the details of the Python code above.
 
 2. Use the following structure for the columns field in each module:
 
-   ![Image shows configuration in the Edit columns dialog.](images/E06.png 'configuration in the Edit columns dialog')
+   ![Image shows configuration in the Edit columns dialog.](images/16.png 'configuration in the Edit columns dialog')
 
 ## Task 7: Create the regression model 
 
@@ -173,11 +173,11 @@ Don't worry if you do not fully understand the details of the Python code above.
 
 3. Link the **Boosted Decision Tree Regression** module as the first input and the training dataset as the second input like in the image below.
 
-   ![Image shows the configuration of the first Train model module.](images/18.png 'Train model module connected in the designer')
+   ![Image shows the configuration of the first Train model module.](images/E06.png 'Train model module connected in the designer')
 
 4. Use the exact same configuration on the right branch that uses the output from the Python Script.
 
-   ![Image shows the configuration of the first Train model module.](images/19.png 'Train model module connected in the designer')
+   ![Image shows the configuration of the first Train model module.](images/E07.png 'Train model module connected in the designer')
 
 ## Task 8: Evaluate and score models
 
