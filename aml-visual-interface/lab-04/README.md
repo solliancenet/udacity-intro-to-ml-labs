@@ -167,7 +167,7 @@ Don't worry if you do not fully understand the details of the Python code above.
 
 1. Under the **Machine Learning Algorithms, Regression** category, select the  **Boosted Decision Tree Regression** module. Drag and drop it on the canvas and use the default settings provided.
 
-   ![Image shows the Boosted Decision Tree Regression module.](images/E07.png 'Boosted Decision Tree Regression module used in the designer')
+   ![Image shows the Boosted Decision Tree Regression module.](images/E05.png 'Boosted Decision Tree Regression module used in the designer')
 
 2. Next, use the **Train model** module under the **Model training** category and enter the `cnt` column in the **Label column** field.
 
