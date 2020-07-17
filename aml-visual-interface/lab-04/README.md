@@ -147,17 +147,17 @@ Don't worry if you do not fully understand the details of the Python code above.
     - Splitting mode: `Relative Expression`
     - Relational expression: `\"yr" == 0`
 
-    ![Image shows how to use the Split Data module.](images/13.png 'Use the Split Data module')
+    ![Image shows how to use the Split Data module.](images/E01.png 'Use the Split Data module')
 
 2. Select the **Split Data** module block and use the menu buttons to Copy and Paste it on the canvas. Connect the second one to the output of the Python Script execution step, which is the featured B set.
 
-   ![Image shows how to duplicate the Split Data module.](images/14.png 'Duplicate the Split Data module') 
+   ![Image shows how to duplicate the Split Data module.](images/E02.png 'Duplicate the Split Data module') 
 
 ## Task 6: Select columns from the test and training resulted sets
 
 1. Next, using the **Select columns** module under the **Data transformation** category, create four identical modules to exclude the `yr` column from all the outputs: test and training sets in both branches: A and A+B.
 
-   ![Image shows how to exclude the yr column with Select Columns module.](images/15.png 'Exclude the yr column with Select Columns module')
+   ![Image shows how to exclude the yr column with Select Columns module.](images/E03.png 'Exclude the yr column with Select Columns module')
 
 2. Use the following structure for the columns field in each module:
 
