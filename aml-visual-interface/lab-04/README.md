@@ -157,17 +157,17 @@ Don't worry if you do not fully understand the details of the Python code above.
 
 1. Next, using the **Select columns** module under the **Data transformation** category, create four identical modules to exclude the `yr` column from all the outputs: test and training sets in both branches: A and A+B.
 
-   ![Image shows how to exclude the yr column with Select Columns module.](images/E03.png 'Exclude the yr column with Select Columns module')
+   ![Image shows how to exclude the yr column with Select Columns module.](images/E08.png 'Exclude the yr column with Select Columns module')
 
 2. Use the following structure for the columns field in each module:
 
-   ![Image shows configuration in the Edit columns dialog.](images/16.png 'configuration in the Edit columns dialog')
+   ![Image shows configuration in the Edit columns dialog.](images/E06.png 'configuration in the Edit columns dialog')
 
 ## Task 7: Create the regression model 
 
 1. Under the **Machine Learning Algorithms, Regression** category, select the  **Boosted Decision Tree Regression** module. Drag and drop it on the canvas and use the default settings provided.
 
-   ![Image shows the Boosted Decision Tree Regression module.](images/17.png 'Boosted Decision Tree Regression module used in the designer')
+   ![Image shows the Boosted Decision Tree Regression module.](images/E07.png 'Boosted Decision Tree Regression module used in the designer')
 
 2. Next, use the **Train model** module under the **Model training** category and enter the `cnt` column in the **Label column** field.
 
