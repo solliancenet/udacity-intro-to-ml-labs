@@ -122,7 +122,7 @@ In this lab, you learn how to create, run, and explore automated machine learnin
 
 ## Task 2: Monitor Experiment
 
-1. The experiment will run for about *30 min*. Note that most of the time will be spent in the data preparation step and once the data preparation is complete, the experiment will take 1-2 minutes to run.
+1. The experiment will run for about *30 min*. Note that most of the time will be spent in the data preparation step and once the data preparation is done, the experiment will take an additional 1-2 minutes to complete.
 
 2. In the **Details** tab, observe the **run status** of the job.
 
