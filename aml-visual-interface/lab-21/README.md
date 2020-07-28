@@ -50,7 +50,7 @@ The Azure Machine Learning designer simplifies the process by enabling you to tr
 
     > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide an unique **Experiment Name**, and then select **Submit**.
+2. In the `Setup pipeline run editor`, select **Experiment, Create new** and provide `New experiment name`: **designer-run**, and then select **Submit**.
 
    ![The dialog is displayed with the previously described values.](images/set-up-pipeline-run.png "Set up pipeline run")
 
@@ -72,7 +72,7 @@ The Azure Machine Learning designer simplifies the process by enabling you to tr
 
     > Please note that the button name in the UI is changed from **Run** to **Submit**.
 
-2. In the `Setup pipeline run` editor, select **Select existing**, then select the experiment you created in an earlier step. Select **Submit** to start the pipeline.
+2. In the `Setup pipeline run` editor, select **Select existing**, then select the experiment you created in an earlier step: **designer-run**. Select **Submit** to start the pipeline.
 
    ![Select your previous experiment.](images/set-up-inference-pipeline-run.png "Set up pipeline run")
 

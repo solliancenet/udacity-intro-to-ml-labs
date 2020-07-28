@@ -18,7 +18,6 @@ We are building two training datasets by combining the feature set as follows:
 
 For the model, we are using regression because the number of rentals (the label column) contains continuos real numbers. As the algorithm for the experiment, we will be using the Boosted Decision Tree Regression.
 
-
 # Exercise 1: Data pre-processing using the Pipeline Authoring Editor
 
 ## Task 1: Upload Dataset
@@ -72,11 +71,11 @@ For the model, we are using regression because the number of rentals (the label 
 
     ![Image shows how to import the registered Bike Rental dataset in designer.](images/07.png 'Use registered Bike Rental Hourly dataset in the designer')
 
-2. Under the **Data transformation** category drag and drop the `Edit metadata` module.
+2. Under the **Data transformation** category drag and drop the `Edit Metadata` module, connect the module to the dataset, and select **Edit column** on the right pane.
 
     ![Image shows how to add the Edit Metadata module in the designer.](images/08.png 'Use Edit Metadata Module')
 
-3. Edit the column list by selecting **Edit columns** on the right pane. Add the `season` and `weathersit` column and select **Save**.
+3. Add the `season` and `weathersit` column and select **Save**.
 
     ![Image shows how to configure the column list for the Edit metadata module.](images/09.png 'Edit columns')
 
@@ -84,15 +83,22 @@ For the model, we are using regression because the number of rentals (the label 
 
     ![Image shows how to fill in configuration of the Edit metadata module.](images/10.png 'Edit metadata module configuration')
 
-5. Next, use the **Select columns in Dataset** module under the **Data transformation** category and configure it as follows:
+    > Note that you can submit the pipeline at any point to peek at the outputs and activities. Running pipeline also generates metadata that is available for downstream activities such selecting column names from a list in selection dialogs. Please refer ahead to Exercise 1, Task 8, Step 3 on details of submitting the pipeline. It can take up to 5-10 minutes to run the pipeline.
 
-- Include all columns
-- Exclude column names: `instant`, `dteday`, `casual` ,`registered`
-- Use default compute target: `aml-compute`
+5. Under the **Data transformation** category drag and drop the `Select Columns in Dataset` module, connect the module to the `Edit Metadata` module, and select **Edit column** on the right pane.
 
-    ![Image shows how to fill in configuration of the Edit metadata module.](images/11.png 'Edit metadata module configuration')
+    ![Image shows how to fill in configuration of the Edit metadata module.](images/11_1.png 'Select Columns in Dataset module configuration')
 
-6. Connect the output from the **Edit columns** module to the input of the **Select columns in Dataset** module.
+6. Configure the `Select Columns in Dataset` module as follows:
+
+    - Include: All columns
+    - Select **+**
+    - Exclude Column names: `instant`, `dteday`, `casual`,`registered`
+    - Select **Save**
+
+    ![Image shows how to fill in configuration of the Edit metadata module.](images/11.png 'Select Columns in Dataset module configuration')
+
+    > Note: You can copy and paste all four column names separated by comma (`instant`, `dteday`, `casual`,`registered`) in the text box, then select anywhere on the dialog, and then select Save.
 
 7. Under the **Python Language** category on the left, select the **Execute Python Script** module and connect it with the **Select Columns in Dataset** module. Make sure the connector is connected to the very first input of the **Execute Python Script** module.
 
