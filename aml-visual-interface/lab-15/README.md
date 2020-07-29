@@ -151,7 +151,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     6. For Learning rate: **0.001**. The learning rate defines the step size for learning.
 
-    ![Image shows the steps to add and configure the Train SVD Recommender module.](images/12.png 'Train SVD Recommender module')
+    ![Image shows the steps to add and configure the Train SVD Recommender module.](images/6a.png 'Train SVD Recommender module')
 
 ### Task 9: Select Columns UserId, Movie Name from the test set
 
