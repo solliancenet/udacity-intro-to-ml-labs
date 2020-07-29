@@ -119,7 +119,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     4. Select the **Edit columns** link to open the `Select columns` editor and then enter the following list of columns to be included in the output dataset: **Movie Name**, **UserId**.
 
-     ![Image shows the Remove Duplicate Rows module added to the canvas` editor.](images/10.png 'Add Remove Duplicate Rows module')
+     ![Image shows the Remove Duplicate Rows module added to the canvas editor.](images/10.png 'Add Remove Duplicate Rows module')
 
 ### Task 7: Split the dataset into training set (0.5) and test set (0.5)
 
