@@ -92,7 +92,7 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
     3. Splitting mode: **Relative Expression**
 
-    4. Relational expression: **\\"Month" < 10**
+    4. Relational expression: **\\"Month" < 10** (please make sure that the expression is provided exactly as seen in the image below, starting with backslash.)
 
     5. Connect the `Dataset` to the `Split Data` module
 
