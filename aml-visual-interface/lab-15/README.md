@@ -119,7 +119,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     4. Select the **Edit columns** link to open the `Select columns` editor and then enter the following list of columns to be included in the output dataset: **Movie Name**, **UserId**.
 
-     ![Image shows the Remove Duplicate Rows module added to the canvas` editor.](images/10.png 'Add Remove Duplicate Rows module')
+     ![Image shows the Remove Duplicate Rows module added to the canvas editor.](images/10.png 'Add Remove Duplicate Rows module')
 
 ### Task 7: Split the dataset into training set (0.5) and test set (0.5)
 
@@ -151,7 +151,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     6. For Learning rate: **0.001**. The learning rate defines the step size for learning.
 
-    ![Image shows the steps to add and configure the Train SVD Recommender module.](images/12.png 'Train SVD Recommender module')
+    ![Image shows the steps to add and configure the Train SVD Recommender module.](images/06a.png 'Train SVD Recommender module')
 
 ### Task 9: Select Columns UserId, Movie Name from the test set
 
