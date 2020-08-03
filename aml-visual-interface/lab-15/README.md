@@ -165,7 +165,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     4. Select the **Edit columns** link to open the `Select columns` editor and then enter the following list of columns to be included in the output dataset: **UserId**, **Movie Name**.
 
-     ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/13.png 'Add Select Columns in Dataset module')
+     ![Image shows the Select Columns in Dataset module added to the canvas editor.](images/13.png 'Add Select Columns in Dataset module')
 
 ### Task 10: Configure the Score SVD Recommender
 
