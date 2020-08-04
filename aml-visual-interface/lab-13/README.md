@@ -90,7 +90,7 @@ In this lab, we will be using the `Weather Dataset` that has weather data for 66
 
     2. Drag and drop the selected module on to the canvas
 
-    3. Connect the `Split Data` module to the `Normalize Data` module
+    3. Connect the left port of`Split Data` module to the `Normalize Data` module
 
     4. Select **Edit column** link to open the `Columns to transform` editor
 

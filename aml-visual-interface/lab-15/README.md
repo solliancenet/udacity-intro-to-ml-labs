@@ -7,7 +7,7 @@ There are two principal approaches to recommender systems:
 - The `content-based` approach, which makes use of features for both users and items. Users can be described by properties such as age or gender. Items can be described by properties such as the author or the manufacturer. Typical examples of content-based recommendation systems can be found on social matchmaking sites.
 - The `Collaborative filtering` approach, which uses only identifiers of the users and the items. It is based on a matrix of ratings given by the users to the items. The main source of information about a user is the list the items they've rated and the similarity with other users who have rated the same items.
 
-The SVD recommender module in Azure Machine Learning designer is based on the Single Value Decomposition algorithm. It uses identifiers of the users and the items, and a matrix of ratings given by the users to the items. It's a typical example of collaborative recommender.
+The SVD recommender module in Azure Machine Learning designer is based on the Singular Value Decomposition algorithm. It uses identifiers of the users and the items, and a matrix of ratings given by the users to the items. It's a typical example of collaborative recommender.
 
 ## Lab Overview
 
@@ -165,7 +165,7 @@ The trained model will predict what rating a user will give to unseen movies, so
 
     4. Select the **Edit columns** link to open the `Select columns` editor and then enter the following list of columns to be included in the output dataset: **UserId**, **Movie Name**.
 
-     ![Image shows the Select Columns in Dataset module added to the canvas` editor.](images/13.png 'Add Select Columns in Dataset module')
+     ![Image shows the Select Columns in Dataset module added to the canvas editor.](images/13.png 'Add Select Columns in Dataset module')
 
 ### Task 10: Configure the Score SVD Recommender
 
