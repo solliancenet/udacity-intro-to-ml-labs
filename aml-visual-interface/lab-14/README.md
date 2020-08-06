@@ -30,7 +30,9 @@ In this lab we will be using a subset of NYC Taxi & Limousine Commission - green
 
 5. In the Web URL field provide the following URL for the training data file:
 
-    [https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data.csv](https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data.csv)
+    ```
+    https://introtomlsampledata.blob.core.windows.net/data/nyc-taxi/nyc-taxi-sample-data.csv
+    ```
 
 6. Provide `nyc-taxi-sample-data` as the Name, leave the remaining values at their defaults and select **Next**.
 
