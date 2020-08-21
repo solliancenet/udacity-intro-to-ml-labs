@@ -84,7 +84,7 @@ In this lab, we will be using the `Flight Delays` data set that is enhanced with
 
 1. We will split the dataset such that months prior to October will be used for model training and months October to December will be used for model testing.
 
-2. Select **Data Transformation** section in the left navigation. Follow the steps outlined below:
+2. Select **Data Transformation** section in the **Modules**. Follow the steps outlined below:
 
     1. Select the **Split Data** prebuilt module
 
